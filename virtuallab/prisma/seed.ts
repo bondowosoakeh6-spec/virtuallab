@@ -98,6 +98,9 @@ async function seedClassAndMembers() {
   
   if (!instructorUser) return;
 
+  const instructor = await prisma.instructor.findUnique({ where: { userId: instructorUser.id } });
+  if (!instructor) return;
+
   const newClass = await prisma.class.upsert({
     where: { code: 'KIM-301' },
     update: {},
@@ -107,7 +110,7 @@ async function seedClassAndMembers() {
       course: 'Kimia Analitik',
       semester: 'Ganjil',
       academicYear: '2024/2025',
-      instructorId: instructorUser.id,
+      instructorId: instructor.id,
     },
   });
 

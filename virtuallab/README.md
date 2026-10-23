@@ -37,9 +37,12 @@ Open [http://localhost:3000](http://localhost:3000)
 
 | Role | Email | Password |
 |------|-------|----------|
-| Admin | admin@virtuallab.ac.id | admin123 |
-| Dosen | dosen@virtuallab.ac.id | dosen123 |
-| Siswa | mahasiswa1@virtuallab.ac.id | siswa123 |
+| Admin | admin@virtuallab.local | Admin123! |
+| Instructor | dosen@virtuallab.local | Dosen123! |
+| Student | student@virtuallab.local | Student123! |
+| Students 2-5 | mahasiswa2-5@virtuallab.local | Student123! |
+| Demo Instructor | demo.instructor@virtuallab.local | Demo123! |
+| Demo Student | demo.student@virtuallab.local | Demo123! |
 
 ## Available Scripts
 
@@ -51,7 +54,11 @@ Open [http://localhost:3000](http://localhost:3000)
 | `npm run db:push` | Push Prisma schema to database |
 | `npm run db:seed` | Seed database with sample data |
 | `npm run db:studio` | Open Prisma Studio (DB GUI) |
-| `npm run test:calc` | Run calculation engine tests |
+| `npm run test` | Run all unit & integration tests |
+| `npm run test:e2e` | Run Playwright E2E tests |
+| `npm run test:integration` | Run integration tests |
+| `npm run test:excel` | Run Excel validation tests |
+| `npm run validate:excel` | Validate Excel formula mappings |
 
 ## Project Structure
 
