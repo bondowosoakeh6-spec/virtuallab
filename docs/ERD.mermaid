@@ -1,0 +1,268 @@
+erDiagram
+
+    USER ||--o| STUDENT : has
+    USER ||--o| INSTRUCTOR : has
+
+    INSTRUCTOR ||--o{ CLASS : teaches
+
+    CLASS ||--o{ CLASS_MEMBER : contains
+    STUDENT ||--o{ CLASS_MEMBER : joins
+
+    CLASS ||--o{ EXPERIMENT : has
+    LAB_MODULE ||--o{ EXPERIMENT : uses
+
+    EXPERIMENT ||--o{ EXPERIMENT_SESSION : creates
+    STUDENT ||--o{ EXPERIMENT_SESSION : performs
+
+    EXPERIMENT_SESSION ||--o{ EXPERIMENT_INPUT : contains
+    EXPERIMENT_SESSION ||--o{ CALCULATION_RESULT : produces
+
+    EXPERIMENT ||--o{ SUBMISSION : receives
+    STUDENT ||--o{ SUBMISSION : submits
+
+    SUBMISSION ||--o| GRADE : receives
+
+    LAB_MODULE ||--o{ QUIZ : contains
+    QUIZ ||--o{ QUIZ_QUESTION : contains
+    STUDENT ||--o{ QUIZ_ATTEMPT : attempts
+    QUIZ ||--o{ QUIZ_ATTEMPT : has
+
+    QUIZ_ATTEMPT ||--o{ QUIZ_ANSWER : contains
+    QUIZ_QUESTION ||--o{ QUIZ_ANSWER : answers
+
+    CHEMICAL_ELEMENT ||--o{ COMPOUND_ELEMENT : contains
+    CHEMICAL_COMPOUND ||--o{ COMPOUND_ELEMENT : contains
+
+    LUFF_SCHOORL_TABLE ||--o{ LUFF_SCHOORL_VALUE : contains
+
+    LAB_MODULE ||--o{ FORMULA : defines
+    FORMULA ||--o{ FORMULA_VERSION : versions
+
+    USER ||--o{ AUDIT_LOG : generates
+
+    USER {
+        string id PK
+        string name
+        string email UK
+        string passwordHash
+        enum role
+        enum status
+        string avatarUrl
+    }
+
+    STUDENT {
+        string id PK
+        string userId FK_UK
+        string studentNumber UK
+        string program
+        int semester
+    }
+
+    INSTRUCTOR {
+        string id PK
+        string userId FK_UK
+        string employeeNumber UK
+        string expertise
+    }
+
+    CLASS {
+        string id PK
+        string name
+        string code UK
+        string course
+        string semester
+        string academicYear
+        string instructorId FK
+    }
+
+    CLASS_MEMBER {
+        string id PK
+        string classId FK
+        string studentId FK
+        datetime joinedAt
+    }
+
+    LAB_MODULE {
+        string id PK
+        string slug UK
+        string name
+        string category
+        string description
+        text theory
+        text procedure
+        boolean isActive
+    }
+
+    EXPERIMENT {
+        string id PK
+        string moduleId FK
+        string classId FK
+        string title
+        string description
+        text instructions
+        decimal maxScore
+        datetime deadline
+        boolean isPublished
+    }
+
+    EXPERIMENT_SESSION {
+        string id PK
+        string experimentId FK
+        string studentId FK
+        string status
+        datetime startedAt
+        datetime completedAt
+    }
+
+    EXPERIMENT_INPUT {
+        string id PK
+        string sessionId FK
+        string parameter
+        decimal value
+        string textValue
+        string unit
+    }
+
+    CALCULATION_RESULT {
+        string id PK
+        string sessionId FK
+        string calculationId
+        string formula
+        json inputSnapshot
+        json intermediate
+        decimal result
+        string unit
+        string status
+    }
+
+    SUBMISSION {
+        string id PK
+        string experimentId FK
+        string studentId FK
+        string sessionId
+        datetime submittedAt
+        string status
+        string reportUrl
+    }
+
+    GRADE {
+        string id PK
+        string submissionId FK_UK
+        decimal preTest
+        decimal practical
+        decimal calculation
+        decimal report
+        decimal postTest
+        decimal total
+        string feedback
+    }
+
+    CHEMICAL_ELEMENT {
+        string id PK
+        int atomicNumber
+        string symbol UK
+        decimal atomicMass
+        string groupName
+        int period
+        string category
+    }
+
+    CHEMICAL_COMPOUND {
+        string id PK
+        string name
+        string formula UK
+        decimal molarMass
+        string description
+    }
+
+    COMPOUND_ELEMENT {
+        string id PK
+        string compoundId FK
+        string elementId FK
+        int quantity
+    }
+
+    LUFF_SCHOORL_TABLE {
+        string id PK
+        string name
+        string description
+    }
+
+    LUFF_SCHOORL_VALUE {
+        string id PK
+        string tableId FK
+        decimal volumeMl
+        decimal glucoseMg
+        decimal lactoseMg
+        decimal maltoseMg
+    }
+
+    FORMULA {
+        string id PK
+        string moduleId FK
+        string code UK
+        string name
+        string description
+        string expression
+        string unit
+        boolean isSystem
+        boolean isActive
+    }
+
+    FORMULA_VERSION {
+        string id PK
+        string formulaId FK
+        int version
+        string expression
+    }
+
+    QUIZ {
+        string id PK
+        string moduleId FK
+        string title
+        string description
+        int timeLimit
+        int passingScore
+        boolean isActive
+    }
+
+    QUIZ_QUESTION {
+        string id PK
+        string quizId FK
+        string questionText
+        string questionType
+        json options
+        string correctAnswer
+        int points
+        int orderIndex
+    }
+
+    QUIZ_ATTEMPT {
+        string id PK
+        string quizId FK
+        string studentId FK
+        int score
+        boolean passed
+        datetime startedAt
+        datetime completedAt
+    }
+
+    QUIZ_ANSWER {
+        string id PK
+        string attemptId FK
+        string questionId FK
+        string answer
+        boolean isCorrect
+        int pointsAwarded
+    }
+
+    AUDIT_LOG {
+        string id PK
+        string userId FK
+        string action
+        string entity
+        string entityId
+        json metadata
+        string ipAddress
+        string userAgent
+    }

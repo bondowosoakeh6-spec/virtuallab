@@ -1,0 +1,83 @@
+# ============================================================
+# VirtualLab AKUANALIS - Docker Compose
+# Services: web, postgres, redis (optional)
+# ============================================================
+
+version: '3.8'
+
+services:
+  # ===========================================
+  # Web Application (Next.js)
+  # ===========================================
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: virtuallab-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://virtuallab:virtuallab_secret@postgres:5432/virtuallab_akuanalis
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - virtuallab-network
+
+  # ===========================================
+  # PostgreSQL Database
+  # ===========================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: virtuallab-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: virtuallab
+      POSTGRES_PASSWORD: virtuallab_secret
+      POSTGRES_DB: virtuallab_akuanalis
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U virtuallab -d virtuallab_akuanalis"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - virtuallab-network
+
+  # ===========================================
+  # Redis (Optional - for rate limiting/cache)
+  # ===========================================
+  redis:
+    image: redis:7-alpine
+    container_name: virtuallab-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 128mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - virtuallab-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  virtuallab-network:
+    driver: bridge

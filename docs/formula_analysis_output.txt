@@ -1,0 +1,2646 @@
+﻿
+================================================================================
+WORKBOOK: Format Analisis Proksimat-a adam.xlsx
+================================================================================
+
+--- Format Kadar Air ---
+  Formula cells: 23
+  Input cells: 3
+  Output cells: 9
+  FORMULA E12: =IFERROR(H16,"0,0000")
+         type=conditional_calculation, inputs=['H16'], label=Bobot cawan kosong + sampel sebelum dikeringkan, cached=0,0000
+  FORMULA G13: =
+         type=calculation, inputs=[], label=Bobot sampel sebelum dikeringkan (g/mg), cached==
+  FORMULA H13: =E11
+         type=calculation, inputs=['E11'], label=Bobot sampel sebelum dikeringkan (g/mg), cached= 
+  FORMULA J13: =E13
+         type=calculation, inputs=['E13'], label==E11, cached= 
+  FORMULA L13: =E14
+         type=calculation, inputs=['E14'], label==E13, cached= 
+  FORMULA H14: =E13
+         type=calculation, inputs=['E13'], label=Bobot wadah kosong dan sampel setelah dikeringkan , cached= 
+  FORMULA E16: =H24
+         type=calculation, inputs=['H24'], label=Kadar Air (%), cached=0
+  FORMULA G16: =
+         type=calculation, inputs=[], label==H24, cached==
+  FORMULA H16: =IFERROR(H13+J13,"0,0000")
+         type=conditional_calculation, inputs=['H13', 'J13'], label==H24, cached=0,0000
+  FORMULA J16: =L13
+         type=calculation, inputs=['L13'], label==IFERROR(H13+J13,"0,0000"), cached= 
+  FORMULA H17: =E13
+         type=calculation, inputs=['E13'], label==IFERROR(H13+J13,"0,0000"), cached= 
+  FORMULA G19: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H19: =IFERROR(H16-J16,"0,0000")
+         type=conditional_calculation, inputs=['H16', 'J16'], label==E13, cached=0,0000
+  FORMULA H20: =H17
+         type=calculation, inputs=['H17'], label==IFERROR(H16-J16,"0,0000"), cached= 
+  FORMULA G22: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H22: =IFERROR(H19/H20,"0")
+         type=conditional_calculation, inputs=['H19', 'H20'], label==H17, cached=0
+  FORMULA H24: =H22*100
+         type=calculation, inputs=['H22'], label=Kadar Air (%) =, cached=0
+  FORMULA G33: =
+         type=calculation, inputs=[], label=Kadar Air (%) =, cached==
+  FORMULA H33: =IFERROR(E12-E14,"0,0000")
+         type=conditional_calculation, inputs=['E12', 'E14'], label=Berat sampel, cached=0,0000
+  FORMULA H34: =E13
+         type=calculation, inputs=['E13'], label==IFERROR(E12-E14,"0,0000"), cached= 
+  FORMULA G36: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H36: =IFERROR(H33/H34,"0")
+         type=conditional_calculation, inputs=['H33', 'H34'], label==E13, cached=0
+  FORMULA H38: =H36*100
+         type=calculation, inputs=['H36'], label=Kadar Air (%) =, cached=0
+
+  INPUTS:
+    E11: value= , label=Bobot wadah kosong (g/mg), unit=milligram
+    E13: value= , label=Bobot sampel sebelum dikeringkan (g/mg), unit=milligram
+    E14: value= , label=Bobot wadah kosong dan sampel setelah dikeringkan , unit=milligram
+
+--- Format Kadar Abu ---
+  Formula cells: 21
+  Input cells: 5
+  Output cells: 10
+  FORMULA H10: =D14
+         type=calculation, inputs=['D14'], label=Kadar Abu (%) =, cached=Bobot wadah kosong dan sampel setelah dikeringkan 
+  FORMULA H11: =D12
+         type=calculation, inputs=['D12'], label=Bobot wadah kosong (g/mg), cached=Bobot cawan kosong + sampel sebelum dikeringkan
+  FORMULA G13: =
+         type=calculation, inputs=[], label=Bobot sampel sebelum dikeringkan (g/mg), cached==
+  FORMULA H13: =E14
+         type=calculation, inputs=['E14'], label=Bobot sampel sebelum dikeringkan (g/mg), cached=0
+  FORMULA J13: =E11
+         type=calculation, inputs=['E11'], label==E14, cached=0
+  FORMULA H14: =E12
+         type=calculation, inputs=['E12'], label=Bobot wadah kosong dan sampel setelah dikeringkan, cached=0
+  FORMULA J14: =E11
+         type=calculation, inputs=['E11'], label==E12, cached=0
+  FORMULA E15: =E14-$E$11
+         type=calculation, inputs=['E14', 'E11'], label=Bobot sampel sesudah pemanasan/dikeringkan, cached=0
+  FORMULA G16: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA H16: =H13-$J$13
+         type=calculation, inputs=['H13', 'J13'], label=Hasil, cached=0
+  FORMULA E17: =H21
+         type=calculation, inputs=['H21'], label=Kadar Abu (%), cached=0
+  FORMULA H17: =H14-$J$14
+         type=calculation, inputs=['H14', 'J14'], label==H21, cached=0
+  FORMULA G19: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H19: =IFERROR($H$16/$H$17,"0")
+         type=conditional_calculation, inputs=['H16', 'H17'], label==H14-$J$14, cached=0
+  FORMULA H21: =IFERROR($H$19,"0%")
+         type=conditional_calculation, inputs=['H19'], label=Kadar Abu (%) =, cached=0
+  FORMULA G33: =
+         type=calculation, inputs=[], label=Kadar Abu (%) =, cached==
+  FORMULA H33: =E14-$E$11
+         type=calculation, inputs=['E14', 'E11'], label=Bobot Sampel, cached=0
+  FORMULA H34: =E12-$E$11
+         type=calculation, inputs=['E12', 'E11'], label==E14-$E$11, cached=0
+  FORMULA G36: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H36: =IFERROR($H$33/$H$34,"0")
+         type=conditional_calculation, inputs=['H33', 'H34'], label==E12-$E$11, cached=0
+  FORMULA H38: =H36*100
+         type=calculation, inputs=['H36'], label=Kadar Abu (%) =, cached=0
+
+  INPUTS:
+    E11: value=0, label=Bobot wadah kosong (g/mg), unit=milligram
+    E14: value=0, label=Bobot wadah kosong dan sampel setelah dikeringkan, unit=milligram
+    D14: value=Bobot wadah kosong dan sampel setelah dikeringkan , label=Bobot sampel sebelum dikeringkan (g/mg), unit=milligram
+    E12: value=0, label=Bobot cawan kosong + sampel sebelum dikeringkan, unit=milligram
+    D12: value=Bobot cawan kosong + sampel sebelum dikeringkan, label=Bobot wadah kosong (g/mg), unit=milligram
+
+--- Format Kadar Protein ---
+  Formula cells: 75
+  Input cells: 40
+  Output cells: 33
+  FORMULA H10: =G10-F10
+         type=calculation, inputs=['G10', 'F10'], label=Simplo, cached=0
+  FORMULA H11: =G11-F11
+         type=calculation, inputs=['G11', 'F11'], label=Duplo, cached=0
+  FORMULA H12: =AVERAGE(H10:H11)
+         type=aggregation, inputs=['H10', 'H11'], label=Volume rata-rata penitar (ml):, cached=0
+  FORMULA H18: =D18
+         type=calculation, inputs=['D18'], label=Konsentrasi X =, cached=Volume Y (ml)
+  FORMULA J18: =D19
+         type=calculation, inputs=['D19'], label==D18, cached=Konsentrasi Y (N, M)
+  FORMULA E20: =H12
+         type=calculation, inputs=['H12'], label=Volume rata-rataX (ml), cached=0
+  FORMULA E22: =H28
+         type=calculation, inputs=['H28'], label=Konsentrasi X (N, M), cached=0
+  FORMULA G22: =
+         type=calculation, inputs=[], label==H28, cached==
+  FORMULA H22: =E18
+         type=calculation, inputs=['E18'], label==H28, cached=0
+  FORMULA J22: =E19
+         type=calculation, inputs=['E19'], label==E18, cached=0
+  FORMULA H23: =E20
+         type=calculation, inputs=['E20'], label==E18, cached=0
+  FORMULA G25: =
+         type=calculation, inputs=[], label=yang ingin distandarisasi, cached==
+  FORMULA H25: =H22*J22
+         type=calculation, inputs=['H22', 'J22'], label=yang ingin distandarisasi, cached=0
+  FORMULA H26: =H23
+         type=calculation, inputs=['H23'], label=penstandarisasi, cached=0
+  FORMULA H28: =IFERROR(H25/H26,"0")
+         type=conditional_calculation, inputs=['H25', 'H26'], label=Konsentrasi X =, cached=0
+  FORMULA H35: =G35-F35
+         type=calculation, inputs=['G35', 'F35'], label=Simplo, cached=0
+  FORMULA H36: =G36-F36
+         type=calculation, inputs=['G36', 'F36'], label=Duplo, cached=0
+  FORMULA H37: =AVERAGE(H35:H36)
+         type=aggregation, inputs=['H35', 'H36'], label=Volume rata-rata blanko (ml):, cached=0
+  FORMULA H39: =G39-F39
+         type=calculation, inputs=['G39', 'F39'], label=Simplo, cached=0
+  FORMULA H40: =G40-F40
+         type=calculation, inputs=['G40', 'F40'], label=Duplo, cached=0
+  FORMULA H41: =AVERAGE(H35:H36)
+         type=aggregation, inputs=['H35', 'H36'], label=Volume rata-rata sampel (ml):, cached=0
+  FORMULA E48: =H37
+         type=calculation, inputs=['H37'], label=Volume Rata2 Blanko (ml), cached=0
+  FORMULA E49: =H41
+         type=calculation, inputs=['H41'], label=Volume Rata2 Sampel (ml), cached=0
+  FORMULA K49: =D52
+         type=calculation, inputs=['D52'], label=Volume NaOH (blanko-sampel), cached=Konsentrasi Penitar (N, M)
+  FORMULA M49: =D53
+         type=calculation, inputs=['D53'], label==D52, cached=Ketetapan Protein
+  FORMULA O49: =D54
+         type=calculation, inputs=['D54'], label==D53, cached=Faktor Pengenceran
+  FORMULA I50: =D50
+         type=calculation, inputs=['D50'], label=Massa Sampel (mg), cached=Massa Sampel (mg)
+  FORMULA H52: =
+         type=calculation, inputs=[], label=Konsentrasi Penitar (N, M), cached==
+  FORMULA I52: =E48-E49
+         type=calculation, inputs=['E48', 'E49'], label=Konsentrasi Penitar (N, M), cached=0
+  FORMULA K52: =E52
+         type=calculation, inputs=['E52'], label==E48-E49, cached=0
+  FORMULA M52: =E53
+         type=calculation, inputs=['E53'], label==E52, cached=14.007
+  FORMULA O52: =E54
+         type=calculation, inputs=['E54'], label==E53, cached=0
+  FORMULA I53: =E50
+         type=calculation, inputs=['E50'], label=Ketetapan Protein, cached=0
+  FORMULA H55: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA I55: =PRODUCT(I52:O52)
+         type=calculation, inputs=['I52', 'O52'], label==E50, cached=0
+  FORMULA E56: =I59
+         type=calculation, inputs=['I59'], label=% Nitrogen, cached=0%
+  FORMULA I56: =I53
+         type=calculation, inputs=['I53'], label==I59, cached=0
+  FORMULA I59: =IFERROR(I55/I56,"0%")
+         type=conditional_calculation, inputs=['I55', 'I56'], label=% Nitrogen =, cached=0%
+  FORMULA I63: =D64
+         type=calculation, inputs=['D64'], label=% Protein =, cached=% Nitrogen 
+  FORMULA K63: =D66
+         type=calculation, inputs=['D66'], label==D64, cached=Faktor Konversi
+  FORMULA D64: =D56
+         type=calculation, inputs=['D56'], label=Diketahui, cached=% Nitrogen 
+  FORMULA E64: =E56
+         type=calculation, inputs=['E56'], label==D56, cached=0%
+  FORMULA H64: =
+         type=calculation, inputs=[], label==E56, cached==
+  FORMULA I64: =E64
+         type=calculation, inputs=['E64'], label==E56, cached=0%
+  FORMULA K64: =E66
+         type=calculation, inputs=['E66'], label==E64, cached=0
+  FORMULA E66: =IFERROR(VLOOKUP(E65,D105:E122,2,FALSE),"0")
+         type=lookup, inputs=['E65', 'D105', 'E122'], label=Faktor Konversi, cached=0
+  FORMULA I66: =PRODUCT(I64:K64)
+         type=calculation, inputs=['I64', 'K64'], label=% Protein =, cached=0
+  FORMULA E68: =I66
+         type=calculation, inputs=['I66'], label=% Protein, cached=0
+  FORMULA E76: =H37
+         type=calculation, inputs=['H37'], label=Volume Rata2 Blanko (ml), cached=0
+  FORMULA E77: =H41
+         type=calculation, inputs=['H41'], label=Volume Rata2 Sampel (ml), cached=0
+  FORMULA K77: =D80
+         type=calculation, inputs=['D80'], label=Volume NaOH (blanko-sampel), cached=Konsentrasi Penitar (N, M)
+  FORMULA M77: =D81
+         type=calculation, inputs=['D81'], label==D80, cached=Ketetapan Protein
+  FORMULA O77: =D82
+         type=calculation, inputs=['D82'], label==D81, cached=Faktor Pengenceran
+  FORMULA I78: =D78
+         type=calculation, inputs=['D78'], label=Massa Sampel (mg), cached=Massa Sampel (mg)
+  FORMULA I80: =E76-E77
+         type=calculation, inputs=['E76', 'E77'], label=Konsentrasi Penitar (N, M), cached=0
+  FORMULA K80: =E80
+         type=calculation, inputs=['E80'], label==E76-E77, cached=0
+  FORMULA M80: =E81
+         type=calculation, inputs=['E81'], label==E80, cached=14.007
+  FORMULA O80: =E82
+         type=calculation, inputs=['E82'], label==E81, cached=0
+  FORMULA H81: =
+         type=calculation, inputs=[], label=Ketetapan Protein, cached==
+  FORMULA I81: =E78
+         type=calculation, inputs=['E78'], label=Ketetapan Protein, cached=0
+  FORMULA E84: =I87
+         type=calculation, inputs=['I87'], label=% Nitrogen, cached=0%
+  FORMULA H84: =
+         type=calculation, inputs=[], label==I87, cached==
+  FORMULA I84: =PRODUCT(I80:O80)
+         type=calculation, inputs=['I80', 'O80'], label==I87, cached=0
+  FORMULA I85: =I81
+         type=calculation, inputs=['I81'], label==PRODUCT(I80:O80), cached=0
+  FORMULA I87: =IFERROR(I55/I56,"0%")
+         type=conditional_calculation, inputs=['I55', 'I56'], label=% Nitrogen =, cached=0%
+  FORMULA I92: =D93
+         type=calculation, inputs=['D93'], label=% Protein =, cached=% Nitrogen 
+  FORMULA K92: =D95
+         type=calculation, inputs=['D95'], label==D93, cached=Faktor Konversi
+  FORMULA D93: =D84
+         type=calculation, inputs=['D84'], label=Diketahui, cached=% Nitrogen 
+  FORMULA E93: =E84
+         type=calculation, inputs=['E84'], label==D84, cached=0%
+  FORMULA H93: =
+         type=calculation, inputs=[], label==E84, cached==
+  FORMULA I93: =E93
+         type=calculation, inputs=['E93'], label==E84, cached=0%
+  FORMULA K93: =E95
+         type=calculation, inputs=['E95'], label==E93, cached=0
+  FORMULA I94: =PRODUCT(I93:K93)
+         type=calculation, inputs=['I93', 'K93'], label=% Protein =, cached=0
+  FORMULA E95: =IFERROR(VLOOKUP(E94,D105:E122,2,FALSE),"0")
+         type=lookup, inputs=['E94', 'D105', 'E122'], label=Faktor Konversi, cached=0
+  FORMULA E97: =I94
+         type=calculation, inputs=['I94'], label=% Protein, cached=0
+
+  INPUTS:
+    E52: value=0, label=Konsentrasi Penitar (N, M), unit=milliliter
+    D82: value=Faktor Pengenceran, label=Ketetapan Protein, unit=normalitas
+    E122: value=5.55, label=Gelatin, unit=normalitas
+    D53: value=Ketetapan Protein, label=Konsentrasi Penitar (N, M), unit=milligram
+    E18: value=0, label=Volume Y (ml), unit=milliliter
+    E80: value=0, label=Konsentrasi Penitar (N, M), unit=milliliter
+    D81: value=Ketetapan Protein, label=Konsentrasi Penitar (N, M), unit=milligram
+    F11: value=0, label=Duplo, unit=milliliter
+    D95: value=Faktor Konversi, label=Sampel, unit=liter
+    F39: value=0, label=Simplo, unit=milliliter
+    G10: value=0, label=Simplo, unit=milliliter
+    D18: value=Volume Y (ml), label=Diketahui, unit=milliliter
+    D52: value=Konsentrasi Penitar (N, M), label=Titran yang Dipakai, unit=milliliter
+    G40: value=0, label=Duplo, unit=
+    F35: value=0, label=Simplo, unit=milliliter
+    D105: value=Bir, label=Bahan, unit=liter
+    F10: value=0, label=Simplo, unit=milliliter
+    D19: value=Konsentrasi Y (N, M), label=Volume Y (ml), unit=milliliter
+    D66: value=Faktor Konversi, label=Sampel, unit=liter
+    F36: value=0, label=Duplo, unit=liter
+    G11: value=0, label=Duplo, unit=milliliter
+    D78: value=Massa Sampel (mg), label=Volume Rata2 Sampel (ml), unit=milliliter
+    E78: value=0, label=Massa Sampel (mg), unit=milliliter
+    E50: value=0, label=Massa Sampel (mg), unit=milliliter
+    D56: value=% Nitrogen , label=Faktor Pengenceran, unit=liter
+    D80: value=Konsentrasi Penitar (N, M), label=Titran yang Dipakai, unit=milliliter
+    D54: value=Faktor Pengenceran, label=Ketetapan Protein, unit=normalitas
+    F40: value=0, label=Duplo, unit=milliliter
+    E94: value= , label=Sampel, unit=liter
+    E82: value=0, label=Faktor Pengenceran, unit=normalitas
+    E19: value=0, label=Konsentrasi Y (N, M), unit=milliliter
+    G35: value=0, label=Simplo, unit=milliliter
+    E65: value= , label=Sampel, unit=liter
+    E81: value=14.007, label=Ketetapan Protein, unit=milligram
+    D84: value=% Nitrogen , label=Faktor Pengenceran, unit=liter
+    E53: value=14.007, label=Ketetapan Protein, unit=milligram
+    G39: value=0, label=Simplo, unit=
+    D50: value=Massa Sampel (mg), label=Volume Rata2 Sampel (ml), unit=milliliter
+    E54: value=0, label=Faktor Pengenceran, unit=normalitas
+    G36: value=0, label=Duplo, unit=liter
+
+--- Format %Protein_standarless ---
+  Formula cells: 55
+  Input cells: 32
+  Output cells: 26
+  FORMULA H12: =G12-F12
+         type=calculation, inputs=['G12', 'F12'], label=Simplo, cached=0
+  FORMULA H13: =G13-F13
+         type=calculation, inputs=['G13', 'F13'], label=Duplo, cached=0
+  FORMULA H14: =AVERAGE(H12:H13)
+         type=aggregation, inputs=['H12', 'H13'], label=Volume rata-rata blanko (ml):, cached=0
+  FORMULA H16: =G16-F16
+         type=calculation, inputs=['G16', 'F16'], label=Simplo, cached=0
+  FORMULA H17: =G17-F17
+         type=calculation, inputs=['G17', 'F17'], label=Duplo, cached=0
+  FORMULA H18: =AVERAGE(H12:H13)
+         type=aggregation, inputs=['H12', 'H13'], label=Volume rata-rata sampel (ml):, cached=0
+  FORMULA K26: =D29
+         type=calculation, inputs=['D29'], label=Volume NaOH (blanko-sampel), cached=Konsentrasi Penitar (N, M)
+  FORMULA M26: =D30
+         type=calculation, inputs=['D30'], label==D29, cached=Ketetapan Protein
+  FORMULA O26: =D31
+         type=calculation, inputs=['D31'], label==D30, cached=Faktor Pengenceran
+  FORMULA I27: =D27
+         type=calculation, inputs=['D27'], label=Massa Sampel (mg), cached=Massa Sampel (mg)
+  FORMULA H29: =
+         type=calculation, inputs=[], label=Konsentrasi Penitar (N, M), cached==
+  FORMULA M29: =E30
+         type=calculation, inputs=['E30'], label==D30, cached=14.007
+  FORMULA O29: =E31
+         type=calculation, inputs=['E31'], label==E30, cached=1
+  FORMULA H32: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA I32: =PRODUCT(I29:O29)
+         type=calculation, inputs=['I29', 'O29'], label==D27, cached=28.714349999999996
+  FORMULA E33: =I36
+         type=calculation, inputs=['I36'], label=% Nitrogen, cached=0.028642743142144635
+  FORMULA I33: =I30
+         type=calculation, inputs=['I30'], label==I36, cached=1002.5
+  FORMULA I36: =IFERROR(I32/I33,"0%")
+         type=conditional_calculation, inputs=['I32', 'I33'], label=% Nitrogen =, cached=0.028642743142144635
+  FORMULA I40: =D41
+         type=calculation, inputs=['D41'], label=% Protein =, cached=% Nitrogen 
+  FORMULA K40: =D43
+         type=calculation, inputs=['D43'], label==D41, cached=Faktor Konversi
+  FORMULA D41: =D33
+         type=calculation, inputs=['D33'], label=Diketahui, cached=% Nitrogen 
+  FORMULA E41: =I36
+         type=calculation, inputs=['I36'], label==D33, cached=0.028642743142144635
+  FORMULA H41: =
+         type=calculation, inputs=[], label==I36, cached==
+  FORMULA I41: =E41
+         type=calculation, inputs=['E41'], label==I36, cached=0.028642743142144635
+  FORMULA K41: =E43
+         type=calculation, inputs=['E43'], label==E41, cached=5.75
+  FORMULA E43: =IFERROR(VLOOKUP(E42,D82:E100,2,FALSE),"0")
+         type=lookup, inputs=['E42', 'D82', 'E100'], label=Faktor Konversi, cached=5.75
+  FORMULA I43: =PRODUCT(I41:K41)
+         type=calculation, inputs=['I41', 'K41'], label=% Protein =, cached=0.16469577306733166
+  FORMULA E45: =I43
+         type=calculation, inputs=['I43'], label=% Protein, cached=0.16469577306733166
+  FORMULA E53: =$H$14
+         type=calculation, inputs=['H14'], label=Volume Rata2 Blanko (ml), cached=0
+  FORMULA E54: =$H$18
+         type=calculation, inputs=['H18'], label=Volume Rata2 Sampel (ml), cached=0
+  FORMULA K54: =D57
+         type=calculation, inputs=['D57'], label=Volume NaOH (blanko-sampel), cached=Konsentrasi Penitar (N, M)
+  FORMULA M54: =D58
+         type=calculation, inputs=['D58'], label==D57, cached=Ketetapan Protein
+  FORMULA O54: =D59
+         type=calculation, inputs=['D59'], label==D58, cached=Faktor Pengenceran
+  FORMULA I55: =D55
+         type=calculation, inputs=['D55'], label=Massa Sampel (mg), cached=Massa Sampel (mg)
+  FORMULA I57: =E53-E54
+         type=calculation, inputs=['E53', 'E54'], label=Konsentrasi Penitar (N, M), cached=0
+  FORMULA K57: =E57
+         type=calculation, inputs=['E57'], label==E53-E54, cached=0
+  FORMULA M57: =E58
+         type=calculation, inputs=['E58'], label==E57, cached=14.007
+  FORMULA O57: =E59
+         type=calculation, inputs=['E59'], label==E58, cached=0
+  FORMULA H58: =
+         type=calculation, inputs=[], label=Ketetapan Protein, cached==
+  FORMULA I58: =E55
+         type=calculation, inputs=['E55'], label=Ketetapan Protein, cached=0
+  FORMULA E61: =I64
+         type=calculation, inputs=['I64'], label=% Nitrogen, cached=0%
+  FORMULA H61: =
+         type=calculation, inputs=[], label==I64, cached==
+  FORMULA I61: =PRODUCT(I57:O57)
+         type=calculation, inputs=['I57', 'O57'], label==I64, cached=0
+  FORMULA I62: =I58
+         type=calculation, inputs=['I58'], label==PRODUCT(I57:O57), cached=0
+  FORMULA I64: =IFERROR(I61/I62,"0%")
+         type=conditional_calculation, inputs=['I61', 'I62'], label=% Nitrogen =, cached=0%
+  FORMULA I69: =D70
+         type=calculation, inputs=['D70'], label=% Protein =, cached=% Nitrogen 
+  FORMULA K69: =D72
+         type=calculation, inputs=['D72'], label==D70, cached=Faktor Konversi
+  FORMULA D70: =D61
+         type=calculation, inputs=['D61'], label=Diketahui, cached=% Nitrogen 
+  FORMULA E70: =E61
+         type=calculation, inputs=['E61'], label==D61, cached=0%
+  FORMULA H70: =
+         type=calculation, inputs=[], label==E61, cached==
+  FORMULA I70: =E70
+         type=calculation, inputs=['E70'], label==E61, cached=0%
+  FORMULA K70: =E72
+         type=calculation, inputs=['E72'], label==E70, cached=0
+  FORMULA I71: =PRODUCT(I70:K70)
+         type=calculation, inputs=['I70', 'K70'], label=% Protein =, cached=0
+  FORMULA E72: =IFERROR(VLOOKUP(E71,D82:E100,2,FALSE),"0")
+         type=lookup, inputs=['E71', 'D82', 'E100'], label=Faktor Konversi, cached=0
+  FORMULA E74: =I71
+         type=calculation, inputs=['I71'], label=% Protein, cached=0
+
+  INPUTS:
+    D72: value=Faktor Konversi, label=Sampel, unit=liter
+    F12: value=0, label=Simplo, unit=milliliter
+    E59: value=0, label=Faktor Pengenceran, unit=normalitas
+    D82: value=Bir, label=Bahan, unit=liter
+    I29: value=20, label=Konsentrasi Penitar (N, M), unit=liter
+    E71: value= , label=Sampel, unit=liter
+    G13: value=0, label=Duplo, unit=liter
+    E30: value=14.007, label=Ketetapan Protein, unit=milligram
+    D61: value=% Nitrogen , label=Faktor Pengenceran, unit=liter
+    E100: value=5.75, label=Tahu, unit=normalitas
+    E31: value=1, label=Faktor Pengenceran, unit=normalitas
+    G16: value=0, label=Simplo, unit=
+    D58: value=Ketetapan Protein, label=Konsentrasi Penitar (N, M), unit=milligram
+    E57: value=0, label=Konsentrasi Penitar (N, M), unit=milliliter
+    D30: value=Ketetapan Protein, label=Konsentrasi Penitar (N, M), unit=milligram
+    G12: value=0, label=Simplo, unit=milliliter
+    D31: value=Faktor Pengenceran, label=Ketetapan Protein, unit=normalitas
+    D33: value=% Nitrogen , label=Faktor Pengenceran, unit=liter
+    F17: value=0, label=Duplo, unit=milliliter
+    D59: value=Faktor Pengenceran, label=Ketetapan Protein, unit=normalitas
+    E55: value=0, label=Massa Sampel (mg), unit=milliliter
+    E42: value=tahu, label=Sampel, unit=liter
+    I30: value=1002.5, label=Ketetapan Protein, unit=
+    G17: value=0, label=Duplo, unit=
+    F13: value=0, label=Duplo, unit=liter
+    D29: value=Konsentrasi Penitar (N, M), label=Titran yang Dipakai, unit=milliliter
+    E58: value=14.007, label=Ketetapan Protein, unit=milligram
+    F16: value=0, label=Simplo, unit=milliliter
+    D57: value=Konsentrasi Penitar (N, M), label=Titran yang Dipakai, unit=milliliter
+    D27: value=Massa Sampel (mg), label=Volume Rata2 Sampel (ml), unit=milliliter
+    D43: value=Faktor Konversi, label=Sampel, unit=liter
+    D55: value=Massa Sampel (mg), label=Volume Rata2 Sampel (ml), unit=milliliter
+
+--- karbo ---
+  Formula cells: 95
+  Input cells: 47
+  Output cells: 33
+  FORMULA G12: =F12-E12
+         type=calculation, inputs=['F12', 'E12'], label=Simplo, cached=0
+  FORMULA G13: =F13-E13
+         type=calculation, inputs=['F13', 'E13'], label=Duplo, cached=0
+  FORMULA G14: =AVERAGE(G12:G13)
+         type=aggregation, inputs=['G12', 'G13'], label=Volume rata-rata penitar (ml):, cached=0
+  FORMULA G20: =C20
+         type=calculation, inputs=['C20'], label=Konsentrasi X =, cached=Volume Y (ml)
+  FORMULA I20: =C21
+         type=calculation, inputs=['C21'], label==C20, cached=Konsentrasi Y
+  FORMULA D22: =G14
+         type=calculation, inputs=['G14'], label=Volume rata-rata X (ml), cached=0
+  FORMULA D24: =G30
+         type=calculation, inputs=['G30'], label=Konsentrasi X (N, M), cached=0
+  FORMULA F24: =
+         type=calculation, inputs=[], label==G30, cached==
+  FORMULA G24: =D20
+         type=calculation, inputs=['D20'], label==G30, cached=0
+  FORMULA I24: =D21
+         type=calculation, inputs=['D21'], label==D20, cached=0
+  FORMULA G25: =D22
+         type=calculation, inputs=['D22'], label==D20, cached=0
+  FORMULA F27: =
+         type=calculation, inputs=[], label=Natrium Tiosulfat 0,1 N, cached==
+  FORMULA G27: =G24*I24
+         type=calculation, inputs=['G24', 'I24'], label=Natrium Tiosulfat 0,1 N, cached=0
+  FORMULA G28: =G25
+         type=calculation, inputs=['G25'], label=Kalium Iodat 0,1 N, cached=0
+  FORMULA G30: =IFERROR(G27/G28,"0")
+         type=conditional_calculation, inputs=['G27', 'G28'], label=Konsentrasi X =, cached=0
+  FORMULA G38: =F38-E38
+         type=calculation, inputs=['F38', 'E38'], label=Simplo, cached=0
+  FORMULA G39: =F39-E39
+         type=calculation, inputs=['F39', 'E39'], label=Duplo, cached=0
+  FORMULA G40: =AVERAGE(G38:G39)
+         type=aggregation, inputs=['G38', 'G39'], label=Volume rata-rata blanko (ml):, cached=0
+  FORMULA G42: =F42-E42
+         type=calculation, inputs=['F42', 'E42'], label=Simplo, cached=0
+  FORMULA G43: =F43-E43
+         type=calculation, inputs=['F43', 'E43'], label=Duplo, cached=0
+  FORMULA G44: =AVERAGE(G38:G39)
+         type=aggregation, inputs=['G38', 'G39'], label=Volume rata-rata sampel (ml):, cached=0
+  FORMULA D50: =G40
+         type=calculation, inputs=['G40'], label=Volume Rata2 Blanko (ml), cached=0
+  FORMULA J50: =C53
+         type=calculation, inputs=['C53'], label=Volume Natrium Tiosulfat ( Blanko-Sampel), cached=Konsentrasi Penitar yang terstandarisasi(N, M)
+  FORMULA D51: =G44
+         type=calculation, inputs=['G44'], label=Volume Rata2 Sampel (ml), cached=0
+  FORMULA I51: =C54
+         type=calculation, inputs=['C54'], label==G44, cached=Konsentrasi Penitar yang dibuat (N)
+  FORMULA D53: =G30
+         type=calculation, inputs=['G30'], label=Konsentrasi Penitar yang terstandarisasi(N, M), cached=0
+  FORMULA G53: =
+         type=calculation, inputs=[], label==G30, cached==
+  FORMULA H53: =D50-D51
+         type=calculation, inputs=['D50', 'D51'], label==G30, cached=0
+  FORMULA J53: =D53
+         type=calculation, inputs=['D53'], label==D50-D51, cached=0
+  FORMULA H54: =D54
+         type=calculation, inputs=['D54'], label=Konsentrasi Penitar yang dibuat (N), cached=0.1
+  FORMULA G55: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA H55: =PRODUCT(H53:J53)
+         type=calculation, inputs=['H53', 'J53'], label==D54, cached=0
+  FORMULA D56: =H58
+         type=calculation, inputs=['H58'], label=Volume (mL) Natrium Tiosulfat 0,1 N, cached=0
+  FORMULA H56: =H54
+         type=calculation, inputs=['H54'], label==H58, cached=0.1
+  FORMULA H58: =IFERROR(H55/H56,"0")
+         type=conditional_calculation, inputs=['H55', 'H56'], label=Volume (mL) Natrium Tiosulfat 0,1 N =, cached=0
+  FORMULA D70: =D56
+         type=calculation, inputs=['D56'], label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, cached=0
+  FORMULA D72: =IFERROR(VLOOKUP(D70,H70:K93,2,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D70', 'H70', 'K93'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=belum terkonversi
+  FORMULA C95: =C72
+         type=calculation, inputs=['C72'], label=Diketahui, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA D95: =D72
+         type=calculation, inputs=['D72'], label==C72, cached=belum terkonversi
+  FORMULA G95: =C95
+         type=calculation, inputs=['C95'], label=% Glukosa =, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA J95: =C96
+         type=calculation, inputs=['C96'], label==C95, cached=Faktor Pengenceran
+  FORMULA G96: =C97
+         type=calculation, inputs=['C97'], label=Faktor Pengenceran, cached=Massa Sampel (mg)
+  FORMULA F98: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA G98: =D95
+         type=calculation, inputs=['D95'], label=Hasil, cached=belum terkonversi
+  FORMULA I98: =D96
+         type=calculation, inputs=['D96'], label==D95, cached=0
+  FORMULA D99: =G104
+         type=calculation, inputs=['G104'], label=% Glukosa, cached=0%
+  FORMULA G99: =D97
+         type=calculation, inputs=['D97'], label==G104, cached=0
+  FORMULA F101: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA G101: =PRODUCT(G98:I98)
+         type=calculation, inputs=['G98', 'I98'], label==D97, cached=0
+  FORMULA G102: =G99
+         type=calculation, inputs=['G99'], label==PRODUCT(G98:I98), cached=0
+  FORMULA G104: =IFERROR(G101/G102,"0%")
+         type=conditional_calculation, inputs=['G101', 'G102'], label=% Glukosa =, cached=0%
+  FORMULA C110: =C99
+         type=calculation, inputs=['C99'], label=Diketahui, cached=% Glukosa
+  FORMULA D110: =D99
+         type=calculation, inputs=['D99'], label==C99, cached=0%
+  FORMULA G110: =C110
+         type=calculation, inputs=['C110'], label=% Karbohidrat =, cached=% Glukosa
+  FORMULA I110: =C112
+         type=calculation, inputs=['C112'], label==C110, cached=Faktor Konversi
+  FORMULA D112: =IFERROR(VLOOKUP(D111,C121:D122,2,TRUE),"0")
+         type=lookup, inputs=['D111', 'C121', 'D122'], label=Faktor Konversi, cached=0
+  FORMULA F112: =
+         type=calculation, inputs=[], label==IFERROR(VLOOKUP(D111,C121:D122,2,TRUE),"0"), cached==
+  FORMULA G112: =D110
+         type=calculation, inputs=['D110'], label==IFERROR(VLOOKUP(D111,C121:D122,2,TRUE),"0"), cached=0%
+  FORMULA I112: =D112
+         type=calculation, inputs=['D112'], label==D110, cached=0
+  FORMULA D114: =G114
+         type=calculation, inputs=['G114'], label=% Karbohidrat, cached=0
+  FORMULA G114: =IFERROR(PRODUCT(G112:I112),"0%")
+         type=conditional_calculation, inputs=['G112', 'I112'], label=% Karbohidrat =, cached=0
+  FORMULA G133: =VLOOKUP(G134,C148:F169,1,TRUE)
+         type=lookup, inputs=['G134', 'C148', 'F169'], label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, cached=12
+  FORMULA H133: =VLOOKUP(G133,C148:F169,2,TRUE)
+         type=lookup, inputs=['G133', 'C148', 'F169'], label==VLOOKUP(G134,C148:F169,1,TRUE), cached=30.3
+  FORMULA G134: =D133
+         type=calculation, inputs=['D133'], label=Hasil, cached=12.3345
+  FORMULA D135: =IFERROR(VLOOKUP(D134,H163:K186,2,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D134', 'H163', 'K186'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=belum terkonversi
+  FORMULA G135: =G133+1
+         type=calculation, inputs=['G133'], label==IFERROR(VLOOKUP(D134,H163:K186,2,TRUE),"belum ter, cached=13
+  FORMULA H135: =VLOOKUP(G135,C148:F169,2,FALSE)
+         type=lookup, inputs=['G135', 'C148', 'F169'], label==G133+1, cached=33
+  FORMULA G140: =G135-G133
+         type=calculation, inputs=['G135', 'G133'], label=ml tio yang didapat -ml tio terkecil, cached=1
+  FORMULA H140: =H135-H133
+         type=calculation, inputs=['H135', 'H133'], label==G135-G133, cached=2.6999999999999993
+  FORMULA G141: =G134-G133
+         type=calculation, inputs=['G134', 'G133'], label==G135-G133, cached=0.33450000000000024
+  FORMULA H141: =-H135&"X"
+         type=string_operation, inputs=['H135'], label==G134-G133, cached=-33X
+  FORMULA C188: =C135
+         type=calculation, inputs=['C135'], label=Diketahui, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA D188: =D135
+         type=calculation, inputs=['D135'], label==C135, cached=belum terkonversi
+  FORMULA G188: =C188
+         type=calculation, inputs=['C188'], label=% Glukosa =, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA J188: =C189
+         type=calculation, inputs=['C189'], label==C188, cached=Faktor Pengenceran
+  FORMULA G189: =C190
+         type=calculation, inputs=['C190'], label=Faktor Pengenceran, cached=Massa Sampel (mg)
+  FORMULA F191: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA G191: =D188
+         type=calculation, inputs=['D188'], label=Hasil, cached=belum terkonversi
+  FORMULA I191: =D189
+         type=calculation, inputs=['D189'], label==D188, cached=0
+  FORMULA D192: =G197
+         type=calculation, inputs=['G197'], label=% Glukosa, cached=0%
+  FORMULA G192: =D190
+         type=calculation, inputs=['D190'], label==G197, cached=0
+  FORMULA F194: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA G194: =PRODUCT(G191:I191)
+         type=calculation, inputs=['G191', 'I191'], label==D190, cached=0
+  FORMULA G195: =G192
+         type=calculation, inputs=['G192'], label==PRODUCT(G191:I191), cached=0
+  FORMULA G197: =IFERROR(G194/G195,"0%")
+         type=conditional_calculation, inputs=['G194', 'G195'], label=% Glukosa =, cached=0%
+  FORMULA C203: =C192
+         type=calculation, inputs=['C192'], label=Diketahui, cached=% Glukosa
+  FORMULA D203: =D192
+         type=calculation, inputs=['D192'], label==C192, cached=0%
+  FORMULA G203: =C203
+         type=calculation, inputs=['C203'], label=% Karbohidrat =, cached=% Glukosa
+  FORMULA I203: =C205
+         type=calculation, inputs=['C205'], label==C203, cached=Faktor Konversi
+  FORMULA D205: =IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0")
+         type=lookup, inputs=['D204', 'C217', 'D218'], label=Faktor Konversi, cached=0
+  FORMULA F205: =
+         type=calculation, inputs=[], label==IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0"), cached==
+  FORMULA G205: =D203
+         type=calculation, inputs=['D203'], label==IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0"), cached=0%
+  FORMULA I205: =D205
+         type=calculation, inputs=['D205'], label==D203, cached=0
+  FORMULA D207: =G207
+         type=calculation, inputs=['G207'], label=% Karbohidrat, cached=0
+  FORMULA G207: =IFERROR(PRODUCT(G205:I205),"0%")
+         type=conditional_calculation, inputs=['G205', 'I205'], label=% Karbohidrat =, cached=0
+
+  INPUTS:
+    E12: value=0, label=Simplo, unit=milliliter
+    D111: value= , label=Jenis Sampel, unit=liter
+    H163: value=, label=, unit=
+    C190: value=Massa Sampel (mg), label=Faktor Pengenceran, unit=normalitas
+    C121: value=Pati, label=Jenis Sampel, unit=liter
+    D122: value=0.95, label=Sukrosa, unit=liter
+    E13: value=0, label=Duplo, unit=milliliter
+    C148: value=1, label=Volume (ml) Natrium Tiosulfat 0,1 N, unit=liter
+    C217: value=Pati, label=Jenis Sampel, unit=liter
+    C97: value=Massa Sampel (mg), label=Faktor Pengenceran, unit=normalitas
+    C112: value=Faktor Konversi, label=Jenis Sampel, unit=liter
+    F39: value=0, label=Duplo, unit=liter
+    D133: value=12.3345, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=milliliter
+    D190: value=0, label=Massa Sampel (mg), unit=normalitas
+    D204: value= , label=Jenis Sampel, unit=liter
+    F38: value=0, label=Simplo, unit=milliliter
+    D20: value=0, label=Volume Y (ml), unit=milliliter
+    E39: value=0, label=Duplo, unit=liter
+    C54: value=Konsentrasi Penitar yang dibuat (N), label=Konsentrasi Penitar yang terstandarisasi(N, M), unit=milliliter
+    C21: value=Konsentrasi Y, label=Volume Y (ml), unit=milliliter
+    D97: value=0, label=Massa Sampel (mg), unit=normalitas
+    K93: value=, label=Formula Perhitungan % Glukosa, unit=
+    D189: value=0, label=Faktor Pengenceran, unit=normalitas
+    F12: value=0, label=Simplo, unit=milliliter
+    H70: value=3, label==D56, unit=milliliter
+    C205: value=Faktor Konversi, label=Jenis Sampel, unit=liter
+    C20: value=Volume Y (ml), label=Diketahui, unit=milliliter
+    E38: value=0, label=Simplo, unit=milliliter
+    E42: value=0, label=Simplo, unit=milliliter
+    C135: value=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=liter
+    F43: value=0, label=Duplo, unit=
+    E43: value=0, label=Duplo, unit=milliliter
+    D21: value=0, label=Konsentrasi Y, unit=milliliter
+    F169: value=94.6, label=, unit=
+    C99: value=% Glukosa, label=Massa Sampel (mg), unit=liter
+    C72: value=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=liter
+    D54: value=0.1, label=Konsentrasi Penitar yang dibuat (N), unit=milliliter
+    C192: value=% Glukosa, label=Massa Sampel (mg), unit=liter
+    C189: value=Faktor Pengenceran, label==C135, unit=normalitas
+    F42: value=0, label=Simplo, unit=
+    D218: value=0.95, label=Sukrosa, unit=liter
+    K186: value=, label=Formula Perhitungan % Glukosa, unit=
+    C96: value=Faktor Pengenceran, label==C72, unit=normalitas
+    F13: value=0, label=Duplo, unit=milliliter
+    D96: value=0, label=Faktor Pengenceran, unit=normalitas
+    C53: value=Konsentrasi Penitar yang terstandarisasi(N, M), label=Titran yang Dipakai, unit=milliliter
+    D134: value=, label=Hasil, unit=liter
+
+--- karbo (2) ---
+  Formula cells: 87
+  Input cells: 47
+  Output cells: 32
+  FORMULA G12: =F12-E12
+         type=calculation, inputs=['F12', 'E12'], label=Simplo, cached=0
+  FORMULA G13: =F13-E13
+         type=calculation, inputs=['F13', 'E13'], label=Duplo, cached=0
+  FORMULA G14: =AVERAGE(G12:G13)
+         type=aggregation, inputs=['G12', 'G13'], label=Volume rata-rata penitar (ml):, cached=0
+  FORMULA G20: =C20
+         type=calculation, inputs=['C20'], label=Konsentrasi X =, cached=Volume Y (ml)
+  FORMULA I20: =C21
+         type=calculation, inputs=['C21'], label==C20, cached=Konsentrasi Y
+  FORMULA D22: =G14
+         type=calculation, inputs=['G14'], label=Volume rata-rata X (ml), cached=0
+  FORMULA D24: =G30
+         type=calculation, inputs=['G30'], label=Konsentrasi X (N, M), cached=0
+  FORMULA F24: =
+         type=calculation, inputs=[], label==G30, cached==
+  FORMULA G24: =D20
+         type=calculation, inputs=['D20'], label==G30, cached=0
+  FORMULA I24: =D21
+         type=calculation, inputs=['D21'], label==D20, cached=0
+  FORMULA G25: =D22
+         type=calculation, inputs=['D22'], label==D20, cached=0
+  FORMULA F27: =
+         type=calculation, inputs=[], label=Natrium Tiosulfat 0,1 N, cached==
+  FORMULA G27: =G24*I24
+         type=calculation, inputs=['G24', 'I24'], label=Natrium Tiosulfat 0,1 N, cached=0
+  FORMULA G28: =G25
+         type=calculation, inputs=['G25'], label=Kalium Iodat 0,1 N, cached=0
+  FORMULA G30: =IFERROR(G27/G28,"0")
+         type=conditional_calculation, inputs=['G27', 'G28'], label=Konsentrasi X =, cached=0
+  FORMULA G38: =F38-E38
+         type=calculation, inputs=['F38', 'E38'], label=Simplo, cached=0
+  FORMULA G39: =F39-E39
+         type=calculation, inputs=['F39', 'E39'], label=Duplo, cached=0
+  FORMULA G40: =AVERAGE(G38:G39)
+         type=aggregation, inputs=['G38', 'G39'], label=Volume rata-rata blanko (ml):, cached=0
+  FORMULA G42: =F42-E42
+         type=calculation, inputs=['F42', 'E42'], label=Simplo, cached=0
+  FORMULA G43: =F43-E43
+         type=calculation, inputs=['F43', 'E43'], label=Duplo, cached=0
+  FORMULA G44: =AVERAGE(G38:G39)
+         type=aggregation, inputs=['G38', 'G39'], label=Volume rata-rata sampel (ml):, cached=0
+  FORMULA D50: =G40
+         type=calculation, inputs=['G40'], label=Volume Rata2 Blanko (ml), cached=0
+  FORMULA J50: =C53
+         type=calculation, inputs=['C53'], label=Volume Natrium Tiosulfat ( Blanko-Sampel), cached=Konsentrasi Penitar yang terstandarisasi(N, M)
+  FORMULA D51: =G44
+         type=calculation, inputs=['G44'], label=Volume Rata2 Sampel (ml), cached=0
+  FORMULA I51: =C54
+         type=calculation, inputs=['C54'], label==G44, cached=Konsentrasi Penitar yang dibuat (N)
+  FORMULA D53: =G30
+         type=calculation, inputs=['G30'], label=Konsentrasi Penitar yang terstandarisasi(N, M), cached=0
+  FORMULA G53: =
+         type=calculation, inputs=[], label==G30, cached==
+  FORMULA H53: =D50-D51
+         type=calculation, inputs=['D50', 'D51'], label==G30, cached=0
+  FORMULA J53: =D53
+         type=calculation, inputs=['D53'], label==D50-D51, cached=0
+  FORMULA H54: =D54
+         type=calculation, inputs=['D54'], label=Konsentrasi Penitar yang dibuat (N), cached=0.1
+  FORMULA G55: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA H55: =PRODUCT(H53:J53)
+         type=calculation, inputs=['H53', 'J53'], label==D54, cached=0
+  FORMULA D56: =H58
+         type=calculation, inputs=['H58'], label=Volume (mL) Natrium Tiosulfat 0,1 N, cached=0
+  FORMULA H56: =H54
+         type=calculation, inputs=['H54'], label==H58, cached=0.1
+  FORMULA H58: =IFERROR(H55/H56,"0")
+         type=conditional_calculation, inputs=['H55', 'H56'], label=Volume (mL) Natrium Tiosulfat 0,1 N =, cached=0
+  FORMULA D72: =IFERROR(VLOOKUP(D70,H68:K89,2,FALSE),"belum terkonversi")
+         type=lookup, inputs=['D70', 'H68', 'K89'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=belum terkonversi
+  FORMULA C95: =C72
+         type=calculation, inputs=['C72'], label=Diketahui, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA D95: =D72
+         type=calculation, inputs=['D72'], label==C72, cached=belum terkonversi
+  FORMULA G95: =C95
+         type=calculation, inputs=['C95'], label=% Glukosa =, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA J95: =C96
+         type=calculation, inputs=['C96'], label==C95, cached=Faktor Pengenceran
+  FORMULA G96: =C97
+         type=calculation, inputs=['C97'], label=Faktor Pengenceran, cached=Massa Sampel (mg)
+  FORMULA F98: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA G98: =D95
+         type=calculation, inputs=['D95'], label=Hasil, cached=belum terkonversi
+  FORMULA I98: =D96
+         type=calculation, inputs=['D96'], label==D95, cached=0
+  FORMULA D99: =G104
+         type=calculation, inputs=['G104'], label=% Glukosa, cached=0%
+  FORMULA G99: =D97
+         type=calculation, inputs=['D97'], label==G104, cached=0
+  FORMULA F101: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA G101: =PRODUCT(G98:I98)
+         type=calculation, inputs=['G98', 'I98'], label==D97, cached=0
+  FORMULA G102: =G99
+         type=calculation, inputs=['G99'], label==PRODUCT(G98:I98), cached=0
+  FORMULA G104: =IFERROR(G101/G102,"0%")
+         type=conditional_calculation, inputs=['G101', 'G102'], label=% Glukosa =, cached=0%
+  FORMULA C110: =C99
+         type=calculation, inputs=['C99'], label=Diketahui, cached=% Glukosa
+  FORMULA D110: =D99
+         type=calculation, inputs=['D99'], label==C99, cached=0%
+  FORMULA G110: =C110
+         type=calculation, inputs=['C110'], label=% Karbohidrat =, cached=% Glukosa
+  FORMULA I110: =C112
+         type=calculation, inputs=['C112'], label==C110, cached=Faktor Konversi
+  FORMULA D112: =IFERROR(VLOOKUP(D111,C124:D125,2,TRUE),"0")
+         type=lookup, inputs=['D111', 'C124', 'D125'], label=Faktor Konversi, cached=0
+  FORMULA F112: =
+         type=calculation, inputs=[], label==IFERROR(VLOOKUP(D111,C124:D125,2,TRUE),"0"), cached==
+  FORMULA G112: =D110
+         type=calculation, inputs=['D110'], label==IFERROR(VLOOKUP(D111,C124:D125,2,TRUE),"0"), cached=0%
+  FORMULA I112: =D112
+         type=calculation, inputs=['D112'], label==D110, cached=0
+  FORMULA D114: =G114
+         type=calculation, inputs=['G114'], label=% Karbohidrat, cached=0
+  FORMULA G114: =IFERROR(PRODUCT(G112:I112),"0%")
+         type=conditional_calculation, inputs=['G112', 'I112'], label=% Karbohidrat =, cached=0
+  FORMULA F135: =C136&"="
+         type=string_operation, inputs=['C136'], label=Nilai, cached=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat=
+  FORMULA D136: =D124
+         type=calculation, inputs=['D124'], label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, cached=0.9
+  FORMULA D138: =IFERROR(VLOOKUP(D137,H163:K186,2,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D137', 'H163', 'K186'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=belum terkonversi
+  FORMULA C188: =C138
+         type=calculation, inputs=['C138'], label=Diketahui, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA D188: =D138
+         type=calculation, inputs=['D138'], label==C138, cached=belum terkonversi
+  FORMULA G188: =C188
+         type=calculation, inputs=['C188'], label=% Glukosa =, cached=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula
+  FORMULA J188: =C189
+         type=calculation, inputs=['C189'], label==C188, cached=Faktor Pengenceran
+  FORMULA G189: =C190
+         type=calculation, inputs=['C190'], label=Faktor Pengenceran, cached=Massa Sampel (mg)
+  FORMULA F191: =
+         type=calculation, inputs=[], label=Hasil, cached==
+  FORMULA G191: =D188
+         type=calculation, inputs=['D188'], label=Hasil, cached=belum terkonversi
+  FORMULA I191: =D189
+         type=calculation, inputs=['D189'], label==D188, cached=0
+  FORMULA D192: =G197
+         type=calculation, inputs=['G197'], label=% Glukosa, cached=0%
+  FORMULA G192: =D190
+         type=calculation, inputs=['D190'], label==G197, cached=0
+  FORMULA F194: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA G194: =PRODUCT(G191:I191)
+         type=calculation, inputs=['G191', 'I191'], label==D190, cached=0
+  FORMULA G195: =G192
+         type=calculation, inputs=['G192'], label==PRODUCT(G191:I191), cached=0
+  FORMULA G197: =IFERROR(G194/G195,"0%")
+         type=conditional_calculation, inputs=['G194', 'G195'], label=% Glukosa =, cached=0%
+  FORMULA C203: =C192
+         type=calculation, inputs=['C192'], label=Diketahui, cached=% Glukosa
+  FORMULA D203: =D192
+         type=calculation, inputs=['D192'], label==C192, cached=0%
+  FORMULA G203: =C203
+         type=calculation, inputs=['C203'], label=% Karbohidrat =, cached=% Glukosa
+  FORMULA I203: =C205
+         type=calculation, inputs=['C205'], label==C203, cached=Faktor Konversi
+  FORMULA D205: =IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0")
+         type=lookup, inputs=['D204', 'C217', 'D218'], label=Faktor Konversi, cached=0
+  FORMULA F205: =
+         type=calculation, inputs=[], label==IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0"), cached==
+  FORMULA G205: =D203
+         type=calculation, inputs=['D203'], label==IFERROR(VLOOKUP(D204,C217:D218,2,TRUE),"0"), cached=0%
+  FORMULA I205: =D205
+         type=calculation, inputs=['D205'], label==D203, cached=0
+  FORMULA D207: =G207
+         type=calculation, inputs=['G207'], label=% Karbohidrat, cached=0
+  FORMULA G207: =IFERROR(PRODUCT(G205:I205),"0%")
+         type=conditional_calculation, inputs=['G205', 'I205'], label=% Karbohidrat =, cached=0
+
+  INPUTS:
+    E12: value=0, label=Simplo, unit=milliliter
+    D111: value= , label=Jenis Sampel, unit=liter
+    D124: value=0.9, label=Pati, unit=liter
+    H163: value=, label=, unit=
+    C190: value=Massa Sampel (mg), label=Faktor Pengenceran, unit=normalitas
+    E13: value=0, label=Duplo, unit=milliliter
+    C217: value=Pati, label=Jenis Sampel, unit=liter
+    C97: value=Massa Sampel (mg), label=Faktor Pengenceran, unit=normalitas
+    C112: value=Faktor Konversi, label=Jenis Sampel, unit=liter
+    F39: value=0, label=Duplo, unit=liter
+    D190: value=0, label=Massa Sampel (mg), unit=normalitas
+    D204: value= , label=Jenis Sampel, unit=liter
+    F38: value=0, label=Simplo, unit=milliliter
+    D20: value=0, label=Volume Y (ml), unit=milliliter
+    E39: value=0, label=Duplo, unit=liter
+    C54: value=Konsentrasi Penitar yang dibuat (N), label=Konsentrasi Penitar yang terstandarisasi(N, M), unit=milliliter
+    C21: value=Konsentrasi Y, label=Volume Y (ml), unit=milliliter
+    D97: value=0, label=Massa Sampel (mg), unit=normalitas
+    K89: value=94.6, label=, unit=
+    D189: value=0, label=Faktor Pengenceran, unit=normalitas
+    D70: value= , label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=milliliter
+    F12: value=0, label=Simplo, unit=milliliter
+    C205: value=Faktor Konversi, label=Jenis Sampel, unit=liter
+    C20: value=Volume Y (ml), label=Diketahui, unit=milliliter
+    E38: value=0, label=Simplo, unit=milliliter
+    E42: value=0, label=Simplo, unit=milliliter
+    F43: value=0, label=Duplo, unit=
+    E43: value=0, label=Duplo, unit=milliliter
+    C138: value=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=liter
+    D21: value=0, label=Konsentrasi Y, unit=milliliter
+    C99: value=% Glukosa, label=Massa Sampel (mg), unit=liter
+    C72: value=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang didapat ke mg Gula, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=liter
+    D54: value=0.1, label=Konsentrasi Penitar yang dibuat (N), unit=milliliter
+    H68: value=1, label=Volume (ml) Natrium Tiosulfat 0,1 N, unit=liter
+    C192: value=% Glukosa, label=Massa Sampel (mg), unit=liter
+    C189: value=Faktor Pengenceran, label==C138, unit=normalitas
+    C136: value=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, label=Diketahui, unit=milliliter
+    D125: value=0.95, label=Sukrosa, unit=liter
+    F42: value=0, label=Simplo, unit=
+    D218: value=0.95, label=Sukrosa, unit=liter
+    K186: value=, label=Formula Perhitungan % Glukosa, unit=
+    C96: value=Faktor Pengenceran, label==C72, unit=normalitas
+    F13: value=0, label=Duplo, unit=milliliter
+    C53: value=Konsentrasi Penitar yang terstandarisasi(N, M), label=Titran yang Dipakai, unit=milliliter
+    D96: value=0, label=Faktor Pengenceran, unit=normalitas
+    C124: value=Pati, label=Jenis Sampel, unit=liter
+    D137: value=, label=Hasil, unit=liter
+
+--- Konversi Tabel Luff Schoorl ---
+  Formula cells: 3
+  Input cells: 5
+  Output cells: 3
+  FORMULA D11: =IFERROR(VLOOKUP(D9,H7:I28,2,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D9', 'H7', 'I28'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=2.4
+  FORMULA D12: =IFERROR(VLOOKUP(D9,H7:J28,3,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D9', 'H7', 'J28'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=3.6
+  FORMULA D13: =IFERROR(VLOOKUP(D9,H7:K28,4,TRUE),"belum terkonversi")
+         type=lookup, inputs=['D9', 'H7', 'K28'], label=Konversi volume (ml) Natrium Tiosulfat 0,1 N yang , cached=3.9
+
+  INPUTS:
+    H7: value=1, label=Volume (ml) Natrium Tiosulfat 0,1 N, unit=liter
+    D9: value=1, label=Volume (mL) Natrium Tiosulfat 0,1 N yang didapat, unit=milliliter
+    J28: value=88, label=, unit=
+    I28: value=62.2, label=, unit=
+    K28: value=94.6, label=, unit=
+
+--- Rekap Kegiatan ---
+  Formula cells: 0
+  Input cells: 0
+  Output cells: 0
+
+  LOOKUP TABLES:
+    Sheet=Format Kadar Protein, Col=C, Rows=105-122, Count=18, Header=No.
+    Sheet=Format Kadar Protein, Col=E, Rows=105-122, Count=18, Header=Faktor Konversi
+    Sheet=Format %Protein_standarless, Col=C, Rows=82-100, Count=19, Header=No.
+    Sheet=Format %Protein_standarless, Col=E, Rows=82-100, Count=19, Header=Faktor Konversi
+    Sheet=karbo, Col=C, Rows=148-169, Count=22, Header=Volume (ml) Natrium Tiosulfat 0,1 N
+    Sheet=karbo, Col=D, Rows=148-169, Count=22, Header=Glukosa, Fruktosa Gula Inverse (mg)
+    Sheet=karbo, Col=E, Rows=148-169, Count=22, Header=Laktosa (mg)
+    Sheet=karbo, Col=F, Rows=148-169, Count=22, Header=Maltosa
+    Sheet=karbo, Col=H, Rows=68-89, Count=22, Header=Volume (ml) Natrium Tiosulfat 0,1 N
+    Sheet=karbo, Col=I, Rows=68-89, Count=22, Header=Glukosa, Fruktosa Gula Inverse (mg)
+    Sheet=karbo, Col=J, Rows=68-89, Count=22, Header=Laktosa (mg)
+    Sheet=karbo, Col=K, Rows=68-89, Count=22, Header=Maltosa
+    Sheet=karbo (2), Col=C, Rows=145-166, Count=22, Header=Volume (ml) Natrium Tiosulfat 0,1 N
+    Sheet=karbo (2), Col=D, Rows=145-166, Count=22, Header=Glukosa, Fruktosa Gula Inverse (mg)
+    Sheet=karbo (2), Col=E, Rows=145-166, Count=22, Header=Laktosa (mg)
+    Sheet=karbo (2), Col=F, Rows=145-166, Count=22, Header=Maltosa
+    Sheet=karbo (2), Col=H, Rows=68-89, Count=22, Header=Volume (ml) Natrium Tiosulfat 0,1 N
+    Sheet=karbo (2), Col=I, Rows=68-89, Count=22, Header=Glukosa, Fruktosa Gula Inverse (mg)
+    Sheet=karbo (2), Col=J, Rows=68-89, Count=22, Header=Laktosa (mg)
+    Sheet=karbo (2), Col=K, Rows=68-89, Count=22, Header=Maltosa
+    Sheet=Konversi Tabel Luff Schoorl, Col=H, Rows=7-28, Count=22, Header=Volume (ml) Natrium Tiosulfat 0,1 N
+    Sheet=Konversi Tabel Luff Schoorl, Col=I, Rows=7-28, Count=22, Header=Glukosa, Fruktosa Gula Inverse (mg)
+    Sheet=Konversi Tabel Luff Schoorl, Col=J, Rows=7-28, Count=22, Header=Laktosa (mg)
+    Sheet=Konversi Tabel Luff Schoorl, Col=K, Rows=7-28, Count=22, Header=Maltosa
+
+================================================================================
+WORKBOOK: Format Analisis Volumetri-Perhitungan.xlsx
+================================================================================
+
+--- SPU KIMIA ---
+  Formula cells: 353
+  Input cells: 354
+  Output cells: 353
+  FORMULA K7: =IFERROR(VLOOKUP(J7,C6:F124,2,FALSE),"unknown")
+         type=lookup, inputs=['J7', 'C6', 'F124'], label=Nomor Massa (Ar), cached=unknown
+  FORMULA L7: =IFERROR(VLOOKUP(J7,C6:F124,3,FALSE),"unknown")
+         type=lookup, inputs=['J7', 'C6', 'F124'], label==IFERROR(VLOOKUP(J7,C6:F124,2,FALSE),"unknown"), cached=unknown
+  FORMULA M7: =IFERROR(VLOOKUP(J7,C6:F124,4,FALSE),"unknown")
+         type=lookup, inputs=['J7', 'C6', 'F124'], label==IFERROR(VLOOKUP(J7,C6:F124,3,FALSE),"unknown"), cached=unknown
+  FORMULA K8: =IFERROR(VLOOKUP(J8,C7:F125,2,FALSE),"")
+         type=lookup, inputs=['J8', 'C7', 'F125'], label==IFERROR(VLOOKUP(J7,C6:F124,2,FALSE),"unknown"), cached=
+  FORMULA L8: =IFERROR(VLOOKUP(J8,C7:F125,3,FALSE),"")
+         type=lookup, inputs=['J8', 'C7', 'F125'], label==IFERROR(VLOOKUP(J8,C7:F125,2,FALSE),""), cached=
+  FORMULA M8: =IFERROR(VLOOKUP(J8,C7:F125,4,FALSE),"")
+         type=lookup, inputs=['J8', 'C7', 'F125'], label==IFERROR(VLOOKUP(J8,C7:F125,3,FALSE),""), cached=
+  FORMULA K9: =IFERROR(VLOOKUP(J9,C8:F126,2,FALSE),"")
+         type=lookup, inputs=['J9', 'C8', 'F126'], label==IFERROR(VLOOKUP(J8,C7:F125,2,FALSE),""), cached=
+  FORMULA L9: =IFERROR(VLOOKUP(J9,C8:F126,3,FALSE),"")
+         type=lookup, inputs=['J9', 'C8', 'F126'], label==IFERROR(VLOOKUP(J9,C8:F126,2,FALSE),""), cached=
+  FORMULA M9: =IFERROR(VLOOKUP(J9,C8:F126,4,FALSE),"")
+         type=lookup, inputs=['J9', 'C8', 'F126'], label==IFERROR(VLOOKUP(J9,C8:F126,3,FALSE),""), cached=
+  FORMULA K10: =IFERROR(VLOOKUP(J10,C9:F127,2,FALSE),"")
+         type=lookup, inputs=['J10', 'C9', 'F127'], label==IFERROR(VLOOKUP(J9,C8:F126,2,FALSE),""), cached=
+  FORMULA L10: =IFERROR(VLOOKUP(J10,C9:F127,3,FALSE),"")
+         type=lookup, inputs=['J10', 'C9', 'F127'], label==IFERROR(VLOOKUP(J10,C9:F127,2,FALSE),""), cached=
+  FORMULA M10: =IFERROR(VLOOKUP(J10,C9:F127,4,FALSE),"")
+         type=lookup, inputs=['J10', 'C9', 'F127'], label==IFERROR(VLOOKUP(J10,C9:F127,3,FALSE),""), cached=
+  FORMULA K11: =IFERROR(VLOOKUP(J11,C10:F128,2,FALSE),"")
+         type=lookup, inputs=['J11', 'C10', 'F128'], label==IFERROR(VLOOKUP(J10,C9:F127,2,FALSE),""), cached=
+  FORMULA L11: =IFERROR(VLOOKUP(J11,C10:F128,3,FALSE),"")
+         type=lookup, inputs=['J11', 'C10', 'F128'], label==IFERROR(VLOOKUP(J11,C10:F128,2,FALSE),""), cached=
+  FORMULA M11: =IFERROR(VLOOKUP(J11,C10:F128,4,FALSE),"")
+         type=lookup, inputs=['J11', 'C10', 'F128'], label==IFERROR(VLOOKUP(J11,C10:F128,3,FALSE),""), cached=
+  FORMULA L12: =IFERROR(VLOOKUP(J12,C11:F129,3,FALSE),"")
+         type=lookup, inputs=['J12', 'C11', 'F129'], label==IFERROR(VLOOKUP(J11,C10:F128,3,FALSE),""), cached=
+  FORMULA M12: =IFERROR(VLOOKUP(J12,C11:F129,4,FALSE),"")
+         type=lookup, inputs=['J12', 'C11', 'F129'], label==IFERROR(VLOOKUP(J12,C11:F129,3,FALSE),""), cached=
+  FORMULA K13: =IFERROR(VLOOKUP(J13,C12:F130,2,FALSE),"")
+         type=lookup, inputs=['J13', 'C12', 'F130'], label==IFERROR(VLOOKUP(J11,C10:F128,2,FALSE),""), cached=
+  FORMULA L13: =IFERROR(VLOOKUP(J13,C12:F130,3,FALSE),"")
+         type=lookup, inputs=['J13', 'C12', 'F130'], label==IFERROR(VLOOKUP(J13,C12:F130,2,FALSE),""), cached=
+  FORMULA M13: =IFERROR(VLOOKUP(J13,C12:F130,4,FALSE),"")
+         type=lookup, inputs=['J13', 'C12', 'F130'], label==IFERROR(VLOOKUP(J13,C12:F130,3,FALSE),""), cached=
+  FORMULA K14: =IFERROR(VLOOKUP(J14,C13:F131,2,FALSE),"")
+         type=lookup, inputs=['J14', 'C13', 'F131'], label==IFERROR(VLOOKUP(J13,C12:F130,2,FALSE),""), cached=
+  FORMULA L14: =IFERROR(VLOOKUP(J14,C13:F131,3,FALSE),"")
+         type=lookup, inputs=['J14', 'C13', 'F131'], label==IFERROR(VLOOKUP(J14,C13:F131,2,FALSE),""), cached=
+  FORMULA M14: =IFERROR(VLOOKUP(J14,C13:F131,4,FALSE),"")
+         type=lookup, inputs=['J14', 'C13', 'F131'], label==IFERROR(VLOOKUP(J14,C13:F131,3,FALSE),""), cached=
+  FORMULA K15: =IFERROR(VLOOKUP(J15,C14:F132,2,FALSE),"")
+         type=lookup, inputs=['J15', 'C14', 'F132'], label==IFERROR(VLOOKUP(J14,C13:F131,2,FALSE),""), cached=
+  FORMULA L15: =IFERROR(VLOOKUP(J15,C14:F132,3,FALSE),"")
+         type=lookup, inputs=['J15', 'C14', 'F132'], label==IFERROR(VLOOKUP(J15,C14:F132,2,FALSE),""), cached=
+  FORMULA M15: =IFERROR(VLOOKUP(J15,C14:F132,4,FALSE),"")
+         type=lookup, inputs=['J15', 'C14', 'F132'], label==IFERROR(VLOOKUP(J15,C14:F132,3,FALSE),""), cached=
+  FORMULA K16: =IFERROR(VLOOKUP(J16,C15:F133,2,FALSE),"")
+         type=lookup, inputs=['J16', 'C15', 'F133'], label==IFERROR(VLOOKUP(J15,C14:F132,2,FALSE),""), cached=
+  FORMULA L16: =IFERROR(VLOOKUP(J16,C15:F133,3,FALSE),"")
+         type=lookup, inputs=['J16', 'C15', 'F133'], label==IFERROR(VLOOKUP(J16,C15:F133,2,FALSE),""), cached=
+  FORMULA M16: =IFERROR(VLOOKUP(J16,C15:F133,4,FALSE),"")
+         type=lookup, inputs=['J16', 'C15', 'F133'], label==IFERROR(VLOOKUP(J16,C15:F133,3,FALSE),""), cached=
+  FORMULA K17: =IFERROR(VLOOKUP(J17,C16:F134,2,FALSE),"")
+         type=lookup, inputs=['J17', 'C16', 'F134'], label==IFERROR(VLOOKUP(J16,C15:F133,2,FALSE),""), cached=
+  FORMULA L17: =IFERROR(VLOOKUP(J17,C16:F134,3,FALSE),"")
+         type=lookup, inputs=['J17', 'C16', 'F134'], label==IFERROR(VLOOKUP(J17,C16:F134,2,FALSE),""), cached=
+  FORMULA M17: =IFERROR(VLOOKUP(J17,C16:F134,4,FALSE),"")
+         type=lookup, inputs=['J17', 'C16', 'F134'], label==IFERROR(VLOOKUP(J17,C16:F134,3,FALSE),""), cached=
+  FORMULA K18: =IFERROR(VLOOKUP(J18,C17:F135,2,FALSE),"")
+         type=lookup, inputs=['J18', 'C17', 'F135'], label==IFERROR(VLOOKUP(J17,C16:F134,2,FALSE),""), cached=
+  FORMULA L18: =IFERROR(VLOOKUP(J18,C17:F135,3,FALSE),"")
+         type=lookup, inputs=['J18', 'C17', 'F135'], label==IFERROR(VLOOKUP(J18,C17:F135,2,FALSE),""), cached=
+  FORMULA M18: =IFERROR(VLOOKUP(J18,C17:F135,4,FALSE),"")
+         type=lookup, inputs=['J18', 'C17', 'F135'], label==IFERROR(VLOOKUP(J18,C17:F135,3,FALSE),""), cached=
+  FORMULA K19: =IFERROR(VLOOKUP(J19,C18:F136,2,FALSE),"")
+         type=lookup, inputs=['J19', 'C18', 'F136'], label==IFERROR(VLOOKUP(J18,C17:F135,2,FALSE),""), cached=
+  FORMULA L19: =IFERROR(VLOOKUP(J19,C18:F136,3,FALSE),"")
+         type=lookup, inputs=['J19', 'C18', 'F136'], label==IFERROR(VLOOKUP(J19,C18:F136,2,FALSE),""), cached=
+  FORMULA M19: =IFERROR(VLOOKUP(J19,C18:F136,4,FALSE),"")
+         type=lookup, inputs=['J19', 'C18', 'F136'], label==IFERROR(VLOOKUP(J19,C18:F136,3,FALSE),""), cached=
+  FORMULA K20: =IFERROR(VLOOKUP(J20,C19:F137,2,FALSE),"")
+         type=lookup, inputs=['J20', 'C19', 'F137'], label==IFERROR(VLOOKUP(J19,C18:F136,2,FALSE),""), cached=
+  FORMULA L20: =IFERROR(VLOOKUP(J20,C19:F137,3,FALSE),"")
+         type=lookup, inputs=['J20', 'C19', 'F137'], label==IFERROR(VLOOKUP(J20,C19:F137,2,FALSE),""), cached=
+  FORMULA M20: =IFERROR(VLOOKUP(J20,C19:F137,4,FALSE),"")
+         type=lookup, inputs=['J20', 'C19', 'F137'], label==IFERROR(VLOOKUP(J20,C19:F137,3,FALSE),""), cached=
+  FORMULA K21: =IFERROR(VLOOKUP(J21,C20:F138,2,FALSE),"")
+         type=lookup, inputs=['J21', 'C20', 'F138'], label==IFERROR(VLOOKUP(J20,C19:F137,2,FALSE),""), cached=
+  FORMULA L21: =IFERROR(VLOOKUP(J21,C20:F138,3,FALSE),"")
+         type=lookup, inputs=['J21', 'C20', 'F138'], label==IFERROR(VLOOKUP(J21,C20:F138,2,FALSE),""), cached=
+  FORMULA M21: =IFERROR(VLOOKUP(J21,C20:F138,4,FALSE),"")
+         type=lookup, inputs=['J21', 'C20', 'F138'], label==IFERROR(VLOOKUP(J21,C20:F138,3,FALSE),""), cached=
+  FORMULA K22: =IFERROR(VLOOKUP(J22,C21:F139,2,FALSE),"")
+         type=lookup, inputs=['J22', 'C21', 'F139'], label==IFERROR(VLOOKUP(J21,C20:F138,2,FALSE),""), cached=
+  FORMULA L22: =IFERROR(VLOOKUP(J22,C21:F139,3,FALSE),"")
+         type=lookup, inputs=['J22', 'C21', 'F139'], label==IFERROR(VLOOKUP(J22,C21:F139,2,FALSE),""), cached=
+  FORMULA M22: =IFERROR(VLOOKUP(J22,C21:F139,4,FALSE),"")
+         type=lookup, inputs=['J22', 'C21', 'F139'], label==IFERROR(VLOOKUP(J22,C21:F139,3,FALSE),""), cached=
+  FORMULA K23: =IFERROR(VLOOKUP(J23,C22:F140,2,FALSE),"")
+         type=lookup, inputs=['J23', 'C22', 'F140'], label==IFERROR(VLOOKUP(J22,C21:F139,2,FALSE),""), cached=
+  FORMULA L23: =IFERROR(VLOOKUP(J23,C22:F140,3,FALSE),"")
+         type=lookup, inputs=['J23', 'C22', 'F140'], label==IFERROR(VLOOKUP(J23,C22:F140,2,FALSE),""), cached=
+  FORMULA M23: =IFERROR(VLOOKUP(J23,C22:F140,4,FALSE),"")
+         type=lookup, inputs=['J23', 'C22', 'F140'], label==IFERROR(VLOOKUP(J23,C22:F140,3,FALSE),""), cached=
+  FORMULA K24: =IFERROR(VLOOKUP(J24,C23:F141,2,FALSE),"")
+         type=lookup, inputs=['J24', 'C23', 'F141'], label==IFERROR(VLOOKUP(J23,C22:F140,2,FALSE),""), cached=
+  FORMULA L24: =IFERROR(VLOOKUP(J24,C23:F141,3,FALSE),"")
+         type=lookup, inputs=['J24', 'C23', 'F141'], label==IFERROR(VLOOKUP(J24,C23:F141,2,FALSE),""), cached=
+  FORMULA M24: =IFERROR(VLOOKUP(J24,C23:F141,4,FALSE),"")
+         type=lookup, inputs=['J24', 'C23', 'F141'], label==IFERROR(VLOOKUP(J24,C23:F141,3,FALSE),""), cached=
+  FORMULA K25: =IFERROR(VLOOKUP(J25,C24:F142,2,FALSE),"")
+         type=lookup, inputs=['J25', 'C24', 'F142'], label==IFERROR(VLOOKUP(J24,C23:F141,2,FALSE),""), cached=
+  FORMULA L25: =IFERROR(VLOOKUP(J25,C24:F142,3,FALSE),"")
+         type=lookup, inputs=['J25', 'C24', 'F142'], label==IFERROR(VLOOKUP(J25,C24:F142,2,FALSE),""), cached=
+  FORMULA M25: =IFERROR(VLOOKUP(J25,C24:F142,4,FALSE),"")
+         type=lookup, inputs=['J25', 'C24', 'F142'], label==IFERROR(VLOOKUP(J25,C24:F142,3,FALSE),""), cached=
+  FORMULA K26: =IFERROR(VLOOKUP(J26,C25:F143,2,FALSE),"")
+         type=lookup, inputs=['J26', 'C25', 'F143'], label==IFERROR(VLOOKUP(J25,C24:F142,2,FALSE),""), cached=
+  FORMULA L26: =IFERROR(VLOOKUP(J26,C25:F143,3,FALSE),"")
+         type=lookup, inputs=['J26', 'C25', 'F143'], label==IFERROR(VLOOKUP(J26,C25:F143,2,FALSE),""), cached=
+  FORMULA M26: =IFERROR(VLOOKUP(J26,C25:F143,4,FALSE),"")
+         type=lookup, inputs=['J26', 'C25', 'F143'], label==IFERROR(VLOOKUP(J26,C25:F143,3,FALSE),""), cached=
+  FORMULA K27: =IFERROR(VLOOKUP(J27,C26:F144,2,FALSE),"")
+         type=lookup, inputs=['J27', 'C26', 'F144'], label==IFERROR(VLOOKUP(J26,C25:F143,2,FALSE),""), cached=
+  FORMULA L27: =IFERROR(VLOOKUP(J27,C26:F144,3,FALSE),"")
+         type=lookup, inputs=['J27', 'C26', 'F144'], label==IFERROR(VLOOKUP(J27,C26:F144,2,FALSE),""), cached=
+  FORMULA M27: =IFERROR(VLOOKUP(J27,C26:F144,4,FALSE),"")
+         type=lookup, inputs=['J27', 'C26', 'F144'], label==IFERROR(VLOOKUP(J27,C26:F144,3,FALSE),""), cached=
+  FORMULA K28: =IFERROR(VLOOKUP(J28,C27:F145,2,FALSE),"")
+         type=lookup, inputs=['J28', 'C27', 'F145'], label==IFERROR(VLOOKUP(J27,C26:F144,2,FALSE),""), cached=
+  FORMULA L28: =IFERROR(VLOOKUP(J28,C27:F145,3,FALSE),"")
+         type=lookup, inputs=['J28', 'C27', 'F145'], label==IFERROR(VLOOKUP(J28,C27:F145,2,FALSE),""), cached=
+  FORMULA M28: =IFERROR(VLOOKUP(J28,C27:F145,4,FALSE),"")
+         type=lookup, inputs=['J28', 'C27', 'F145'], label==IFERROR(VLOOKUP(J28,C27:F145,3,FALSE),""), cached=
+  FORMULA K29: =IFERROR(VLOOKUP(J29,C28:F146,2,FALSE),"")
+         type=lookup, inputs=['J29', 'C28', 'F146'], label==IFERROR(VLOOKUP(J28,C27:F145,2,FALSE),""), cached=
+  FORMULA L29: =IFERROR(VLOOKUP(J29,C28:F146,3,FALSE),"")
+         type=lookup, inputs=['J29', 'C28', 'F146'], label==IFERROR(VLOOKUP(J29,C28:F146,2,FALSE),""), cached=
+  FORMULA M29: =IFERROR(VLOOKUP(J29,C28:F146,4,FALSE),"")
+         type=lookup, inputs=['J29', 'C28', 'F146'], label==IFERROR(VLOOKUP(J29,C28:F146,3,FALSE),""), cached=
+  FORMULA K30: =IFERROR(VLOOKUP(J30,C29:F147,2,FALSE),"")
+         type=lookup, inputs=['J30', 'C29', 'F147'], label==IFERROR(VLOOKUP(J29,C28:F146,2,FALSE),""), cached=
+  FORMULA L30: =IFERROR(VLOOKUP(J30,C29:F147,3,FALSE),"")
+         type=lookup, inputs=['J30', 'C29', 'F147'], label==IFERROR(VLOOKUP(J30,C29:F147,2,FALSE),""), cached=
+  FORMULA M30: =IFERROR(VLOOKUP(J30,C29:F147,4,FALSE),"")
+         type=lookup, inputs=['J30', 'C29', 'F147'], label==IFERROR(VLOOKUP(J30,C29:F147,3,FALSE),""), cached=
+  FORMULA K31: =IFERROR(VLOOKUP(J31,C30:F148,2,FALSE),"")
+         type=lookup, inputs=['J31', 'C30', 'F148'], label==IFERROR(VLOOKUP(J30,C29:F147,2,FALSE),""), cached=
+  FORMULA L31: =IFERROR(VLOOKUP(J31,C30:F148,3,FALSE),"")
+         type=lookup, inputs=['J31', 'C30', 'F148'], label==IFERROR(VLOOKUP(J31,C30:F148,2,FALSE),""), cached=
+  FORMULA M31: =IFERROR(VLOOKUP(J31,C30:F148,4,FALSE),"")
+         type=lookup, inputs=['J31', 'C30', 'F148'], label==IFERROR(VLOOKUP(J31,C30:F148,3,FALSE),""), cached=
+  FORMULA K32: =IFERROR(VLOOKUP(J32,C31:F149,2,FALSE),"")
+         type=lookup, inputs=['J32', 'C31', 'F149'], label==IFERROR(VLOOKUP(J31,C30:F148,2,FALSE),""), cached=
+  FORMULA L32: =IFERROR(VLOOKUP(J32,C31:F149,3,FALSE),"")
+         type=lookup, inputs=['J32', 'C31', 'F149'], label==IFERROR(VLOOKUP(J32,C31:F149,2,FALSE),""), cached=
+  FORMULA M32: =IFERROR(VLOOKUP(J32,C31:F149,4,FALSE),"")
+         type=lookup, inputs=['J32', 'C31', 'F149'], label==IFERROR(VLOOKUP(J32,C31:F149,3,FALSE),""), cached=
+  FORMULA K33: =IFERROR(VLOOKUP(J33,C32:F150,2,FALSE),"")
+         type=lookup, inputs=['J33', 'C32', 'F150'], label==IFERROR(VLOOKUP(J32,C31:F149,2,FALSE),""), cached=
+  FORMULA L33: =IFERROR(VLOOKUP(J33,C32:F150,3,FALSE),"")
+         type=lookup, inputs=['J33', 'C32', 'F150'], label==IFERROR(VLOOKUP(J33,C32:F150,2,FALSE),""), cached=
+  FORMULA M33: =IFERROR(VLOOKUP(J33,C32:F150,4,FALSE),"")
+         type=lookup, inputs=['J33', 'C32', 'F150'], label==IFERROR(VLOOKUP(J33,C32:F150,3,FALSE),""), cached=
+  FORMULA K34: =IFERROR(VLOOKUP(J34,C33:F151,2,FALSE),"")
+         type=lookup, inputs=['J34', 'C33', 'F151'], label==IFERROR(VLOOKUP(J33,C32:F150,2,FALSE),""), cached=
+  FORMULA L34: =IFERROR(VLOOKUP(J34,C33:F151,3,FALSE),"")
+         type=lookup, inputs=['J34', 'C33', 'F151'], label==IFERROR(VLOOKUP(J34,C33:F151,2,FALSE),""), cached=
+  FORMULA M34: =IFERROR(VLOOKUP(J34,C33:F151,4,FALSE),"")
+         type=lookup, inputs=['J34', 'C33', 'F151'], label==IFERROR(VLOOKUP(J34,C33:F151,3,FALSE),""), cached=
+  FORMULA K35: =IFERROR(VLOOKUP(J35,C34:F152,2,FALSE),"")
+         type=lookup, inputs=['J35', 'C34', 'F152'], label==IFERROR(VLOOKUP(J34,C33:F151,2,FALSE),""), cached=
+  FORMULA L35: =IFERROR(VLOOKUP(J35,C34:F152,3,FALSE),"")
+         type=lookup, inputs=['J35', 'C34', 'F152'], label==IFERROR(VLOOKUP(J35,C34:F152,2,FALSE),""), cached=
+  FORMULA M35: =IFERROR(VLOOKUP(J35,C34:F152,4,FALSE),"")
+         type=lookup, inputs=['J35', 'C34', 'F152'], label==IFERROR(VLOOKUP(J35,C34:F152,3,FALSE),""), cached=
+  FORMULA K36: =IFERROR(VLOOKUP(J36,C35:F153,2,FALSE),"")
+         type=lookup, inputs=['J36', 'C35', 'F153'], label==IFERROR(VLOOKUP(J35,C34:F152,2,FALSE),""), cached=
+  FORMULA L36: =IFERROR(VLOOKUP(J36,C35:F153,3,FALSE),"")
+         type=lookup, inputs=['J36', 'C35', 'F153'], label==IFERROR(VLOOKUP(J36,C35:F153,2,FALSE),""), cached=
+  FORMULA M36: =IFERROR(VLOOKUP(J36,C35:F153,4,FALSE),"")
+         type=lookup, inputs=['J36', 'C35', 'F153'], label==IFERROR(VLOOKUP(J36,C35:F153,3,FALSE),""), cached=
+  FORMULA K37: =IFERROR(VLOOKUP(J37,C36:F154,2,FALSE),"")
+         type=lookup, inputs=['J37', 'C36', 'F154'], label==IFERROR(VLOOKUP(J36,C35:F153,2,FALSE),""), cached=
+  FORMULA L37: =IFERROR(VLOOKUP(J37,C36:F154,3,FALSE),"")
+         type=lookup, inputs=['J37', 'C36', 'F154'], label==IFERROR(VLOOKUP(J37,C36:F154,2,FALSE),""), cached=
+  FORMULA M37: =IFERROR(VLOOKUP(J37,C36:F154,4,FALSE),"")
+         type=lookup, inputs=['J37', 'C36', 'F154'], label==IFERROR(VLOOKUP(J37,C36:F154,3,FALSE),""), cached=
+  FORMULA K38: =IFERROR(VLOOKUP(J38,C37:F155,2,FALSE),"")
+         type=lookup, inputs=['J38', 'C37', 'F155'], label==IFERROR(VLOOKUP(J37,C36:F154,2,FALSE),""), cached=
+  FORMULA L38: =IFERROR(VLOOKUP(J38,C37:F155,3,FALSE),"")
+         type=lookup, inputs=['J38', 'C37', 'F155'], label==IFERROR(VLOOKUP(J38,C37:F155,2,FALSE),""), cached=
+  FORMULA M38: =IFERROR(VLOOKUP(J38,C37:F155,4,FALSE),"")
+         type=lookup, inputs=['J38', 'C37', 'F155'], label==IFERROR(VLOOKUP(J38,C37:F155,3,FALSE),""), cached=
+  FORMULA K39: =IFERROR(VLOOKUP(J39,C38:F156,2,FALSE),"")
+         type=lookup, inputs=['J39', 'C38', 'F156'], label==IFERROR(VLOOKUP(J38,C37:F155,2,FALSE),""), cached=
+  FORMULA L39: =IFERROR(VLOOKUP(J39,C38:F156,3,FALSE),"")
+         type=lookup, inputs=['J39', 'C38', 'F156'], label==IFERROR(VLOOKUP(J39,C38:F156,2,FALSE),""), cached=
+  FORMULA M39: =IFERROR(VLOOKUP(J39,C38:F156,4,FALSE),"")
+         type=lookup, inputs=['J39', 'C38', 'F156'], label==IFERROR(VLOOKUP(J39,C38:F156,3,FALSE),""), cached=
+  FORMULA K40: =IFERROR(VLOOKUP(J40,C39:F157,2,FALSE),"")
+         type=lookup, inputs=['J40', 'C39', 'F157'], label==IFERROR(VLOOKUP(J39,C38:F156,2,FALSE),""), cached=
+  FORMULA L40: =IFERROR(VLOOKUP(J40,C39:F157,3,FALSE),"")
+         type=lookup, inputs=['J40', 'C39', 'F157'], label==IFERROR(VLOOKUP(J40,C39:F157,2,FALSE),""), cached=
+  FORMULA M40: =IFERROR(VLOOKUP(J40,C39:F157,4,FALSE),"")
+         type=lookup, inputs=['J40', 'C39', 'F157'], label==IFERROR(VLOOKUP(J40,C39:F157,3,FALSE),""), cached=
+  FORMULA K41: =IFERROR(VLOOKUP(J41,C40:F158,2,FALSE),"")
+         type=lookup, inputs=['J41', 'C40', 'F158'], label==IFERROR(VLOOKUP(J40,C39:F157,2,FALSE),""), cached=
+  FORMULA L41: =IFERROR(VLOOKUP(J41,C40:F158,3,FALSE),"")
+         type=lookup, inputs=['J41', 'C40', 'F158'], label==IFERROR(VLOOKUP(J41,C40:F158,2,FALSE),""), cached=
+  FORMULA M41: =IFERROR(VLOOKUP(J41,C40:F158,4,FALSE),"")
+         type=lookup, inputs=['J41', 'C40', 'F158'], label==IFERROR(VLOOKUP(J41,C40:F158,3,FALSE),""), cached=
+  FORMULA K42: =IFERROR(VLOOKUP(J42,C41:F159,2,FALSE),"")
+         type=lookup, inputs=['J42', 'C41', 'F159'], label==IFERROR(VLOOKUP(J41,C40:F158,2,FALSE),""), cached=
+  FORMULA L42: =IFERROR(VLOOKUP(J42,C41:F159,3,FALSE),"")
+         type=lookup, inputs=['J42', 'C41', 'F159'], label==IFERROR(VLOOKUP(J42,C41:F159,2,FALSE),""), cached=
+  FORMULA M42: =IFERROR(VLOOKUP(J42,C41:F159,4,FALSE),"")
+         type=lookup, inputs=['J42', 'C41', 'F159'], label==IFERROR(VLOOKUP(J42,C41:F159,3,FALSE),""), cached=
+  FORMULA K43: =IFERROR(VLOOKUP(J43,C42:F160,2,FALSE),"")
+         type=lookup, inputs=['J43', 'C42', 'F160'], label==IFERROR(VLOOKUP(J42,C41:F159,2,FALSE),""), cached=
+  FORMULA L43: =IFERROR(VLOOKUP(J43,C42:F160,3,FALSE),"")
+         type=lookup, inputs=['J43', 'C42', 'F160'], label==IFERROR(VLOOKUP(J43,C42:F160,2,FALSE),""), cached=
+  FORMULA M43: =IFERROR(VLOOKUP(J43,C42:F160,4,FALSE),"")
+         type=lookup, inputs=['J43', 'C42', 'F160'], label==IFERROR(VLOOKUP(J43,C42:F160,3,FALSE),""), cached=
+  FORMULA K44: =IFERROR(VLOOKUP(J44,C43:F161,2,FALSE),"")
+         type=lookup, inputs=['J44', 'C43', 'F161'], label==IFERROR(VLOOKUP(J43,C42:F160,2,FALSE),""), cached=
+  FORMULA L44: =IFERROR(VLOOKUP(J44,C43:F161,3,FALSE),"")
+         type=lookup, inputs=['J44', 'C43', 'F161'], label==IFERROR(VLOOKUP(J44,C43:F161,2,FALSE),""), cached=
+  FORMULA M44: =IFERROR(VLOOKUP(J44,C43:F161,4,FALSE),"")
+         type=lookup, inputs=['J44', 'C43', 'F161'], label==IFERROR(VLOOKUP(J44,C43:F161,3,FALSE),""), cached=
+  FORMULA K45: =IFERROR(VLOOKUP(J45,C44:F162,2,FALSE),"")
+         type=lookup, inputs=['J45', 'C44', 'F162'], label==IFERROR(VLOOKUP(J44,C43:F161,2,FALSE),""), cached=
+  FORMULA L45: =IFERROR(VLOOKUP(J45,C44:F162,3,FALSE),"")
+         type=lookup, inputs=['J45', 'C44', 'F162'], label==IFERROR(VLOOKUP(J45,C44:F162,2,FALSE),""), cached=
+  FORMULA M45: =IFERROR(VLOOKUP(J45,C44:F162,4,FALSE),"")
+         type=lookup, inputs=['J45', 'C44', 'F162'], label==IFERROR(VLOOKUP(J45,C44:F162,3,FALSE),""), cached=
+  FORMULA K46: =IFERROR(VLOOKUP(J46,C45:F163,2,FALSE),"")
+         type=lookup, inputs=['J46', 'C45', 'F163'], label==IFERROR(VLOOKUP(J45,C44:F162,2,FALSE),""), cached=
+  FORMULA L46: =IFERROR(VLOOKUP(J46,C45:F163,3,FALSE),"")
+         type=lookup, inputs=['J46', 'C45', 'F163'], label==IFERROR(VLOOKUP(J46,C45:F163,2,FALSE),""), cached=
+  FORMULA M46: =IFERROR(VLOOKUP(J46,C45:F163,4,FALSE),"")
+         type=lookup, inputs=['J46', 'C45', 'F163'], label==IFERROR(VLOOKUP(J46,C45:F163,3,FALSE),""), cached=
+  FORMULA K47: =IFERROR(VLOOKUP(J47,C46:F164,2,FALSE),"")
+         type=lookup, inputs=['J47', 'C46', 'F164'], label==IFERROR(VLOOKUP(J46,C45:F163,2,FALSE),""), cached=
+  FORMULA L47: =IFERROR(VLOOKUP(J47,C46:F164,3,FALSE),"")
+         type=lookup, inputs=['J47', 'C46', 'F164'], label==IFERROR(VLOOKUP(J47,C46:F164,2,FALSE),""), cached=
+  FORMULA M47: =IFERROR(VLOOKUP(J47,C46:F164,4,FALSE),"")
+         type=lookup, inputs=['J47', 'C46', 'F164'], label==IFERROR(VLOOKUP(J47,C46:F164,3,FALSE),""), cached=
+  FORMULA K48: =IFERROR(VLOOKUP(J48,C47:F165,2,FALSE),"")
+         type=lookup, inputs=['J48', 'C47', 'F165'], label==IFERROR(VLOOKUP(J47,C46:F164,2,FALSE),""), cached=
+  FORMULA L48: =IFERROR(VLOOKUP(J48,C47:F165,3,FALSE),"")
+         type=lookup, inputs=['J48', 'C47', 'F165'], label==IFERROR(VLOOKUP(J48,C47:F165,2,FALSE),""), cached=
+  FORMULA M48: =IFERROR(VLOOKUP(J48,C47:F165,4,FALSE),"")
+         type=lookup, inputs=['J48', 'C47', 'F165'], label==IFERROR(VLOOKUP(J48,C47:F165,3,FALSE),""), cached=
+  FORMULA K49: =IFERROR(VLOOKUP(J49,C48:F166,2,FALSE),"")
+         type=lookup, inputs=['J49', 'C48', 'F166'], label==IFERROR(VLOOKUP(J48,C47:F165,2,FALSE),""), cached=
+  FORMULA L49: =IFERROR(VLOOKUP(J49,C48:F166,3,FALSE),"")
+         type=lookup, inputs=['J49', 'C48', 'F166'], label==IFERROR(VLOOKUP(J49,C48:F166,2,FALSE),""), cached=
+  FORMULA M49: =IFERROR(VLOOKUP(J49,C48:F166,4,FALSE),"")
+         type=lookup, inputs=['J49', 'C48', 'F166'], label==IFERROR(VLOOKUP(J49,C48:F166,3,FALSE),""), cached=
+  FORMULA K50: =IFERROR(VLOOKUP(J50,C49:F167,2,FALSE),"")
+         type=lookup, inputs=['J50', 'C49', 'F167'], label==IFERROR(VLOOKUP(J49,C48:F166,2,FALSE),""), cached=
+  FORMULA L50: =IFERROR(VLOOKUP(J50,C49:F167,3,FALSE),"")
+         type=lookup, inputs=['J50', 'C49', 'F167'], label==IFERROR(VLOOKUP(J50,C49:F167,2,FALSE),""), cached=
+  FORMULA M50: =IFERROR(VLOOKUP(J50,C49:F167,4,FALSE),"")
+         type=lookup, inputs=['J50', 'C49', 'F167'], label==IFERROR(VLOOKUP(J50,C49:F167,3,FALSE),""), cached=
+  FORMULA K51: =IFERROR(VLOOKUP(J51,C50:F168,2,FALSE),"")
+         type=lookup, inputs=['J51', 'C50', 'F168'], label==IFERROR(VLOOKUP(J50,C49:F167,2,FALSE),""), cached=
+  FORMULA L51: =IFERROR(VLOOKUP(J51,C50:F168,3,FALSE),"")
+         type=lookup, inputs=['J51', 'C50', 'F168'], label==IFERROR(VLOOKUP(J51,C50:F168,2,FALSE),""), cached=
+  FORMULA M51: =IFERROR(VLOOKUP(J51,C50:F168,4,FALSE),"")
+         type=lookup, inputs=['J51', 'C50', 'F168'], label==IFERROR(VLOOKUP(J51,C50:F168,3,FALSE),""), cached=
+  FORMULA K52: =IFERROR(VLOOKUP(J52,C51:F169,2,FALSE),"")
+         type=lookup, inputs=['J52', 'C51', 'F169'], label==IFERROR(VLOOKUP(J51,C50:F168,2,FALSE),""), cached=
+  FORMULA L52: =IFERROR(VLOOKUP(J52,C51:F169,3,FALSE),"")
+         type=lookup, inputs=['J52', 'C51', 'F169'], label==IFERROR(VLOOKUP(J52,C51:F169,2,FALSE),""), cached=
+  FORMULA M52: =IFERROR(VLOOKUP(J52,C51:F169,4,FALSE),"")
+         type=lookup, inputs=['J52', 'C51', 'F169'], label==IFERROR(VLOOKUP(J52,C51:F169,3,FALSE),""), cached=
+  FORMULA K53: =IFERROR(VLOOKUP(J53,C52:F170,2,FALSE),"")
+         type=lookup, inputs=['J53', 'C52', 'F170'], label==IFERROR(VLOOKUP(J52,C51:F169,2,FALSE),""), cached=
+  FORMULA L53: =IFERROR(VLOOKUP(J53,C52:F170,3,FALSE),"")
+         type=lookup, inputs=['J53', 'C52', 'F170'], label==IFERROR(VLOOKUP(J53,C52:F170,2,FALSE),""), cached=
+  FORMULA M53: =IFERROR(VLOOKUP(J53,C52:F170,4,FALSE),"")
+         type=lookup, inputs=['J53', 'C52', 'F170'], label==IFERROR(VLOOKUP(J53,C52:F170,3,FALSE),""), cached=
+  FORMULA K54: =IFERROR(VLOOKUP(J54,C53:F171,2,FALSE),"")
+         type=lookup, inputs=['J54', 'C53', 'F171'], label==IFERROR(VLOOKUP(J53,C52:F170,2,FALSE),""), cached=
+  FORMULA L54: =IFERROR(VLOOKUP(J54,C53:F171,3,FALSE),"")
+         type=lookup, inputs=['J54', 'C53', 'F171'], label==IFERROR(VLOOKUP(J54,C53:F171,2,FALSE),""), cached=
+  FORMULA M54: =IFERROR(VLOOKUP(J54,C53:F171,4,FALSE),"")
+         type=lookup, inputs=['J54', 'C53', 'F171'], label==IFERROR(VLOOKUP(J54,C53:F171,3,FALSE),""), cached=
+  FORMULA K55: =IFERROR(VLOOKUP(J55,C54:F172,2,FALSE),"")
+         type=lookup, inputs=['J55', 'C54', 'F172'], label==IFERROR(VLOOKUP(J54,C53:F171,2,FALSE),""), cached=
+  FORMULA L55: =IFERROR(VLOOKUP(J55,C54:F172,3,FALSE),"")
+         type=lookup, inputs=['J55', 'C54', 'F172'], label==IFERROR(VLOOKUP(J55,C54:F172,2,FALSE),""), cached=
+  FORMULA M55: =IFERROR(VLOOKUP(J55,C54:F172,4,FALSE),"")
+         type=lookup, inputs=['J55', 'C54', 'F172'], label==IFERROR(VLOOKUP(J55,C54:F172,3,FALSE),""), cached=
+  FORMULA K56: =IFERROR(VLOOKUP(J56,C55:F173,2,FALSE),"")
+         type=lookup, inputs=['J56', 'C55', 'F173'], label==IFERROR(VLOOKUP(J55,C54:F172,2,FALSE),""), cached=
+  FORMULA L56: =IFERROR(VLOOKUP(J56,C55:F173,3,FALSE),"")
+         type=lookup, inputs=['J56', 'C55', 'F173'], label==IFERROR(VLOOKUP(J56,C55:F173,2,FALSE),""), cached=
+  FORMULA M56: =IFERROR(VLOOKUP(J56,C55:F173,4,FALSE),"")
+         type=lookup, inputs=['J56', 'C55', 'F173'], label==IFERROR(VLOOKUP(J56,C55:F173,3,FALSE),""), cached=
+  FORMULA K57: =IFERROR(VLOOKUP(J57,C56:F174,2,FALSE),"")
+         type=lookup, inputs=['J57', 'C56', 'F174'], label==IFERROR(VLOOKUP(J56,C55:F173,2,FALSE),""), cached=
+  FORMULA L57: =IFERROR(VLOOKUP(J57,C56:F174,3,FALSE),"")
+         type=lookup, inputs=['J57', 'C56', 'F174'], label==IFERROR(VLOOKUP(J57,C56:F174,2,FALSE),""), cached=
+  FORMULA M57: =IFERROR(VLOOKUP(J57,C56:F174,4,FALSE),"")
+         type=lookup, inputs=['J57', 'C56', 'F174'], label==IFERROR(VLOOKUP(J57,C56:F174,3,FALSE),""), cached=
+  FORMULA K58: =IFERROR(VLOOKUP(J58,C57:F175,2,FALSE),"")
+         type=lookup, inputs=['J58', 'C57', 'F175'], label==IFERROR(VLOOKUP(J57,C56:F174,2,FALSE),""), cached=
+  FORMULA L58: =IFERROR(VLOOKUP(J58,C57:F175,3,FALSE),"")
+         type=lookup, inputs=['J58', 'C57', 'F175'], label==IFERROR(VLOOKUP(J58,C57:F175,2,FALSE),""), cached=
+  FORMULA M58: =IFERROR(VLOOKUP(J58,C57:F175,4,FALSE),"")
+         type=lookup, inputs=['J58', 'C57', 'F175'], label==IFERROR(VLOOKUP(J58,C57:F175,3,FALSE),""), cached=
+  FORMULA K59: =IFERROR(VLOOKUP(J59,C58:F176,2,FALSE),"")
+         type=lookup, inputs=['J59', 'C58', 'F176'], label==IFERROR(VLOOKUP(J58,C57:F175,2,FALSE),""), cached=
+  FORMULA L59: =IFERROR(VLOOKUP(J59,C58:F176,3,FALSE),"")
+         type=lookup, inputs=['J59', 'C58', 'F176'], label==IFERROR(VLOOKUP(J59,C58:F176,2,FALSE),""), cached=
+  FORMULA M59: =IFERROR(VLOOKUP(J59,C58:F176,4,FALSE),"")
+         type=lookup, inputs=['J59', 'C58', 'F176'], label==IFERROR(VLOOKUP(J59,C58:F176,3,FALSE),""), cached=
+  FORMULA K60: =IFERROR(VLOOKUP(J60,C59:F177,2,FALSE),"")
+         type=lookup, inputs=['J60', 'C59', 'F177'], label==IFERROR(VLOOKUP(J59,C58:F176,2,FALSE),""), cached=
+  FORMULA L60: =IFERROR(VLOOKUP(J60,C59:F177,3,FALSE),"")
+         type=lookup, inputs=['J60', 'C59', 'F177'], label==IFERROR(VLOOKUP(J60,C59:F177,2,FALSE),""), cached=
+  FORMULA M60: =IFERROR(VLOOKUP(J60,C59:F177,4,FALSE),"")
+         type=lookup, inputs=['J60', 'C59', 'F177'], label==IFERROR(VLOOKUP(J60,C59:F177,3,FALSE),""), cached=
+  FORMULA K61: =IFERROR(VLOOKUP(J61,C60:F178,2,FALSE),"")
+         type=lookup, inputs=['J61', 'C60', 'F178'], label==IFERROR(VLOOKUP(J60,C59:F177,2,FALSE),""), cached=
+  FORMULA L61: =IFERROR(VLOOKUP(J61,C60:F178,3,FALSE),"")
+         type=lookup, inputs=['J61', 'C60', 'F178'], label==IFERROR(VLOOKUP(J61,C60:F178,2,FALSE),""), cached=
+  FORMULA M61: =IFERROR(VLOOKUP(J61,C60:F178,4,FALSE),"")
+         type=lookup, inputs=['J61', 'C60', 'F178'], label==IFERROR(VLOOKUP(J61,C60:F178,3,FALSE),""), cached=
+  FORMULA K62: =IFERROR(VLOOKUP(J62,C61:F179,2,FALSE),"")
+         type=lookup, inputs=['J62', 'C61', 'F179'], label==IFERROR(VLOOKUP(J61,C60:F178,2,FALSE),""), cached=
+  FORMULA L62: =IFERROR(VLOOKUP(J62,C61:F179,3,FALSE),"")
+         type=lookup, inputs=['J62', 'C61', 'F179'], label==IFERROR(VLOOKUP(J62,C61:F179,2,FALSE),""), cached=
+  FORMULA M62: =IFERROR(VLOOKUP(J62,C61:F179,4,FALSE),"")
+         type=lookup, inputs=['J62', 'C61', 'F179'], label==IFERROR(VLOOKUP(J62,C61:F179,3,FALSE),""), cached=
+  FORMULA K63: =IFERROR(VLOOKUP(J63,C62:F180,2,FALSE),"")
+         type=lookup, inputs=['J63', 'C62', 'F180'], label==IFERROR(VLOOKUP(J62,C61:F179,2,FALSE),""), cached=
+  FORMULA L63: =IFERROR(VLOOKUP(J63,C62:F180,3,FALSE),"")
+         type=lookup, inputs=['J63', 'C62', 'F180'], label==IFERROR(VLOOKUP(J63,C62:F180,2,FALSE),""), cached=
+  FORMULA M63: =IFERROR(VLOOKUP(J63,C62:F180,4,FALSE),"")
+         type=lookup, inputs=['J63', 'C62', 'F180'], label==IFERROR(VLOOKUP(J63,C62:F180,3,FALSE),""), cached=
+  FORMULA K64: =IFERROR(VLOOKUP(J64,C63:F181,2,FALSE),"")
+         type=lookup, inputs=['J64', 'C63', 'F181'], label==IFERROR(VLOOKUP(J63,C62:F180,2,FALSE),""), cached=
+  FORMULA L64: =IFERROR(VLOOKUP(J64,C63:F181,3,FALSE),"")
+         type=lookup, inputs=['J64', 'C63', 'F181'], label==IFERROR(VLOOKUP(J64,C63:F181,2,FALSE),""), cached=
+  FORMULA M64: =IFERROR(VLOOKUP(J64,C63:F181,4,FALSE),"")
+         type=lookup, inputs=['J64', 'C63', 'F181'], label==IFERROR(VLOOKUP(J64,C63:F181,3,FALSE),""), cached=
+  FORMULA K65: =IFERROR(VLOOKUP(J65,C64:F182,2,FALSE),"")
+         type=lookup, inputs=['J65', 'C64', 'F182'], label==IFERROR(VLOOKUP(J64,C63:F181,2,FALSE),""), cached=
+  FORMULA L65: =IFERROR(VLOOKUP(J65,C64:F182,3,FALSE),"")
+         type=lookup, inputs=['J65', 'C64', 'F182'], label==IFERROR(VLOOKUP(J65,C64:F182,2,FALSE),""), cached=
+  FORMULA M65: =IFERROR(VLOOKUP(J65,C64:F182,4,FALSE),"")
+         type=lookup, inputs=['J65', 'C64', 'F182'], label==IFERROR(VLOOKUP(J65,C64:F182,3,FALSE),""), cached=
+  FORMULA K66: =IFERROR(VLOOKUP(J66,C65:F183,2,FALSE),"")
+         type=lookup, inputs=['J66', 'C65', 'F183'], label==IFERROR(VLOOKUP(J65,C64:F182,2,FALSE),""), cached=
+  FORMULA L66: =IFERROR(VLOOKUP(J66,C65:F183,3,FALSE),"")
+         type=lookup, inputs=['J66', 'C65', 'F183'], label==IFERROR(VLOOKUP(J66,C65:F183,2,FALSE),""), cached=
+  FORMULA M66: =IFERROR(VLOOKUP(J66,C65:F183,4,FALSE),"")
+         type=lookup, inputs=['J66', 'C65', 'F183'], label==IFERROR(VLOOKUP(J66,C65:F183,3,FALSE),""), cached=
+  FORMULA K67: =IFERROR(VLOOKUP(J67,C66:F184,2,FALSE),"")
+         type=lookup, inputs=['J67', 'C66', 'F184'], label==IFERROR(VLOOKUP(J66,C65:F183,2,FALSE),""), cached=
+  FORMULA L67: =IFERROR(VLOOKUP(J67,C66:F184,3,FALSE),"")
+         type=lookup, inputs=['J67', 'C66', 'F184'], label==IFERROR(VLOOKUP(J67,C66:F184,2,FALSE),""), cached=
+  FORMULA M67: =IFERROR(VLOOKUP(J67,C66:F184,4,FALSE),"")
+         type=lookup, inputs=['J67', 'C66', 'F184'], label==IFERROR(VLOOKUP(J67,C66:F184,3,FALSE),""), cached=
+  FORMULA K68: =IFERROR(VLOOKUP(J68,C67:F185,2,FALSE),"")
+         type=lookup, inputs=['J68', 'C67', 'F185'], label==IFERROR(VLOOKUP(J67,C66:F184,2,FALSE),""), cached=
+  FORMULA L68: =IFERROR(VLOOKUP(J68,C67:F185,3,FALSE),"")
+         type=lookup, inputs=['J68', 'C67', 'F185'], label==IFERROR(VLOOKUP(J68,C67:F185,2,FALSE),""), cached=
+  FORMULA M68: =IFERROR(VLOOKUP(J68,C67:F185,4,FALSE),"")
+         type=lookup, inputs=['J68', 'C67', 'F185'], label==IFERROR(VLOOKUP(J68,C67:F185,3,FALSE),""), cached=
+  FORMULA K69: =IFERROR(VLOOKUP(J69,C68:F186,2,FALSE),"")
+         type=lookup, inputs=['J69', 'C68', 'F186'], label==IFERROR(VLOOKUP(J68,C67:F185,2,FALSE),""), cached=
+  FORMULA L69: =IFERROR(VLOOKUP(J69,C68:F186,3,FALSE),"")
+         type=lookup, inputs=['J69', 'C68', 'F186'], label==IFERROR(VLOOKUP(J69,C68:F186,2,FALSE),""), cached=
+  FORMULA M69: =IFERROR(VLOOKUP(J69,C68:F186,4,FALSE),"")
+         type=lookup, inputs=['J69', 'C68', 'F186'], label==IFERROR(VLOOKUP(J69,C68:F186,3,FALSE),""), cached=
+  FORMULA K70: =IFERROR(VLOOKUP(J70,C69:F187,2,FALSE),"")
+         type=lookup, inputs=['J70', 'C69', 'F187'], label==IFERROR(VLOOKUP(J69,C68:F186,2,FALSE),""), cached=
+  FORMULA L70: =IFERROR(VLOOKUP(J70,C69:F187,3,FALSE),"")
+         type=lookup, inputs=['J70', 'C69', 'F187'], label==IFERROR(VLOOKUP(J70,C69:F187,2,FALSE),""), cached=
+  FORMULA M70: =IFERROR(VLOOKUP(J70,C69:F187,4,FALSE),"")
+         type=lookup, inputs=['J70', 'C69', 'F187'], label==IFERROR(VLOOKUP(J70,C69:F187,3,FALSE),""), cached=
+  FORMULA K71: =IFERROR(VLOOKUP(J71,C70:F188,2,FALSE),"")
+         type=lookup, inputs=['J71', 'C70', 'F188'], label==IFERROR(VLOOKUP(J70,C69:F187,2,FALSE),""), cached=
+  FORMULA L71: =IFERROR(VLOOKUP(J71,C70:F188,3,FALSE),"")
+         type=lookup, inputs=['J71', 'C70', 'F188'], label==IFERROR(VLOOKUP(J71,C70:F188,2,FALSE),""), cached=
+  FORMULA M71: =IFERROR(VLOOKUP(J71,C70:F188,4,FALSE),"")
+         type=lookup, inputs=['J71', 'C70', 'F188'], label==IFERROR(VLOOKUP(J71,C70:F188,3,FALSE),""), cached=
+  FORMULA K72: =IFERROR(VLOOKUP(J72,C71:F189,2,FALSE),"")
+         type=lookup, inputs=['J72', 'C71', 'F189'], label==IFERROR(VLOOKUP(J71,C70:F188,2,FALSE),""), cached=
+  FORMULA L72: =IFERROR(VLOOKUP(J72,C71:F189,3,FALSE),"")
+         type=lookup, inputs=['J72', 'C71', 'F189'], label==IFERROR(VLOOKUP(J72,C71:F189,2,FALSE),""), cached=
+  FORMULA M72: =IFERROR(VLOOKUP(J72,C71:F189,4,FALSE),"")
+         type=lookup, inputs=['J72', 'C71', 'F189'], label==IFERROR(VLOOKUP(J72,C71:F189,3,FALSE),""), cached=
+  FORMULA K73: =IFERROR(VLOOKUP(J73,C72:F190,2,FALSE),"")
+         type=lookup, inputs=['J73', 'C72', 'F190'], label==IFERROR(VLOOKUP(J72,C71:F189,2,FALSE),""), cached=
+  FORMULA L73: =IFERROR(VLOOKUP(J73,C72:F190,3,FALSE),"")
+         type=lookup, inputs=['J73', 'C72', 'F190'], label==IFERROR(VLOOKUP(J73,C72:F190,2,FALSE),""), cached=
+  FORMULA M73: =IFERROR(VLOOKUP(J73,C72:F190,4,FALSE),"")
+         type=lookup, inputs=['J73', 'C72', 'F190'], label==IFERROR(VLOOKUP(J73,C72:F190,3,FALSE),""), cached=
+  FORMULA K74: =IFERROR(VLOOKUP(J74,C73:F191,2,FALSE),"")
+         type=lookup, inputs=['J74', 'C73', 'F191'], label==IFERROR(VLOOKUP(J73,C72:F190,2,FALSE),""), cached=
+  FORMULA L74: =IFERROR(VLOOKUP(J74,C73:F191,3,FALSE),"")
+         type=lookup, inputs=['J74', 'C73', 'F191'], label==IFERROR(VLOOKUP(J74,C73:F191,2,FALSE),""), cached=
+  FORMULA M74: =IFERROR(VLOOKUP(J74,C73:F191,4,FALSE),"")
+         type=lookup, inputs=['J74', 'C73', 'F191'], label==IFERROR(VLOOKUP(J74,C73:F191,3,FALSE),""), cached=
+  FORMULA K75: =IFERROR(VLOOKUP(J75,C74:F192,2,FALSE),"")
+         type=lookup, inputs=['J75', 'C74', 'F192'], label==IFERROR(VLOOKUP(J74,C73:F191,2,FALSE),""), cached=
+  FORMULA L75: =IFERROR(VLOOKUP(J75,C74:F192,3,FALSE),"")
+         type=lookup, inputs=['J75', 'C74', 'F192'], label==IFERROR(VLOOKUP(J75,C74:F192,2,FALSE),""), cached=
+  FORMULA M75: =IFERROR(VLOOKUP(J75,C74:F192,4,FALSE),"")
+         type=lookup, inputs=['J75', 'C74', 'F192'], label==IFERROR(VLOOKUP(J75,C74:F192,3,FALSE),""), cached=
+  FORMULA K76: =IFERROR(VLOOKUP(J76,C75:F193,2,FALSE),"")
+         type=lookup, inputs=['J76', 'C75', 'F193'], label==IFERROR(VLOOKUP(J75,C74:F192,2,FALSE),""), cached=
+  FORMULA L76: =IFERROR(VLOOKUP(J76,C75:F193,3,FALSE),"")
+         type=lookup, inputs=['J76', 'C75', 'F193'], label==IFERROR(VLOOKUP(J76,C75:F193,2,FALSE),""), cached=
+  FORMULA M76: =IFERROR(VLOOKUP(J76,C75:F193,4,FALSE),"")
+         type=lookup, inputs=['J76', 'C75', 'F193'], label==IFERROR(VLOOKUP(J76,C75:F193,3,FALSE),""), cached=
+  FORMULA K77: =IFERROR(VLOOKUP(J77,C76:F194,2,FALSE),"")
+         type=lookup, inputs=['J77', 'C76', 'F194'], label==IFERROR(VLOOKUP(J76,C75:F193,2,FALSE),""), cached=
+  FORMULA L77: =IFERROR(VLOOKUP(J77,C76:F194,3,FALSE),"")
+         type=lookup, inputs=['J77', 'C76', 'F194'], label==IFERROR(VLOOKUP(J77,C76:F194,2,FALSE),""), cached=
+  FORMULA M77: =IFERROR(VLOOKUP(J77,C76:F194,4,FALSE),"")
+         type=lookup, inputs=['J77', 'C76', 'F194'], label==IFERROR(VLOOKUP(J77,C76:F194,3,FALSE),""), cached=
+  FORMULA K78: =IFERROR(VLOOKUP(J78,C77:F195,2,FALSE),"")
+         type=lookup, inputs=['J78', 'C77', 'F195'], label==IFERROR(VLOOKUP(J77,C76:F194,2,FALSE),""), cached=
+  FORMULA L78: =IFERROR(VLOOKUP(J78,C77:F195,3,FALSE),"")
+         type=lookup, inputs=['J78', 'C77', 'F195'], label==IFERROR(VLOOKUP(J78,C77:F195,2,FALSE),""), cached=
+  FORMULA M78: =IFERROR(VLOOKUP(J78,C77:F195,4,FALSE),"")
+         type=lookup, inputs=['J78', 'C77', 'F195'], label==IFERROR(VLOOKUP(J78,C77:F195,3,FALSE),""), cached=
+  FORMULA K79: =IFERROR(VLOOKUP(J79,C78:F196,2,FALSE),"")
+         type=lookup, inputs=['J79', 'C78', 'F196'], label==IFERROR(VLOOKUP(J78,C77:F195,2,FALSE),""), cached=
+  FORMULA L79: =IFERROR(VLOOKUP(J79,C78:F196,3,FALSE),"")
+         type=lookup, inputs=['J79', 'C78', 'F196'], label==IFERROR(VLOOKUP(J79,C78:F196,2,FALSE),""), cached=
+  FORMULA M79: =IFERROR(VLOOKUP(J79,C78:F196,4,FALSE),"")
+         type=lookup, inputs=['J79', 'C78', 'F196'], label==IFERROR(VLOOKUP(J79,C78:F196,3,FALSE),""), cached=
+  FORMULA K80: =IFERROR(VLOOKUP(J80,C79:F197,2,FALSE),"")
+         type=lookup, inputs=['J80', 'C79', 'F197'], label==IFERROR(VLOOKUP(J79,C78:F196,2,FALSE),""), cached=
+  FORMULA L80: =IFERROR(VLOOKUP(J80,C79:F197,3,FALSE),"")
+         type=lookup, inputs=['J80', 'C79', 'F197'], label==IFERROR(VLOOKUP(J80,C79:F197,2,FALSE),""), cached=
+  FORMULA M80: =IFERROR(VLOOKUP(J80,C79:F197,4,FALSE),"")
+         type=lookup, inputs=['J80', 'C79', 'F197'], label==IFERROR(VLOOKUP(J80,C79:F197,3,FALSE),""), cached=
+  FORMULA K81: =IFERROR(VLOOKUP(J81,C80:F198,2,FALSE),"")
+         type=lookup, inputs=['J81', 'C80', 'F198'], label==IFERROR(VLOOKUP(J80,C79:F197,2,FALSE),""), cached=
+  FORMULA L81: =IFERROR(VLOOKUP(J81,C80:F198,3,FALSE),"")
+         type=lookup, inputs=['J81', 'C80', 'F198'], label==IFERROR(VLOOKUP(J81,C80:F198,2,FALSE),""), cached=
+  FORMULA M81: =IFERROR(VLOOKUP(J81,C80:F198,4,FALSE),"")
+         type=lookup, inputs=['J81', 'C80', 'F198'], label==IFERROR(VLOOKUP(J81,C80:F198,3,FALSE),""), cached=
+  FORMULA K82: =IFERROR(VLOOKUP(J82,C81:F199,2,FALSE),"")
+         type=lookup, inputs=['J82', 'C81', 'F199'], label==IFERROR(VLOOKUP(J81,C80:F198,2,FALSE),""), cached=
+  FORMULA L82: =IFERROR(VLOOKUP(J82,C81:F199,3,FALSE),"")
+         type=lookup, inputs=['J82', 'C81', 'F199'], label==IFERROR(VLOOKUP(J82,C81:F199,2,FALSE),""), cached=
+  FORMULA M82: =IFERROR(VLOOKUP(J82,C81:F199,4,FALSE),"")
+         type=lookup, inputs=['J82', 'C81', 'F199'], label==IFERROR(VLOOKUP(J82,C81:F199,3,FALSE),""), cached=
+  FORMULA K83: =IFERROR(VLOOKUP(J83,C82:F200,2,FALSE),"")
+         type=lookup, inputs=['J83', 'C82', 'F200'], label==IFERROR(VLOOKUP(J82,C81:F199,2,FALSE),""), cached=
+  FORMULA L83: =IFERROR(VLOOKUP(J83,C82:F200,3,FALSE),"")
+         type=lookup, inputs=['J83', 'C82', 'F200'], label==IFERROR(VLOOKUP(J83,C82:F200,2,FALSE),""), cached=
+  FORMULA M83: =IFERROR(VLOOKUP(J83,C82:F200,4,FALSE),"")
+         type=lookup, inputs=['J83', 'C82', 'F200'], label==IFERROR(VLOOKUP(J83,C82:F200,3,FALSE),""), cached=
+  FORMULA K84: =IFERROR(VLOOKUP(J84,C83:F201,2,FALSE),"")
+         type=lookup, inputs=['J84', 'C83', 'F201'], label==IFERROR(VLOOKUP(J83,C82:F200,2,FALSE),""), cached=
+  FORMULA L84: =IFERROR(VLOOKUP(J84,C83:F201,3,FALSE),"")
+         type=lookup, inputs=['J84', 'C83', 'F201'], label==IFERROR(VLOOKUP(J84,C83:F201,2,FALSE),""), cached=
+  FORMULA M84: =IFERROR(VLOOKUP(J84,C83:F201,4,FALSE),"")
+         type=lookup, inputs=['J84', 'C83', 'F201'], label==IFERROR(VLOOKUP(J84,C83:F201,3,FALSE),""), cached=
+  FORMULA K85: =IFERROR(VLOOKUP(J85,C84:F202,2,FALSE),"")
+         type=lookup, inputs=['J85', 'C84', 'F202'], label==IFERROR(VLOOKUP(J84,C83:F201,2,FALSE),""), cached=
+  FORMULA L85: =IFERROR(VLOOKUP(J85,C84:F202,3,FALSE),"")
+         type=lookup, inputs=['J85', 'C84', 'F202'], label==IFERROR(VLOOKUP(J85,C84:F202,2,FALSE),""), cached=
+  FORMULA M85: =IFERROR(VLOOKUP(J85,C84:F202,4,FALSE),"")
+         type=lookup, inputs=['J85', 'C84', 'F202'], label==IFERROR(VLOOKUP(J85,C84:F202,3,FALSE),""), cached=
+  FORMULA K86: =IFERROR(VLOOKUP(J86,C85:F203,2,FALSE),"")
+         type=lookup, inputs=['J86', 'C85', 'F203'], label==IFERROR(VLOOKUP(J85,C84:F202,2,FALSE),""), cached=
+  FORMULA L86: =IFERROR(VLOOKUP(J86,C85:F203,3,FALSE),"")
+         type=lookup, inputs=['J86', 'C85', 'F203'], label==IFERROR(VLOOKUP(J86,C85:F203,2,FALSE),""), cached=
+  FORMULA M86: =IFERROR(VLOOKUP(J86,C85:F203,4,FALSE),"")
+         type=lookup, inputs=['J86', 'C85', 'F203'], label==IFERROR(VLOOKUP(J86,C85:F203,3,FALSE),""), cached=
+  FORMULA K87: =IFERROR(VLOOKUP(J87,C86:F204,2,FALSE),"")
+         type=lookup, inputs=['J87', 'C86', 'F204'], label==IFERROR(VLOOKUP(J86,C85:F203,2,FALSE),""), cached=
+  FORMULA L87: =IFERROR(VLOOKUP(J87,C86:F204,3,FALSE),"")
+         type=lookup, inputs=['J87', 'C86', 'F204'], label==IFERROR(VLOOKUP(J87,C86:F204,2,FALSE),""), cached=
+  FORMULA M87: =IFERROR(VLOOKUP(J87,C86:F204,4,FALSE),"")
+         type=lookup, inputs=['J87', 'C86', 'F204'], label==IFERROR(VLOOKUP(J87,C86:F204,3,FALSE),""), cached=
+  FORMULA K88: =IFERROR(VLOOKUP(J88,C87:F205,2,FALSE),"")
+         type=lookup, inputs=['J88', 'C87', 'F205'], label==IFERROR(VLOOKUP(J87,C86:F204,2,FALSE),""), cached=
+  FORMULA L88: =IFERROR(VLOOKUP(J88,C87:F205,3,FALSE),"")
+         type=lookup, inputs=['J88', 'C87', 'F205'], label==IFERROR(VLOOKUP(J88,C87:F205,2,FALSE),""), cached=
+  FORMULA M88: =IFERROR(VLOOKUP(J88,C87:F205,4,FALSE),"")
+         type=lookup, inputs=['J88', 'C87', 'F205'], label==IFERROR(VLOOKUP(J88,C87:F205,3,FALSE),""), cached=
+  FORMULA K89: =IFERROR(VLOOKUP(J89,C88:F206,2,FALSE),"")
+         type=lookup, inputs=['J89', 'C88', 'F206'], label==IFERROR(VLOOKUP(J88,C87:F205,2,FALSE),""), cached=
+  FORMULA L89: =IFERROR(VLOOKUP(J89,C88:F206,3,FALSE),"")
+         type=lookup, inputs=['J89', 'C88', 'F206'], label==IFERROR(VLOOKUP(J89,C88:F206,2,FALSE),""), cached=
+  FORMULA M89: =IFERROR(VLOOKUP(J89,C88:F206,4,FALSE),"")
+         type=lookup, inputs=['J89', 'C88', 'F206'], label==IFERROR(VLOOKUP(J89,C88:F206,3,FALSE),""), cached=
+  FORMULA K90: =IFERROR(VLOOKUP(J90,C89:F207,2,FALSE),"")
+         type=lookup, inputs=['J90', 'C89', 'F207'], label==IFERROR(VLOOKUP(J89,C88:F206,2,FALSE),""), cached=
+  FORMULA L90: =IFERROR(VLOOKUP(J90,C89:F207,3,FALSE),"")
+         type=lookup, inputs=['J90', 'C89', 'F207'], label==IFERROR(VLOOKUP(J90,C89:F207,2,FALSE),""), cached=
+  FORMULA M90: =IFERROR(VLOOKUP(J90,C89:F207,4,FALSE),"")
+         type=lookup, inputs=['J90', 'C89', 'F207'], label==IFERROR(VLOOKUP(J90,C89:F207,3,FALSE),""), cached=
+  FORMULA K91: =IFERROR(VLOOKUP(J91,C90:F208,2,FALSE),"")
+         type=lookup, inputs=['J91', 'C90', 'F208'], label==IFERROR(VLOOKUP(J90,C89:F207,2,FALSE),""), cached=
+  FORMULA L91: =IFERROR(VLOOKUP(J91,C90:F208,3,FALSE),"")
+         type=lookup, inputs=['J91', 'C90', 'F208'], label==IFERROR(VLOOKUP(J91,C90:F208,2,FALSE),""), cached=
+  FORMULA M91: =IFERROR(VLOOKUP(J91,C90:F208,4,FALSE),"")
+         type=lookup, inputs=['J91', 'C90', 'F208'], label==IFERROR(VLOOKUP(J91,C90:F208,3,FALSE),""), cached=
+  FORMULA K92: =IFERROR(VLOOKUP(J92,C91:F209,2,FALSE),"")
+         type=lookup, inputs=['J92', 'C91', 'F209'], label==IFERROR(VLOOKUP(J91,C90:F208,2,FALSE),""), cached=
+  FORMULA L92: =IFERROR(VLOOKUP(J92,C91:F209,3,FALSE),"")
+         type=lookup, inputs=['J92', 'C91', 'F209'], label==IFERROR(VLOOKUP(J92,C91:F209,2,FALSE),""), cached=
+  FORMULA M92: =IFERROR(VLOOKUP(J92,C91:F209,4,FALSE),"")
+         type=lookup, inputs=['J92', 'C91', 'F209'], label==IFERROR(VLOOKUP(J92,C91:F209,3,FALSE),""), cached=
+  FORMULA K93: =IFERROR(VLOOKUP(J93,C92:F210,2,FALSE),"")
+         type=lookup, inputs=['J93', 'C92', 'F210'], label==IFERROR(VLOOKUP(J92,C91:F209,2,FALSE),""), cached=
+  FORMULA L93: =IFERROR(VLOOKUP(J93,C92:F210,3,FALSE),"")
+         type=lookup, inputs=['J93', 'C92', 'F210'], label==IFERROR(VLOOKUP(J93,C92:F210,2,FALSE),""), cached=
+  FORMULA M93: =IFERROR(VLOOKUP(J93,C92:F210,4,FALSE),"")
+         type=lookup, inputs=['J93', 'C92', 'F210'], label==IFERROR(VLOOKUP(J93,C92:F210,3,FALSE),""), cached=
+  FORMULA K94: =IFERROR(VLOOKUP(J94,C93:F211,2,FALSE),"")
+         type=lookup, inputs=['J94', 'C93', 'F211'], label==IFERROR(VLOOKUP(J93,C92:F210,2,FALSE),""), cached=
+  FORMULA L94: =IFERROR(VLOOKUP(J94,C93:F211,3,FALSE),"")
+         type=lookup, inputs=['J94', 'C93', 'F211'], label==IFERROR(VLOOKUP(J94,C93:F211,2,FALSE),""), cached=
+  FORMULA M94: =IFERROR(VLOOKUP(J94,C93:F211,4,FALSE),"")
+         type=lookup, inputs=['J94', 'C93', 'F211'], label==IFERROR(VLOOKUP(J94,C93:F211,3,FALSE),""), cached=
+  FORMULA K95: =IFERROR(VLOOKUP(J95,C94:F212,2,FALSE),"")
+         type=lookup, inputs=['J95', 'C94', 'F212'], label==IFERROR(VLOOKUP(J94,C93:F211,2,FALSE),""), cached=
+  FORMULA L95: =IFERROR(VLOOKUP(J95,C94:F212,3,FALSE),"")
+         type=lookup, inputs=['J95', 'C94', 'F212'], label==IFERROR(VLOOKUP(J95,C94:F212,2,FALSE),""), cached=
+  FORMULA M95: =IFERROR(VLOOKUP(J95,C94:F212,4,FALSE),"")
+         type=lookup, inputs=['J95', 'C94', 'F212'], label==IFERROR(VLOOKUP(J95,C94:F212,3,FALSE),""), cached=
+  FORMULA K96: =IFERROR(VLOOKUP(J96,C95:F213,2,FALSE),"")
+         type=lookup, inputs=['J96', 'C95', 'F213'], label==IFERROR(VLOOKUP(J95,C94:F212,2,FALSE),""), cached=
+  FORMULA L96: =IFERROR(VLOOKUP(J96,C95:F213,3,FALSE),"")
+         type=lookup, inputs=['J96', 'C95', 'F213'], label==IFERROR(VLOOKUP(J96,C95:F213,2,FALSE),""), cached=
+  FORMULA M96: =IFERROR(VLOOKUP(J96,C95:F213,4,FALSE),"")
+         type=lookup, inputs=['J96', 'C95', 'F213'], label==IFERROR(VLOOKUP(J96,C95:F213,3,FALSE),""), cached=
+  FORMULA K97: =IFERROR(VLOOKUP(J97,C96:F214,2,FALSE),"")
+         type=lookup, inputs=['J97', 'C96', 'F214'], label==IFERROR(VLOOKUP(J96,C95:F213,2,FALSE),""), cached=
+  FORMULA L97: =IFERROR(VLOOKUP(J97,C96:F214,3,FALSE),"")
+         type=lookup, inputs=['J97', 'C96', 'F214'], label==IFERROR(VLOOKUP(J97,C96:F214,2,FALSE),""), cached=
+  FORMULA M97: =IFERROR(VLOOKUP(J97,C96:F214,4,FALSE),"")
+         type=lookup, inputs=['J97', 'C96', 'F214'], label==IFERROR(VLOOKUP(J97,C96:F214,3,FALSE),""), cached=
+  FORMULA K98: =IFERROR(VLOOKUP(J98,C97:F215,2,FALSE),"")
+         type=lookup, inputs=['J98', 'C97', 'F215'], label==IFERROR(VLOOKUP(J97,C96:F214,2,FALSE),""), cached=
+  FORMULA L98: =IFERROR(VLOOKUP(J98,C97:F215,3,FALSE),"")
+         type=lookup, inputs=['J98', 'C97', 'F215'], label==IFERROR(VLOOKUP(J98,C97:F215,2,FALSE),""), cached=
+  FORMULA M98: =IFERROR(VLOOKUP(J98,C97:F215,4,FALSE),"")
+         type=lookup, inputs=['J98', 'C97', 'F215'], label==IFERROR(VLOOKUP(J98,C97:F215,3,FALSE),""), cached=
+  FORMULA K99: =IFERROR(VLOOKUP(J99,C98:F216,2,FALSE),"")
+         type=lookup, inputs=['J99', 'C98', 'F216'], label==IFERROR(VLOOKUP(J98,C97:F215,2,FALSE),""), cached=
+  FORMULA L99: =IFERROR(VLOOKUP(J99,C98:F216,3,FALSE),"")
+         type=lookup, inputs=['J99', 'C98', 'F216'], label==IFERROR(VLOOKUP(J99,C98:F216,2,FALSE),""), cached=
+  FORMULA M99: =IFERROR(VLOOKUP(J99,C98:F216,4,FALSE),"")
+         type=lookup, inputs=['J99', 'C98', 'F216'], label==IFERROR(VLOOKUP(J99,C98:F216,3,FALSE),""), cached=
+  FORMULA K100: =IFERROR(VLOOKUP(J100,C99:F217,2,FALSE),"")
+         type=lookup, inputs=['J100', 'C99', 'F217'], label==IFERROR(VLOOKUP(J99,C98:F216,2,FALSE),""), cached=
+  FORMULA L100: =IFERROR(VLOOKUP(J100,C99:F217,3,FALSE),"")
+         type=lookup, inputs=['J100', 'C99', 'F217'], label==IFERROR(VLOOKUP(J100,C99:F217,2,FALSE),""), cached=
+  FORMULA M100: =IFERROR(VLOOKUP(J100,C99:F217,4,FALSE),"")
+         type=lookup, inputs=['J100', 'C99', 'F217'], label==IFERROR(VLOOKUP(J100,C99:F217,3,FALSE),""), cached=
+  FORMULA K101: =IFERROR(VLOOKUP(J101,C100:F218,2,FALSE),"")
+         type=lookup, inputs=['J101', 'C100', 'F218'], label==IFERROR(VLOOKUP(J100,C99:F217,2,FALSE),""), cached=
+  FORMULA L101: =IFERROR(VLOOKUP(J101,C100:F218,3,FALSE),"")
+         type=lookup, inputs=['J101', 'C100', 'F218'], label==IFERROR(VLOOKUP(J101,C100:F218,2,FALSE),""), cached=
+  FORMULA M101: =IFERROR(VLOOKUP(J101,C100:F218,4,FALSE),"")
+         type=lookup, inputs=['J101', 'C100', 'F218'], label==IFERROR(VLOOKUP(J101,C100:F218,3,FALSE),""), cached=
+  FORMULA K102: =IFERROR(VLOOKUP(J102,C101:F219,2,FALSE),"")
+         type=lookup, inputs=['J102', 'C101', 'F219'], label==IFERROR(VLOOKUP(J101,C100:F218,2,FALSE),""), cached=
+  FORMULA L102: =IFERROR(VLOOKUP(J102,C101:F219,3,FALSE),"")
+         type=lookup, inputs=['J102', 'C101', 'F219'], label==IFERROR(VLOOKUP(J102,C101:F219,2,FALSE),""), cached=
+  FORMULA M102: =IFERROR(VLOOKUP(J102,C101:F219,4,FALSE),"")
+         type=lookup, inputs=['J102', 'C101', 'F219'], label==IFERROR(VLOOKUP(J102,C101:F219,3,FALSE),""), cached=
+  FORMULA K103: =IFERROR(VLOOKUP(J103,C102:F220,2,FALSE),"")
+         type=lookup, inputs=['J103', 'C102', 'F220'], label==IFERROR(VLOOKUP(J102,C101:F219,2,FALSE),""), cached=
+  FORMULA L103: =IFERROR(VLOOKUP(J103,C102:F220,3,FALSE),"")
+         type=lookup, inputs=['J103', 'C102', 'F220'], label==IFERROR(VLOOKUP(J103,C102:F220,2,FALSE),""), cached=
+  FORMULA M103: =IFERROR(VLOOKUP(J103,C102:F220,4,FALSE),"")
+         type=lookup, inputs=['J103', 'C102', 'F220'], label==IFERROR(VLOOKUP(J103,C102:F220,3,FALSE),""), cached=
+  FORMULA K104: =IFERROR(VLOOKUP(J104,C103:F221,2,FALSE),"")
+         type=lookup, inputs=['J104', 'C103', 'F221'], label==IFERROR(VLOOKUP(J103,C102:F220,2,FALSE),""), cached=
+  FORMULA L104: =IFERROR(VLOOKUP(J104,C103:F221,3,FALSE),"")
+         type=lookup, inputs=['J104', 'C103', 'F221'], label==IFERROR(VLOOKUP(J104,C103:F221,2,FALSE),""), cached=
+  FORMULA M104: =IFERROR(VLOOKUP(J104,C103:F221,4,FALSE),"")
+         type=lookup, inputs=['J104', 'C103', 'F221'], label==IFERROR(VLOOKUP(J104,C103:F221,3,FALSE),""), cached=
+  FORMULA K105: =IFERROR(VLOOKUP(J105,C104:F222,2,FALSE),"")
+         type=lookup, inputs=['J105', 'C104', 'F222'], label==IFERROR(VLOOKUP(J104,C103:F221,2,FALSE),""), cached=
+  FORMULA L105: =IFERROR(VLOOKUP(J105,C104:F222,3,FALSE),"")
+         type=lookup, inputs=['J105', 'C104', 'F222'], label==IFERROR(VLOOKUP(J105,C104:F222,2,FALSE),""), cached=
+  FORMULA M105: =IFERROR(VLOOKUP(J105,C104:F222,4,FALSE),"")
+         type=lookup, inputs=['J105', 'C104', 'F222'], label==IFERROR(VLOOKUP(J105,C104:F222,3,FALSE),""), cached=
+  FORMULA K106: =IFERROR(VLOOKUP(J106,C105:F223,2,FALSE),"")
+         type=lookup, inputs=['J106', 'C105', 'F223'], label==IFERROR(VLOOKUP(J105,C104:F222,2,FALSE),""), cached=
+  FORMULA L106: =IFERROR(VLOOKUP(J106,C105:F223,3,FALSE),"")
+         type=lookup, inputs=['J106', 'C105', 'F223'], label==IFERROR(VLOOKUP(J106,C105:F223,2,FALSE),""), cached=
+  FORMULA M106: =IFERROR(VLOOKUP(J106,C105:F223,4,FALSE),"")
+         type=lookup, inputs=['J106', 'C105', 'F223'], label==IFERROR(VLOOKUP(J106,C105:F223,3,FALSE),""), cached=
+  FORMULA K107: =IFERROR(VLOOKUP(J107,C106:F224,2,FALSE),"")
+         type=lookup, inputs=['J107', 'C106', 'F224'], label==IFERROR(VLOOKUP(J106,C105:F223,2,FALSE),""), cached=
+  FORMULA L107: =IFERROR(VLOOKUP(J107,C106:F224,3,FALSE),"")
+         type=lookup, inputs=['J107', 'C106', 'F224'], label==IFERROR(VLOOKUP(J107,C106:F224,2,FALSE),""), cached=
+  FORMULA M107: =IFERROR(VLOOKUP(J107,C106:F224,4,FALSE),"")
+         type=lookup, inputs=['J107', 'C106', 'F224'], label==IFERROR(VLOOKUP(J107,C106:F224,3,FALSE),""), cached=
+  FORMULA K108: =IFERROR(VLOOKUP(J108,C107:F225,2,FALSE),"")
+         type=lookup, inputs=['J108', 'C107', 'F225'], label==IFERROR(VLOOKUP(J107,C106:F224,2,FALSE),""), cached=
+  FORMULA L108: =IFERROR(VLOOKUP(J108,C107:F225,3,FALSE),"")
+         type=lookup, inputs=['J108', 'C107', 'F225'], label==IFERROR(VLOOKUP(J108,C107:F225,2,FALSE),""), cached=
+  FORMULA M108: =IFERROR(VLOOKUP(J108,C107:F225,4,FALSE),"")
+         type=lookup, inputs=['J108', 'C107', 'F225'], label==IFERROR(VLOOKUP(J108,C107:F225,3,FALSE),""), cached=
+  FORMULA K109: =IFERROR(VLOOKUP(J109,C108:F226,2,FALSE),"")
+         type=lookup, inputs=['J109', 'C108', 'F226'], label==IFERROR(VLOOKUP(J108,C107:F225,2,FALSE),""), cached=
+  FORMULA L109: =IFERROR(VLOOKUP(J109,C108:F226,3,FALSE),"")
+         type=lookup, inputs=['J109', 'C108', 'F226'], label==IFERROR(VLOOKUP(J109,C108:F226,2,FALSE),""), cached=
+  FORMULA M109: =IFERROR(VLOOKUP(J109,C108:F226,4,FALSE),"")
+         type=lookup, inputs=['J109', 'C108', 'F226'], label==IFERROR(VLOOKUP(J109,C108:F226,3,FALSE),""), cached=
+  FORMULA K110: =IFERROR(VLOOKUP(J110,C109:F227,2,FALSE),"")
+         type=lookup, inputs=['J110', 'C109', 'F227'], label==IFERROR(VLOOKUP(J109,C108:F226,2,FALSE),""), cached=
+  FORMULA L110: =IFERROR(VLOOKUP(J110,C109:F227,3,FALSE),"")
+         type=lookup, inputs=['J110', 'C109', 'F227'], label==IFERROR(VLOOKUP(J110,C109:F227,2,FALSE),""), cached=
+  FORMULA M110: =IFERROR(VLOOKUP(J110,C109:F227,4,FALSE),"")
+         type=lookup, inputs=['J110', 'C109', 'F227'], label==IFERROR(VLOOKUP(J110,C109:F227,3,FALSE),""), cached=
+  FORMULA K111: =IFERROR(VLOOKUP(J111,C110:F228,2,FALSE),"")
+         type=lookup, inputs=['J111', 'C110', 'F228'], label==IFERROR(VLOOKUP(J110,C109:F227,2,FALSE),""), cached=
+  FORMULA L111: =IFERROR(VLOOKUP(J111,C110:F228,3,FALSE),"")
+         type=lookup, inputs=['J111', 'C110', 'F228'], label==IFERROR(VLOOKUP(J111,C110:F228,2,FALSE),""), cached=
+  FORMULA M111: =IFERROR(VLOOKUP(J111,C110:F228,4,FALSE),"")
+         type=lookup, inputs=['J111', 'C110', 'F228'], label==IFERROR(VLOOKUP(J111,C110:F228,3,FALSE),""), cached=
+  FORMULA K112: =IFERROR(VLOOKUP(J112,C111:F229,2,FALSE),"")
+         type=lookup, inputs=['J112', 'C111', 'F229'], label==IFERROR(VLOOKUP(J111,C110:F228,2,FALSE),""), cached=
+  FORMULA L112: =IFERROR(VLOOKUP(J112,C111:F229,3,FALSE),"")
+         type=lookup, inputs=['J112', 'C111', 'F229'], label==IFERROR(VLOOKUP(J112,C111:F229,2,FALSE),""), cached=
+  FORMULA M112: =IFERROR(VLOOKUP(J112,C111:F229,4,FALSE),"")
+         type=lookup, inputs=['J112', 'C111', 'F229'], label==IFERROR(VLOOKUP(J112,C111:F229,3,FALSE),""), cached=
+  FORMULA K113: =IFERROR(VLOOKUP(J113,C112:F230,2,FALSE),"")
+         type=lookup, inputs=['J113', 'C112', 'F230'], label==IFERROR(VLOOKUP(J112,C111:F229,2,FALSE),""), cached=
+  FORMULA L113: =IFERROR(VLOOKUP(J113,C112:F230,3,FALSE),"")
+         type=lookup, inputs=['J113', 'C112', 'F230'], label==IFERROR(VLOOKUP(J113,C112:F230,2,FALSE),""), cached=
+  FORMULA M113: =IFERROR(VLOOKUP(J113,C112:F230,4,FALSE),"")
+         type=lookup, inputs=['J113', 'C112', 'F230'], label==IFERROR(VLOOKUP(J113,C112:F230,3,FALSE),""), cached=
+  FORMULA K114: =IFERROR(VLOOKUP(J114,C113:F231,2,FALSE),"")
+         type=lookup, inputs=['J114', 'C113', 'F231'], label==IFERROR(VLOOKUP(J113,C112:F230,2,FALSE),""), cached=
+  FORMULA L114: =IFERROR(VLOOKUP(J114,C113:F231,3,FALSE),"")
+         type=lookup, inputs=['J114', 'C113', 'F231'], label==IFERROR(VLOOKUP(J114,C113:F231,2,FALSE),""), cached=
+  FORMULA M114: =IFERROR(VLOOKUP(J114,C113:F231,4,FALSE),"")
+         type=lookup, inputs=['J114', 'C113', 'F231'], label==IFERROR(VLOOKUP(J114,C113:F231,3,FALSE),""), cached=
+  FORMULA K115: =IFERROR(VLOOKUP(J115,C114:F232,2,FALSE),"")
+         type=lookup, inputs=['J115', 'C114', 'F232'], label==IFERROR(VLOOKUP(J114,C113:F231,2,FALSE),""), cached=
+  FORMULA L115: =IFERROR(VLOOKUP(J115,C114:F232,3,FALSE),"")
+         type=lookup, inputs=['J115', 'C114', 'F232'], label==IFERROR(VLOOKUP(J115,C114:F232,2,FALSE),""), cached=
+  FORMULA M115: =IFERROR(VLOOKUP(J115,C114:F232,4,FALSE),"")
+         type=lookup, inputs=['J115', 'C114', 'F232'], label==IFERROR(VLOOKUP(J115,C114:F232,3,FALSE),""), cached=
+  FORMULA K116: =IFERROR(VLOOKUP(J116,C115:F233,2,FALSE),"")
+         type=lookup, inputs=['J116', 'C115', 'F233'], label==IFERROR(VLOOKUP(J115,C114:F232,2,FALSE),""), cached=
+  FORMULA L116: =IFERROR(VLOOKUP(J116,C115:F233,3,FALSE),"")
+         type=lookup, inputs=['J116', 'C115', 'F233'], label==IFERROR(VLOOKUP(J116,C115:F233,2,FALSE),""), cached=
+  FORMULA M116: =IFERROR(VLOOKUP(J116,C115:F233,4,FALSE),"")
+         type=lookup, inputs=['J116', 'C115', 'F233'], label==IFERROR(VLOOKUP(J116,C115:F233,3,FALSE),""), cached=
+  FORMULA K117: =IFERROR(VLOOKUP(J117,C116:F234,2,FALSE),"")
+         type=lookup, inputs=['J117', 'C116', 'F234'], label==IFERROR(VLOOKUP(J116,C115:F233,2,FALSE),""), cached=
+  FORMULA L117: =IFERROR(VLOOKUP(J117,C116:F234,3,FALSE),"")
+         type=lookup, inputs=['J117', 'C116', 'F234'], label==IFERROR(VLOOKUP(J117,C116:F234,2,FALSE),""), cached=
+  FORMULA M117: =IFERROR(VLOOKUP(J117,C116:F234,4,FALSE),"")
+         type=lookup, inputs=['J117', 'C116', 'F234'], label==IFERROR(VLOOKUP(J117,C116:F234,3,FALSE),""), cached=
+  FORMULA K118: =IFERROR(VLOOKUP(J118,C117:F235,2,FALSE),"")
+         type=lookup, inputs=['J118', 'C117', 'F235'], label==IFERROR(VLOOKUP(J117,C116:F234,2,FALSE),""), cached=
+  FORMULA L118: =IFERROR(VLOOKUP(J118,C117:F235,3,FALSE),"")
+         type=lookup, inputs=['J118', 'C117', 'F235'], label==IFERROR(VLOOKUP(J118,C117:F235,2,FALSE),""), cached=
+  FORMULA M118: =IFERROR(VLOOKUP(J118,C117:F235,4,FALSE),"")
+         type=lookup, inputs=['J118', 'C117', 'F235'], label==IFERROR(VLOOKUP(J118,C117:F235,3,FALSE),""), cached=
+  FORMULA K119: =IFERROR(VLOOKUP(J119,C118:F236,2,FALSE),"")
+         type=lookup, inputs=['J119', 'C118', 'F236'], label==IFERROR(VLOOKUP(J118,C117:F235,2,FALSE),""), cached=
+  FORMULA L119: =IFERROR(VLOOKUP(J119,C118:F236,3,FALSE),"")
+         type=lookup, inputs=['J119', 'C118', 'F236'], label==IFERROR(VLOOKUP(J119,C118:F236,2,FALSE),""), cached=
+  FORMULA M119: =IFERROR(VLOOKUP(J119,C118:F236,4,FALSE),"")
+         type=lookup, inputs=['J119', 'C118', 'F236'], label==IFERROR(VLOOKUP(J119,C118:F236,3,FALSE),""), cached=
+  FORMULA K120: =IFERROR(VLOOKUP(J120,C119:F237,2,FALSE),"")
+         type=lookup, inputs=['J120', 'C119', 'F237'], label==IFERROR(VLOOKUP(J119,C118:F236,2,FALSE),""), cached=
+  FORMULA L120: =IFERROR(VLOOKUP(J120,C119:F237,3,FALSE),"")
+         type=lookup, inputs=['J120', 'C119', 'F237'], label==IFERROR(VLOOKUP(J120,C119:F237,2,FALSE),""), cached=
+  FORMULA M120: =IFERROR(VLOOKUP(J120,C119:F237,4,FALSE),"")
+         type=lookup, inputs=['J120', 'C119', 'F237'], label==IFERROR(VLOOKUP(J120,C119:F237,3,FALSE),""), cached=
+  FORMULA K121: =IFERROR(VLOOKUP(J121,C120:F238,2,FALSE),"")
+         type=lookup, inputs=['J121', 'C120', 'F238'], label==IFERROR(VLOOKUP(J120,C119:F237,2,FALSE),""), cached=
+  FORMULA L121: =IFERROR(VLOOKUP(J121,C120:F238,3,FALSE),"")
+         type=lookup, inputs=['J121', 'C120', 'F238'], label==IFERROR(VLOOKUP(J121,C120:F238,2,FALSE),""), cached=
+  FORMULA M121: =IFERROR(VLOOKUP(J121,C120:F238,4,FALSE),"")
+         type=lookup, inputs=['J121', 'C120', 'F238'], label==IFERROR(VLOOKUP(J121,C120:F238,3,FALSE),""), cached=
+  FORMULA K122: =IFERROR(VLOOKUP(J122,C121:F239,2,FALSE),"")
+         type=lookup, inputs=['J122', 'C121', 'F239'], label==IFERROR(VLOOKUP(J121,C120:F238,2,FALSE),""), cached=
+  FORMULA L122: =IFERROR(VLOOKUP(J122,C121:F239,3,FALSE),"")
+         type=lookup, inputs=['J122', 'C121', 'F239'], label==IFERROR(VLOOKUP(J122,C121:F239,2,FALSE),""), cached=
+  FORMULA M122: =IFERROR(VLOOKUP(J122,C121:F239,4,FALSE),"")
+         type=lookup, inputs=['J122', 'C121', 'F239'], label==IFERROR(VLOOKUP(J122,C121:F239,3,FALSE),""), cached=
+  FORMULA K123: =IFERROR(VLOOKUP(J123,C122:F240,2,FALSE),"")
+         type=lookup, inputs=['J123', 'C122', 'F240'], label==IFERROR(VLOOKUP(J122,C121:F239,2,FALSE),""), cached=
+  FORMULA L123: =IFERROR(VLOOKUP(J123,C122:F240,3,FALSE),"")
+         type=lookup, inputs=['J123', 'C122', 'F240'], label==IFERROR(VLOOKUP(J123,C122:F240,2,FALSE),""), cached=
+  FORMULA M123: =IFERROR(VLOOKUP(J123,C122:F240,4,FALSE),"")
+         type=lookup, inputs=['J123', 'C122', 'F240'], label==IFERROR(VLOOKUP(J123,C122:F240,3,FALSE),""), cached=
+  FORMULA K124: =IFERROR(VLOOKUP(J124,C123:F241,2,FALSE),"")
+         type=lookup, inputs=['J124', 'C123', 'F241'], label==IFERROR(VLOOKUP(J123,C122:F240,2,FALSE),""), cached=
+  FORMULA L124: =IFERROR(VLOOKUP(J124,C123:F241,3,FALSE),"")
+         type=lookup, inputs=['J124', 'C123', 'F241'], label==IFERROR(VLOOKUP(J124,C123:F241,2,FALSE),""), cached=
+  FORMULA M124: =IFERROR(VLOOKUP(J124,C123:F241,4,FALSE),"")
+         type=lookup, inputs=['J124', 'C123', 'F241'], label==IFERROR(VLOOKUP(J124,C123:F241,3,FALSE),""), cached=
+
+  INPUTS:
+    C101: value=Am, label=Pu, unit=molar
+    J89: value=, label=5A, unit=
+    C98: value=U, label=Pa, unit=
+    J59: value=, label=7A, unit=
+    F223: value=, label=, unit=
+    F198: value=, label=, unit=
+    F134: value=, label=, unit=
+    C7: value=H, label=Lambang Unsur, unit=molar
+    J67: value=, label=LANTANIDA, unit=
+    J107: value=, label=AKTINIDA, unit=
+    J90: value=, label=6A, unit=
+    J70: value=, label=LANTANIDA, unit=
+    J24: value=, label=8A, unit=
+    F193: value=, label=, unit=
+    J100: value=, label=AKTINIDA, unit=
+    F183: value=, label=, unit=
+    C56: value=Sn, label=In, unit=normalitas
+    C73: value=Ho, label=Dy, unit=
+    C84: value=Pt, label=Ir, unit=
+    J113: value=, label=6B, unit=
+    C87: value=Tl, label=Hg, unit=liter
+    C41: value=Br, label=Se, unit=
+    J56: value=, label=4A, unit=
+    J25: value=, label=1A, unit=
+    J95: value=, label=3B, unit=
+    J52: value=, label=8B, unit=
+    J87: value=, label=2B, unit=
+    J82: value=, label=7B, unit=
+    F178: value=, label=, unit=
+    J30: value=, label=6B, unit=
+    F142: value=, label=, unit=
+    C76: value=Yb, label=Tm, unit=molar
+    F214: value=, label=, unit=
+    C25: value=K, label=Ar, unit=liter
+    F221: value=, label=, unit=
+    F225: value=, label=, unit=
+    J73: value=, label=LANTANIDA, unit=
+    C35: value=Cu, label=Ni, unit=
+    J22: value=, label=6A, unit=
+    C18: value=Mg, label=Na, unit=milligram
+    C54: value=Cd, label=Ag, unit=
+    J101: value=, label=AKTINIDA, unit=
+    F228: value=, label=, unit=
+    J104: value=, label=AKTINIDA, unit=
+    F204: value=, label=, unit=
+    F209: value=, label=, unit=
+    J119: value=, label=3A, unit=
+    F159: value=, label=, unit=
+    C81: value=Re, label=Ta, unit=
+    F206: value=, label=, unit=
+    F155: value=, label=, unit=
+    J33: value=, label=8B, unit=
+    C102: value=Cm, label=Am, unit=molar
+    F226: value=, label=, unit=
+    C19: value=Al, label=Mg, unit=milligram
+    F233: value=, label=, unit=
+    J8: value= , label=8A, unit=
+    C103: value=Bk, label=Cm, unit=molar
+    J77: value=, label=LANTANIDA, unit=
+    J19: value=, label=3A, unit=
+    F169: value=, label=, unit=
+    C26: value=Ca, label=Ar, unit=liter
+    C86: value=Hg, label=Au, unit=
+    F190: value=, label=, unit=
+    C72: value=Dy, label=Tb, unit=
+    J93: value=, label=1A, unit=
+    J37: value=, label=3A, unit=
+    C79: value=Ta, label=Hf, unit=
+    J72: value=, label=LANTANIDA, unit=
+    C43: value=Rb, label=Kr, unit=
+    J102: value=, label=AKTINIDA, unit=
+    C80: value=W, label=Ta, unit=
+    F174: value=, label=, unit=
+    C23: value=Cl, label=Si, unit=liter
+    C107: value=Md, label=Fm, unit=molar
+    F143: value=, label=, unit=
+    C82: value=Os, label=Re, unit=
+    C11: value=B, label=Be, unit=
+    F222: value=, label=, unit=
+    C96: value=Th, label=Ac, unit=
+    C15: value=F, label=Be, unit=normalitas
+    J26: value=, label=2A, unit=
+    C74: value=Er, label=Ho, unit=
+    F203: value=, label=, unit=
+    F207: value=, label=, unit=
+    F171: value=, label=, unit=
+    J63: value=, label=3B, unit=
+    J109: value=, label=AKTINIDA, unit=
+    J23: value=, label=7A, unit=
+    F150: value=, label=, unit=
+    F130: value=, label=, unit=
+    J36: value=, label=2B, unit=
+    J17: value=, label=1A, unit=
+    J13: value=, label=5A, unit=
+    F235: value=, label=, unit=
+    C119: value=Nh, label=Cn, unit=normalitas
+    F124: value=7, label=8A, unit=
+    C104: value=Cf, label=Bk, unit=molar
+    F237: value=, label=, unit=
+    F188: value=, label=, unit=
+    J88: value=, label=4A, unit=
+    C9: value=Li, label=He, unit=molar
+    C97: value=Pa, label=Th, unit=
+    F158: value=, label=, unit=
+    J110: value=, label=3B, unit=
+    F162: value=, label=, unit=
+    F146: value=, label=, unit=
+    F170: value=, label=, unit=
+    C117: value=Rg, label=Ds, unit=
+    J76: value=, label=LANTANIDA, unit=
+    F187: value=, label=, unit=
+    F227: value=, label=, unit=
+    C113: value=Bh, label=Sg, unit=
+    F126: value=, label=, unit=
+    C22: value=S, label=Si, unit=liter
+    C57: value=Sb, label=Sn, unit=normalitas
+    C88: value=Pb, label=Tl, unit=liter
+    C33: value=Co, label=Fe, unit=normalitas
+    J48: value=, label=6B, unit=
+    J116: value=, label=8B, unit=
+    F200: value=, label=, unit=
+    F139: value=, label=, unit=
+    J66: value=, label=LANTANIDA, unit=
+    F179: value=, label=, unit=
+    C51: value=Rh, label=Ru, unit=
+    J69: value=, label=LANTANIDA, unit=
+    C50: value=Ru, label=Tc, unit=
+    C28: value=Ti, label=Sc, unit=
+    C83: value=Ir, label=Os, unit=
+    J112: value=, label=5B, unit=
+    F194: value=, label=, unit=
+    F219: value=, label=, unit=
+    C68: value=Sm, label=Pm, unit=molar
+    C95: value=Ac, label=Ra, unit=normalitas
+    C94: value=Ra, label=Fr, unit=normalitas
+    C24: value=Ar, label=Cl, unit=liter
+    F131: value=, label=, unit=
+    F220: value=, label=, unit=
+    F216: value=, label=, unit=
+    C29: value=V, label=Ti, unit=
+    F147: value=, label=, unit=
+    C71: value=Tb, label=Gd, unit=molar
+    C49: value=Tc, label=Mo, unit=
+    F144: value=, label=, unit=
+    J53: value=, label=1B, unit=
+    J115: value=, label=8B, unit=
+    F140: value=, label=, unit=
+    J108: value=, label=AKTINIDA, unit=
+    J74: value=, label=LANTANIDA, unit=
+    C114: value=Hs, label=Bh, unit=
+    F236: value=, label=, unit=
+    J34: value=, label=8B, unit=
+    F195: value=, label=, unit=
+    F127: value=, label=, unit=
+    J61: value=, label=1A, unit=
+    C118: value=Cn, label=Rg, unit=normalitas
+    J114: value=, label=7B, unit=
+    J47: value=, label=5B, unit=
+    J99: value=, label=AKTINIDA, unit=
+    F202: value=, label=, unit=
+    C67: value=Pm, label=Nd, unit=molar
+    C111: value=Db, label=Rf, unit=
+    F186: value=, label=, unit=
+    F125: value=, label=, unit=
+    C6: value=Lambang Unsur, label=Nomor atom, unit=molar
+    F241: value=, label=, unit=
+    J29: value=, label=5B, unit=
+    C47: value=Nb, label=Zr, unit=
+    F148: value=, label=, unit=
+    C27: value=Sc, label=Ca, unit=
+    J54: value=, label=2B, unit=
+    F231: value=, label=, unit=
+    F180: value=, label=, unit=
+    F185: value=, label=, unit=
+    J64: value=, label=LANTANIDA, unit=
+    J103: value=, label=AKTINIDA, unit=
+    F199: value=, label=, unit=
+    J31: value=, label=7B, unit=
+    F160: value=, label=, unit=
+    F189: value=, label=, unit=
+    C92: value=Rn, label=At, unit=normalitas
+    J35: value=, label=1B, unit=
+    F172: value=, label=, unit=
+    J80: value=, label=5B, unit=
+    F145: value=, label=, unit=
+    C58: value=Te, label=Sb, unit=normalitas
+    F212: value=, label=, unit=
+    J81: value=, label=6B, unit=
+    J49: value=, label=7B, unit=
+    C17: value=Na, label=Ne, unit=
+    J45: value=, label=3B, unit=
+    C52: value=Pd, label=Rh, unit=
+    C34: value=Ni, label=Co, unit=normalitas
+    F238: value=, label=, unit=
+    J12: value=, label=4A, unit=
+    C40: value=Se, label=As, unit=
+    J50: value=, label=8B, unit=
+    J41: value=, label=7A, unit=
+    F205: value=, label=, unit=
+    F234: value=, label=, unit=
+    F230: value=, label=, unit=
+    C106: value=Fm, label=Es, unit=molar
+    J105: value=, label=AKTINIDA, unit=
+    C112: value=Sg, label=Db, unit=
+    F141: value=, label=, unit=
+    J32: value=, label=8B, unit=
+    J11: value=, label=3A, unit=
+    F138: value=, label=, unit=
+    C62: value=Ba, label=Cs, unit=
+    C116: value=Ds, label=Mt, unit=
+    J57: value=, label=5A, unit=
+    J68: value=, label=LANTANIDA, unit=
+    J122: value=, label=6A, unit=
+    J42: value=, label=8A, unit=
+    J21: value=, label=5A, unit=
+    F175: value=, label=, unit=
+    F240: value=, label=, unit=
+    F165: value=, label=, unit=
+    F239: value=, label=, unit=
+    J92: value=, label=8A, unit=
+    C31: value=Mn, label=Cr, unit=normalitas
+    C115: value=Mt, label=Hs, unit=
+    J120: value=, label=4A, unit=
+    C16: value=Ne, label=, unit=normalitas
+    F176: value=, label=, unit=
+    F196: value=, label=, unit=
+    F173: value=, label=, unit=
+    C21: value=P, label=Si, unit=milligram
+    F224: value=, label=, unit=
+    F153: value=, label=, unit=
+    J85: value=, label=8B, unit=
+    J118: value=, label=1B, unit=
+    J46: value=, label=4B, unit=
+    C36: value=Zn, label=Cu, unit=normalitas
+    J84: value=, label=8B, unit=
+    F177: value=, label=, unit=
+    C109: value=Lr, label=No, unit=molar
+    C69: value=Eu, label=Sm, unit=molar
+    F151: value=, label=, unit=
+    C44: value=Sr, label=Rb, unit=
+    F152: value=, label=, unit=
+    C48: value=Mo, label=Nb, unit=
+    F215: value=, label=, unit=
+    C78: value=Hf, label=Lu, unit=molar
+    F167: value=, label=, unit=
+    F135: value=, label=, unit=
+    F191: value=, label=, unit=
+    C105: value=Es, label=Cf, unit=molar
+    J106: value=, label=AKTINIDA, unit=
+    J62: value=, label=2A, unit=
+    J55: value=, label=3A, unit=
+    J65: value=, label=LANTANIDA, unit=
+    C37: value=Ga, label=Zn, unit=normalitas
+    F210: value=, label=, unit=
+    F137: value=, label=, unit=
+    F156: value=, label=, unit=
+    F128: value=, label=, unit=
+    J28: value=, label=4B, unit=
+    J43: value=, label=1A, unit=
+    F164: value=, label=, unit=
+    C53: value=Ag, label=Pd, unit=
+    C70: value=Gd, label=Eu, unit=molar
+    F201: value=, label=, unit=
+    J58: value=, label=6A, unit=
+    C61: value=Cs, label=Xe, unit=
+    F229: value=, label=, unit=
+    C60: value=Xe, label=Te, unit=
+    C45: value=Y, label=Sr, unit=
+    J9: value= , label=1A, unit=
+    C123: value=Ts, label=Lv, unit=liter
+    C122: value=Lv, label=Mc, unit=liter
+    C89: value=Bi, label=Pb, unit=liter
+    J78: value=, label=3B, unit=
+    F129: value=, label=, unit=
+    F154: value=, label=, unit=
+    C90: value=Po, label=Bi, unit=liter
+    C8: value=He, label=Lambang Unsur, unit=molar
+    C121: value=Mc, label=Fl, unit=normalitas
+    F184: value=, label=, unit=
+    J91: value=, label=7A, unit=
+    F208: value=, label=, unit=
+    C14: value=O, label=Be, unit=normalitas
+    C91: value=At, label=Po, unit=
+    J117: value=, label=8B, unit=
+    F192: value=, label=, unit=
+    C100: value=Pu, label=Np, unit=
+    C55: value=In, label=Cd, unit=normalitas
+    J7: value= , label=1A, unit=
+    J124: value=, label=8A, unit=
+    J96: value=, label=AKTINIDA, unit=
+    F166: value=, label=, unit=
+    F197: value=, label=, unit=
+    J10: value= , label=2A, unit=
+    F211: value=, label=, unit=
+    J98: value=, label=AKTINIDA, unit=
+    F161: value=, label=, unit=
+    F218: value=, label=, unit=
+    J71: value=, label=LANTANIDA, unit=
+    C32: value=Fe, label=Mn, unit=normalitas
+    C77: value=Lu, label=Yb, unit=molar
+    F168: value=, label=, unit=
+    F132: value=, label=, unit=
+    F149: value=, label=, unit=
+    J94: value=, label=2A, unit=
+    J75: value=, label=LANTANIDA, unit=
+    C66: value=Nd, label=Pr, unit=
+    C10: value=Be, label=Li, unit=
+    C65: value=Pr, label=Ce, unit=
+    C13: value=N, label=Be, unit=normalitas
+    C38: value=Ge, label=Ga, unit=normalitas
+    F232: value=, label=, unit=
+    C20: value=Si, label=Al, unit=milligram
+    J60: value=, label=8A, unit=
+    J44: value=, label=2A, unit=
+    C64: value=Ce, label=La, unit=
+    J16: value=, label=8A, unit=
+    F217: value=, label=, unit=
+    J18: value=, label=2A, unit=
+    J121: value=, label=5A, unit=
+    J79: value=, label=4B, unit=
+    J38: value=, label=4A, unit=
+    J83: value=, label=8B, unit=
+    C110: value=Rf, label=Lr, unit=
+    C85: value=Au, label=Pt, unit=
+    J15: value=, label=7A, unit=
+    C99: value=Np, label=Pa, unit=
+    J27: value=, label=3B, unit=
+    C63: value=La, label=Ba, unit=
+    F163: value=, label=, unit=
+    F136: value=, label=, unit=
+    J111: value=, label=4B, unit=
+    C120: value=Fl, label=Nh, unit=normalitas
+    C30: value=Cr, label=Ti, unit=
+    J51: value=, label=8B, unit=
+    J123: value=, label=7A, unit=
+    C12: value=C, label=Be, unit=
+    C93: value=Fr, label=Rn, unit=normalitas
+    J14: value=, label=6A, unit=
+    C46: value=Zr, label=Sr, unit=
+    F181: value=, label=, unit=
+    J40: value=, label=6A, unit=
+    J86: value=, label=1B, unit=
+    F182: value=, label=, unit=
+    F133: value=, label=, unit=
+    C39: value=As, label=Ge, unit=normalitas
+    F157: value=, label=, unit=
+    F213: value=, label=, unit=
+    C75: value=Tm, label=Er, unit=molar
+    C108: value=No, label=Md, unit=molar
+    J39: value=, label=5A, unit=
+    J97: value=, label=AKTINIDA, unit=
+    J20: value=, label=4A, unit=
+    C59: value=I, label=Te, unit=normalitas
+    C42: value=Kr, label=Br, unit=
+
+--- Massa Molar ---
+  Formula cells: 36
+  Input cells: 34
+  Output cells: 5
+  FORMULA F7: =IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!D6:$F$124,2,FALSE),"0")
+         type=lookup, inputs=['D7', 'D6', 'F124'], label=Nomor Massa (Ar), cached=0
+  FORMULA G7: =IFERROR(F7*E7,"0")
+         type=conditional_calculation, inputs=['F7', 'E7'], label==IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!D6:$F$124,2,FALS, cached=0
+  FORMULA I7: =IFERROR(G7+G8+G9,"0")
+         type=conditional_calculation, inputs=['G7', 'G8', 'G9'], label==IFERROR(F7*E7,"0"), cached=0
+  FORMULA J7: =I7
+         type=calculation, inputs=['I7'], label==IFERROR(G7+G8+G9,"0"), cached=0
+  FORMULA F8: =IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FALSE),"0")
+         type=lookup, inputs=['D8', 'C7', 'F124'], label==IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!D6:$F$124,2,FALS, cached=0
+  FORMULA G8: =IFERROR(F8*E8,"0")
+         type=conditional_calculation, inputs=['F8', 'E8'], label==IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FA, cached=0
+  FORMULA F9: =IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D9', 'C6', 'D124'], label==IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FA, cached=0
+  FORMULA G9: =IFERROR(F9*E9,"0")
+         type=conditional_calculation, inputs=['F9', 'E9'], label==IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA F10: =IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D10', 'C6', 'D124'], label==IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA G10: =IFERROR(F10*E10,"0")
+         type=conditional_calculation, inputs=['F10', 'E10'], label==IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA I10: =IFERROR(G10+G11+G12,"0")
+         type=conditional_calculation, inputs=['G10', 'G11', 'G12'], label==IFERROR(F10*E10,"0"), cached=0
+  FORMULA J10: =I10
+         type=calculation, inputs=['I10'], label==IFERROR(G10+G11+G12,"0"), cached=0
+  FORMULA F11: =IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D11', 'C6', 'D124'], label==IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G11: =IFERROR(F11*E11,"0")
+         type=conditional_calculation, inputs=['F11', 'E11'], label==IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F12: =IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D12', 'C6', 'D124'], label==IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G12: =IFERROR(E12*F12,"0")
+         type=conditional_calculation, inputs=['E12', 'F12'], label==IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F13: =IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D13', 'C6', 'D124'], label==IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G13: =IFERROR(F13*E13,"0")
+         type=conditional_calculation, inputs=['F13', 'E13'], label==IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA I13: =IFERROR(G13+G14+G15,"0")
+         type=conditional_calculation, inputs=['G13', 'G14', 'G15'], label==IFERROR(F13*E13,"0"), cached=0
+  FORMULA J13: =I13
+         type=calculation, inputs=['I13'], label==IFERROR(G13+G14+G15,"0"), cached=0
+  FORMULA F14: =IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D14', 'C6', 'D124'], label==IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G14: =IFERROR(F14*E14,"0")
+         type=conditional_calculation, inputs=['F14', 'E14'], label==IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F15: =IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D15', 'C6', 'D124'], label==IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G15: =IFERROR(F15*E15,"0")
+         type=conditional_calculation, inputs=['F15', 'E15'], label==IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F16: =IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D16', 'C6', 'D124'], label==IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G16: =IFERROR(F16*E16,"")
+         type=conditional_calculation, inputs=['F16', 'E16'], label==IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA I16: =IFERROR(G16+G17+G18+G19+G20,"0")
+         type=conditional_calculation, inputs=['G16', 'G17', 'G18', 'G19', 'G20'], label==IFERROR(F16*E16,""), cached=0
+  FORMULA J16: =I17
+         type=calculation, inputs=['I17'], label==IFERROR(G16+G17+G18+G19+G20,"0"), cached=0
+  FORMULA F17: =IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D17', 'C6', 'D124'], label==IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G17: =IFERROR(F17*E17,"")
+         type=conditional_calculation, inputs=['F17', 'E17'], label==IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F18: =IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D18', 'C6', 'D124'], label==IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G18: =IFERROR(F18*E18,"")
+         type=conditional_calculation, inputs=['F18', 'E18'], label==IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F19: =IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D19', 'C6', 'D124'], label==IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G19: =IFERROR(F19*E19,"")
+         type=conditional_calculation, inputs=['F19', 'E19'], label==IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F20: =IFERROR(VLOOKUP(D20,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D20', 'C6', 'D124'], label==IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G20: =IFERROR(F20*E20,"")
+         type=conditional_calculation, inputs=['F20', 'E20'], label==IFERROR(VLOOKUP(D20,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+
+  INPUTS:
+    E14: value= , label=, unit=
+    E15: value= , label=, unit=
+    D14: value= , label=, unit=
+    D18: value=, label=, unit=
+    E19: value=, label=, unit=
+    I17: value=, label==IFERROR(F17*E17,""), unit=
+    E12: value= , label=, unit=
+    D12: value= , label=, unit=
+    C6: value=Molekul, label=Parameter, unit=mol
+    D7: value= , label=Lambang Unsur, unit=liter
+    D17: value=, label=, unit=
+    E20: value=, label=, unit=
+    D6: value=Lambang Unsur , label=Molekul, unit=mol
+    D124: value=, label=, unit=
+    E10: value= , label=Kuantitas Unsur, unit=
+    E18: value=, label=, unit=
+    D15: value= , label=, unit=
+    C7: value=, label=Molekul, unit=liter
+    F124: value=, label=, unit=
+    D13: value= , label=, unit=
+    D16: value=, label=, unit=
+    D20: value=, label=, unit=
+    E11: value= , label=Kuantitas Unsur, unit=
+    E9: value= , label=Kuantitas Unsur, unit=liter
+    E8: value= , label=Kuantitas Unsur, unit=liter
+    E13: value= , label=, unit=
+    E7: value= , label=Kuantitas Unsur, unit=liter
+    E17: value=, label=, unit=
+    D11: value= , label=Lambang Unsur, unit=
+    D10: value= , label=Lambang Unsur, unit=
+    E16: value=, label=, unit=
+    D9: value= , label=Lambang Unsur, unit=liter
+    D19: value=, label=, unit=
+    D8: value= , label=Lambang Unsur, unit=liter
+
+--- Bobot Ekuivalen ---
+  Formula cells: 44
+  Input cells: 36
+  Output cells: 7
+  FORMULA F7: =IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D7', 'C6', 'D124'], label=Nomor Massa (Ar), cached=0
+  FORMULA G7: =IFERROR(F7*E7,"0")
+         type=conditional_calculation, inputs=['F7', 'E7'], label==IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA H7: =IFERROR(G7+G8+G9,"0")
+         type=conditional_calculation, inputs=['G7', 'G8', 'G9'], label==IFERROR(F7*E7,"0"), cached=0
+  FORMULA I7: =H7
+         type=calculation, inputs=['H7'], label==IFERROR(G7+G8+G9,"0"), cached=0
+  FORMULA K7: =IFERROR(H7/J7,"0")
+         type=conditional_calculation, inputs=['H7', 'J7'], label==H7, cached=0
+  FORMULA L7: =K7
+         type=calculation, inputs=['K7'], label==IFERROR(H7/J7,"0"), cached=0
+  FORMULA F8: =IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FALSE),"0")
+         type=lookup, inputs=['D8', 'C7', 'F124'], label==IFERROR(VLOOKUP(D7,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA G8: =IFERROR(F8*E8,"0")
+         type=conditional_calculation, inputs=['F8', 'E8'], label==IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FA, cached=0
+  FORMULA F9: =IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D9', 'C6', 'D124'], label==IFERROR(VLOOKUP(D8,'[1]SPU-HOME'!$C$7:$F$124,2,FA, cached=0
+  FORMULA G9: =IFERROR(F9*E9,"0")
+         type=conditional_calculation, inputs=['F9', 'E9'], label==IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA F10: =IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D10', 'C6', 'D124'], label==IFERROR(VLOOKUP(D9,'[1]SPU-HOME'!$C$6:$D$124,2,FA, cached=0
+  FORMULA G10: =IFERROR(F10*E10,"")
+         type=conditional_calculation, inputs=['F10', 'E10'], label==IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=
+  FORMULA H10: =IFERROR(G10+G11+G12,"0")
+         type=conditional_calculation, inputs=['G10', 'G11', 'G12'], label==IFERROR(F10*E10,""), cached=0
+  FORMULA I10: =H10
+         type=calculation, inputs=['H10'], label==IFERROR(G10+G11+G12,"0"), cached=0
+  FORMULA K10: =IFERROR(H10/J10,"0")
+         type=conditional_calculation, inputs=['H10', 'J10'], label==H10, cached=0
+  FORMULA L10: =K10
+         type=calculation, inputs=['K10'], label==IFERROR(H10/J10,"0"), cached=0
+  FORMULA F11: =IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D11', 'C6', 'D124'], label==IFERROR(VLOOKUP(D10,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G11: =IFERROR(F11*E11,"")
+         type=conditional_calculation, inputs=['F11', 'E11'], label==IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=
+  FORMULA F12: =IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D12', 'C6', 'D124'], label==IFERROR(VLOOKUP(D11,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G12: =IFERROR(F12*E12,"0")
+         type=conditional_calculation, inputs=['F12', 'E12'], label==IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F13: =IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D13', 'C6', 'D124'], label==IFERROR(VLOOKUP(D12,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G13: =IFERROR(F13*E13,"")
+         type=conditional_calculation, inputs=['F13', 'E13'], label==IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=
+  FORMULA H13: =IFERROR(G13+G14+G15,"0")
+         type=conditional_calculation, inputs=['G13', 'G14', 'G15'], label==IFERROR(F13*E13,""), cached=0
+  FORMULA I13: =H13
+         type=calculation, inputs=['H13'], label==IFERROR(G13+G14+G15,"0"), cached=0
+  FORMULA K13: =IFERROR(H13/J13,"0")
+         type=conditional_calculation, inputs=['H13', 'J13'], label==H13, cached=0
+  FORMULA L13: =K13
+         type=calculation, inputs=['K13'], label==IFERROR(H13/J13,"0"), cached=0
+  FORMULA F14: =IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D14', 'C6', 'D124'], label==IFERROR(VLOOKUP(D13,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G14: =IFERROR(F14*E14,"")
+         type=conditional_calculation, inputs=['F14', 'E14'], label==IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=
+  FORMULA F15: =IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D15', 'C6', 'D124'], label==IFERROR(VLOOKUP(D14,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G15: =IFERROR(F15*E15,"0")
+         type=conditional_calculation, inputs=['F15', 'E15'], label==IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F16: =IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D16', 'C6', 'D124'], label==IFERROR(VLOOKUP(D15,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G16: =IFERROR(F16*E16,"")
+         type=conditional_calculation, inputs=['F16', 'E16'], label==IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA H16: =IFERROR(G16+G17+G18+G19+G20,"0")
+         type=conditional_calculation, inputs=['G16', 'G17', 'G18', 'G19', 'G20'], label==IFERROR(F16*E16,""), cached=0
+  FORMULA I16: =H17
+         type=calculation, inputs=['H17'], label==IFERROR(G16+G17+G18+G19+G20,"0"), cached=0
+  FORMULA K16: =IFERROR(H16/I16,"0")
+         type=conditional_calculation, inputs=['H16', 'I16'], label==H17, cached=0
+  FORMULA L16: =K16
+         type=calculation, inputs=['K16'], label==IFERROR(H16/I16,"0"), cached=0
+  FORMULA F17: =IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D17', 'C6', 'D124'], label==IFERROR(VLOOKUP(D16,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G17: =IFERROR(F17*E17,"")
+         type=conditional_calculation, inputs=['F17', 'E17'], label==IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F18: =IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D18', 'C6', 'D124'], label==IFERROR(VLOOKUP(D17,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G18: =IFERROR(F18*E18,"")
+         type=conditional_calculation, inputs=['F18', 'E18'], label==IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F19: =IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D19', 'C6', 'D124'], label==IFERROR(VLOOKUP(D18,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G19: =IFERROR(F19*E19,"")
+         type=conditional_calculation, inputs=['F19', 'E19'], label==IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA F20: =IFERROR(VLOOKUP(D20,'[1]SPU-HOME'!$C$6:$D$124,2,FALSE),"0")
+         type=lookup, inputs=['D20', 'C6', 'D124'], label==IFERROR(VLOOKUP(D19,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+  FORMULA G20: =IFERROR(F20*E20,"")
+         type=conditional_calculation, inputs=['F20', 'E20'], label==IFERROR(VLOOKUP(D20,'[1]SPU-HOME'!$C$6:$D$124,2,F, cached=0
+
+  INPUTS:
+    E14: value= , label=, unit=
+    E15: value= , label=, unit=
+    D14: value= , label=, unit=
+    D18: value= , label=, unit=
+    E19: value=, label=, unit=
+    E12: value= , label=, unit=
+    D12: value= , label=, unit=
+    C6: value=Molekul, label=Parameter, unit=normalitas
+    D7: value= , label=Lambang Unsur, unit=liter
+    J7: value= , label==H7, unit=liter
+    D17: value= , label=, unit=
+    E20: value=, label=, unit=
+    D124: value=, label=, unit=
+    E10: value= , label=Kuantitas Unsur, unit=
+    E18: value=, label=, unit=
+    D15: value= , label=, unit=
+    J13: value=, label==H13, unit=
+    C7: value= , label=Molekul, unit=liter
+    J10: value= , label==H10, unit=
+    F124: value=, label=, unit=
+    D13: value= , label=, unit=
+    D16: value= , label=, unit=
+    D20: value= , label=, unit=
+    E11: value= , label=Kuantitas Unsur, unit=
+    E9: value= , label=Kuantitas Unsur, unit=liter
+    E8: value= , label=Kuantitas Unsur, unit=liter
+    E13: value= , label=, unit=
+    E7: value= , label=Kuantitas Unsur, unit=liter
+    E17: value=, label=, unit=
+    D11: value= , label=Lambang Unsur, unit=
+    D10: value= , label=Lambang Unsur, unit=
+    D9: value= , label=Lambang Unsur, unit=liter
+    E16: value=, label=, unit=
+    H17: value=, label==IFERROR(F17*E17,""), unit=
+    D19: value= , label=, unit=
+    D8: value= , label=Lambang Unsur, unit=liter
+
+--- FORMAT STANDARDISASI ---
+  Formula cells: 14
+  Input cells: 10
+  Output cells: 7
+  FORMULA M11: =E12
+         type=calculation, inputs=['E12'], label=Volume Y (ml), cached=0
+  FORMULA H12: =G12-F12
+         type=calculation, inputs=['G12', 'F12'], label=Volume X yang digunakan (ml), cached=0
+  FORMULA H13: =G13-F13
+         type=calculation, inputs=['G13', 'F13'], label==G12-F12, cached=0
+  FORMULA H14: =AVERAGE(H12:H13)
+         type=aggregation, inputs=['H12', 'H13'], label=Volume rata-rata X penitar (ml):, cached=0
+  FORMULA O14: =
+         type=calculation, inputs=[], label=Faktor Pengenceran, cached==
+  FORMULA P14: =M11
+         type=calculation, inputs=['M11'], label=Faktor Pengenceran, cached=0
+  FORMULA R14: =M12
+         type=calculation, inputs=['M12'], label==M11, cached=0
+  FORMULA P15: =S7
+         type=calculation, inputs=['S7'], label=Hasil, cached=0
+  FORMULA M16: =P21
+         type=calculation, inputs=['P21'], label=Konsentrasi X (N, M), cached=0
+  FORMULA O17: =
+         type=calculation, inputs=[], label=Konsentrasi X =, cached==
+  FORMULA P17: =P15*Q15*R15
+         type=calculation, inputs=['P15', 'Q15', 'R15'], label==S7, cached=0
+  FORMULA R17: =M12
+         type=calculation, inputs=['M12'], label==P15*Q15*R15, cached=0
+  FORMULA P18: =M13
+         type=calculation, inputs=['M13'], label==P15*Q15*R15, cached=0
+  FORMULA P21: =IFERROR($P$17/$P$18,"0")
+         type=conditional_calculation, inputs=['P17', 'P18'], label=Konsenttrasi X =, cached=0
+
+  INPUTS:
+    F12: value=0, label=Awal, unit=milliliter
+    Q15: value=, label==S7, unit=
+    G12: value=0, label=Akhir, unit=milliliter
+    M12: value=0, label=Konsentrasi Y (N, M), unit=milliliter
+    S7: value=, label=, unit=
+    G13: value=0, label=Akhir, unit=milliliter
+    E12: value=0, label=Volume Y (ml), unit=milliliter
+    F13: value=0, label=Awal, unit=milliliter
+    R15: value=, label==S7, unit=
+    M13: value=0, label=Volume rata-rataX (ml), unit=milliliter
+
+--- FORMAT STANDARDISASI&KADAR ---
+  Formula cells: 32
+  Input cells: 18
+  Output cells: 13
+  FORMULA I12: =H12-G12
+         type=calculation, inputs=['H12', 'G12'], label=Volume X yang digunakan (ml), cached=0
+  FORMULA I13: =H13-G13
+         type=calculation, inputs=['H13', 'G13'], label==H12-G12, cached=0
+  FORMULA I14: =AVERAGE(I12:I13)
+         type=aggregation, inputs=['I12', 'I13'], label=Volume rata-rata penitar (ml):, cached=0
+  FORMULA I20: =E20
+         type=calculation, inputs=['E20'], label=Konsentrasi X =, cached= Volume Y (ml)
+  FORMULA K20: =E21
+         type=calculation, inputs=['E21'], label==E20, cached=Konsentrasi Y (N, M)
+  FORMULA F22: =I14
+         type=calculation, inputs=['I14'], label=Volume rata-rataX (ml), cached=0
+  FORMULA F24: =I30
+         type=calculation, inputs=['I30'], label=Konsentrasi X (N, M), cached=0
+  FORMULA H24: =
+         type=calculation, inputs=[], label==I30, cached==
+  FORMULA I24: =F20
+         type=calculation, inputs=['F20'], label==I30, cached=0
+  FORMULA K24: =F21
+         type=calculation, inputs=['F21'], label==F20, cached=0
+  FORMULA I25: =F22
+         type=calculation, inputs=['F22'], label==F20, cached=0
+  FORMULA H27: =
+         type=calculation, inputs=[], label=yang ingin distandrarisasi, cached==
+  FORMULA I27: =I24*K24
+         type=calculation, inputs=['I24', 'K24'], label=yang ingin distandrarisasi, cached=0
+  FORMULA I28: =I25
+         type=calculation, inputs=['I25'], label=penstandarisasi, cached=0
+  FORMULA I30: =IFERROR(I27/I28,"0")
+         type=conditional_calculation, inputs=['I27', 'I28'], label=Konsentrasi X =, cached=0
+  FORMULA F36: =IFERROR(VLOOKUP(F35,'SPU KIMIA'!C7:D124,2,FALSE),"0")
+         type=lookup, inputs=['F35', 'C7', 'D124'], label=Ar/Mr/ (g/mol), cached=0
+  FORMULA I36: =E34
+         type=calculation, inputs=['E34'], label=Kadar (g/L) =, cached= Volume titrasi (ml)
+  FORMULA K36: =E36
+         type=calculation, inputs=['E36'], label==E34, cached=Ar/Mr/ (g/mol)
+  FORMULA M36: =E37
+         type=calculation, inputs=['E37'], label==E36, cached=Konsentrasi Penitar (N, M)
+  FORMULA F37: =I30
+         type=calculation, inputs=['I30'], label=Konsentrasi Penitar (N, M), cached=0
+  FORMULA I37: =E38
+         type=calculation, inputs=['E38'], label==I30, cached=Volume Sampel (ml)
+  FORMULA H39: =
+         type=calculation, inputs=[], label=Volume yang dipipet (ml), cached==
+  FORMULA I39: =F34
+         type=calculation, inputs=['F34'], label=Volume yang dipipet (ml), cached=0
+  FORMULA K39: =F36
+         type=calculation, inputs=['F36'], label==F34, cached=0
+  FORMULA M39: =F37
+         type=calculation, inputs=['F37'], label==F36, cached=0
+  FORMULA O39: =F40
+         type=calculation, inputs=['F40'], label==F37, cached=0
+  FORMULA I40: =F38
+         type=calculation, inputs=['F38'], label=Faktor Pengenceran, cached=0
+  FORMULA F42: =I46
+         type=calculation, inputs=['I46'], label=Kadar (g/L), cached=0
+  FORMULA H43: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA I43: =I39*K39*M39*O39
+         type=calculation, inputs=['I39', 'K39', 'M39', 'O39'], label==F38, cached=0
+  FORMULA I44: =F38
+         type=calculation, inputs=['F38'], label==I39*K39*M39*O39, cached=0
+  FORMULA I46: =IFERROR(I43/I44,"0")
+         type=conditional_calculation, inputs=['I43', 'I44'], label=Kadar (g/L) =, cached=0
+
+  INPUTS:
+    G13: value=0, label=Awal, unit=milliliter
+    F34: value=0, label=Volume titrasi (ml), unit=milliliter
+    E20: value= Volume Y (ml), label=Diketahui, unit=milliliter
+    D124: value=, label=, unit=
+    H12: value=0, label=Akhir, unit=milliliter
+    G12: value=0, label=Awal, unit=milliliter
+    F38: value=0, label=Volume Sampel (ml), unit=liter
+    C7: value=, label=, unit=
+    E36: value=Ar/Mr/ (g/mol), label=Unsur/Senyawa, unit=milliliter
+    E21: value=Konsentrasi Y (N, M), label=Volume Y (ml), unit=milliliter
+    E38: value=Volume Sampel (ml), label=Konsentrasi Penitar (N, M), unit=liter
+    F20: value=0, label=Volume Y (ml), unit=milliliter
+    E37: value=Konsentrasi Penitar (N, M), label=Ar/Mr/ (g/mol), unit=milliliter
+    H13: value=0, label=Akhir, unit=milliliter
+    F21: value=0, label=Konsentrasi Y (N, M), unit=milliliter
+    F35: value= , label=Unsur/Senyawa, unit=milliliter
+    F40: value=0, label=Faktor Pengenceran, unit=molar
+    E34: value= Volume titrasi (ml), label=Diketahui, unit=milliliter
+
+--- FORMAT PENETAPAN KADAR ---
+  Formula cells: 20
+  Input cells: 15
+  Output cells: 11
+  FORMULA H12: =G12-F12
+         type=calculation, inputs=['G12', 'F12'], label=Volume penitar yang digunakan (ml), cached=0
+  FORMULA H13: =G13-F13
+         type=calculation, inputs=['G13', 'F13'], label==G12-F12, cached=0
+  FORMULA H14: =AVERAGE(H12:H13)
+         type=aggregation, inputs=['H12', 'H13'], label=Volume rata-rata titrasi (ml):, cached=0
+  FORMULA E19: =H14
+         type=calculation, inputs=['H14'], label=Volume rata2 titrasi (ml), cached=0
+  FORMULA E21: =IFERROR(VLOOKUP(E20,'SPU KIMIA'!C7:D124,2,FALSE),"0")
+         type=lookup, inputs=['E20', 'C7', 'D124'], label=Ar/Mr/ (g/mol), cached=0
+  FORMULA H21: =D19
+         type=calculation, inputs=['D19'], label=Kadar (g/L) =, cached= Volume rata2 titrasi (ml)
+  FORMULA J21: =D21
+         type=calculation, inputs=['D21'], label==D19, cached=Ar/Mr/ (g/mol)
+  FORMULA L21: =D22
+         type=calculation, inputs=['D22'], label==D21, cached=Konsentrasi Penitar (N, M)
+  FORMULA H22: =D23
+         type=calculation, inputs=['D23'], label=Konsentrasi Penitar (N, M), cached=Volume Sampel (ml)
+  FORMULA G24: =
+         type=calculation, inputs=[], label=Faktor Pengenceran, cached==
+  FORMULA H24: =E19
+         type=calculation, inputs=['E19'], label=Faktor Pengenceran, cached=0
+  FORMULA J24: =E21
+         type=calculation, inputs=['E21'], label==E19, cached=0
+  FORMULA L24: =E22
+         type=calculation, inputs=['E22'], label==E21, cached=0
+  FORMULA N24: =E24
+         type=calculation, inputs=['E24'], label==E22, cached=0
+  FORMULA H25: =E23
+         type=calculation, inputs=['E23'], label=Hasil, cached=0
+  FORMULA E26: =H30
+         type=calculation, inputs=['H30'], label=Kadar (g/L), cached=0
+  FORMULA H27: =PRODUCT(H24:N24)
+         type=calculation, inputs=['H24', 'N24'], label==E23, cached=0
+  FORMULA G28: =
+         type=calculation, inputs=[], label=, cached==
+  FORMULA H28: =E23
+         type=calculation, inputs=['E23'], label==PRODUCT(H24:N24), cached=0
+  FORMULA H30: =IFERROR(H27/P23,"0")
+         type=conditional_calculation, inputs=['H27', 'P23'], label=Kadar (g/L) =, cached=0
+
+  INPUTS:
+    F12: value=0, label=Awal, unit=milliliter
+    G13: value=0, label=Akhir, unit=milliliter
+    E24: value=0, label=Faktor Pengenceran, unit=liter
+    E20: value= , label=Unsur/Senyawa, unit=milliliter
+    D124: value=, label=, unit=
+    G12: value=0, label=Akhir, unit=milliliter
+    C7: value=, label=FORMAT DATA TITRASI, unit=
+    P23: value=, label=, unit=
+    D23: value=Volume Sampel (ml), label=Konsentrasi Penitar (N, M), unit=liter
+    E22: value=0, label=Konsentrasi Penitar (N, M), unit=milliliter
+    D21: value=Ar/Mr/ (g/mol), label=Unsur/Senyawa, unit=milliliter
+    F13: value=0, label=Awal, unit=milliliter
+    D19: value= Volume rata2 titrasi (ml), label=Diketahui, unit=milliliter
+    D22: value=Konsentrasi Penitar (N, M), label=Ar/Mr/ (g/mol), unit=milliliter
+    E23: value=0, label=Volume Sampel (ml), unit=liter
+
+--- Curve Titration ---
+  Formula cells: 67
+  Input cells: 6
+  Output cells: 34
+  FORMULA I11: =(10^-14/I10)
+         type=calculation, inputs=['I10'], label=Kb (Y), cached=5.494505494505495e-10
+  FORMULA I13: =I8
+         type=calculation, inputs=['I8'], label=Volume ekuivalen/sempurna (mL), cached=100
+  FORMULA I15: =I8*2
+         type=calculation, inputs=['I8'], label=Volume Max (mL), cached=200
+  FORMULA I17: =L23
+         type=calculation, inputs=['L23'], label=Konsentrasi X (N, M), cached=0
+  FORMULA E22: =IFERROR(-LOG(SQRT($I$9*$I$10)),"")
+         type=conditional_calculation, inputs=['I9', 'I10'], label=PH  dari Y (Ka=), cached=2.8699643060074624
+  FORMULA G22: =I13
+         type=calculation, inputs=['I13'], label==IFERROR(-LOG(SQRT($I$9*$I$10)),""), cached=100
+  FORMULA H22: =14-(-LOG(SQRT($I$11*((G22/1000*$I$9)/((G22+$I$8)/1000)))))
+         type=calculation, inputs=['I11', 'G22', 'I9', 'I8'], label==I13, cached=8.719449308175472
+  FORMULA D23: =D22+$I$12
+         type=calculation, inputs=['D22', 'I12'], label=Volume (X) yang ditambahkan (mL), cached=10
+  FORMULA E23: =((-LOG($I$10)+LOG((D23/1000*$I$9)/(($I$8/1000*$I$9)-(D23/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D23', 'I9', 'I8'], label==D22+$I$12, cached=3.7856861025756
+  FORMULA D24: =D23+$I$12
+         type=calculation, inputs=['D23', 'I12'], label==D22+$I$12, cached=20
+  FORMULA E24: =((-LOG($I$10)+LOG((D24/1000*$I$9)/(($I$8/1000*$I$9)-(D24/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D24', 'I9', 'I8'], label==D23+$I$12, cached=4.137868620686962
+  FORMULA G24: =$G$22+$I$12
+         type=calculation, inputs=['G22', 'I12'], label==((-LOG($I$10)+LOG((D24/1000*$I$9)/(($I$8/1000*$I$, cached=110
+  FORMULA H24: =14-(-LOG(((((G24/1000*$I$9)-($G$22/1000*$I$9))/((G24+$G$22)/1000)))))
+         type=calculation, inputs=['G24', 'I9', 'G22'], label==$G$22+$I$12, cached=11.67778070526608
+  FORMULA D25: =D24+$I$12
+         type=calculation, inputs=['D24', 'I12'], label==D23+$I$12, cached=30
+  FORMULA E25: =((-LOG($I$10)+LOG((D25/1000*$I$9)/(($I$8/1000*$I$9)-(D25/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D25', 'I9', 'I8'], label==D24+$I$12, cached=4.371951826720331
+  FORMULA G25: =G24+$I$12
+         type=calculation, inputs=['G24', 'I12'], label==((-LOG($I$10)+LOG((D25/1000*$I$9)/(($I$8/1000*$I$, cached=120
+  FORMULA H25: =14-(-LOG(((((G25/1000*$I$9)-($G$22/1000*$I$9))/((G25+$G$22)/1000)))))
+         type=calculation, inputs=['G25', 'I9', 'G22'], label==G24+$I$12, cached=11.958607314841775
+  FORMULA D26: =D25+$I$12
+         type=calculation, inputs=['D25', 'I12'], label==D24+$I$12, cached=40
+  FORMULA E26: =((-LOG($I$10)+LOG((D26/1000*$I$9)/(($I$8/1000*$I$9)-(D26/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D26', 'I9', 'I8'], label==D25+$I$12, cached=4.5638373529592435
+  FORMULA G26: =G25+$I$12
+         type=calculation, inputs=['G25', 'I12'], label==((-LOG($I$10)+LOG((D26/1000*$I$9)/(($I$8/1000*$I$, cached=130
+  FORMULA H26: =14-(-LOG(((((G26/1000*$I$9)-($G$22/1000*$I$9))/((G26+$G$22)/1000)))))
+         type=calculation, inputs=['G26', 'I9', 'G22'], label==G25+$I$12, cached=12.11539341870207
+  FORMULA D27: =D26+$I$12
+         type=calculation, inputs=['D26', 'I12'], label==D25+$I$12, cached=50
+  FORMULA E27: =((-LOG($I$10)+LOG((D27/1000*$I$9)/(($I$8/1000*$I$9)-(D27/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D27', 'I9', 'I8'], label==D26+$I$12, cached=4.739928612014925
+  FORMULA G27: =G26+$I$12
+         type=calculation, inputs=['G26', 'I12'], label==((-LOG($I$10)+LOG((D27/1000*$I$9)/(($I$8/1000*$I$, cached=140
+  FORMULA H27: =14-(-LOG(((((G27/1000*$I$9)-($G$22/1000*$I$9))/((G27+$G$22)/1000)))))
+         type=calculation, inputs=['G27', 'I9', 'G22'], label==G26+$I$12, cached=12.221848749616356
+  FORMULA D28: =D27+$I$12
+         type=calculation, inputs=['D27', 'I12'], label==D26+$I$12, cached=60
+  FORMULA E28: =((-LOG($I$10)+LOG((D28/1000*$I$9)/(($I$8/1000*$I$9)-(D28/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D28', 'I9', 'I8'], label==D27+$I$12, cached=4.916019871070606
+  FORMULA G28: =G27+$I$12
+         type=calculation, inputs=['G27', 'I12'], label==((-LOG($I$10)+LOG((D28/1000*$I$9)/(($I$8/1000*$I$, cached=150
+  FORMULA H28: =14-(-LOG(((((G28/1000*$I$9)-($G$22/1000*$I$9))/((G28+$G$22)/1000)))))
+         type=calculation, inputs=['G28', 'I9', 'G22'], label==G27+$I$12, cached=12.301029995663981
+  FORMULA D29: =D28+$I$12
+         type=calculation, inputs=['D28', 'I12'], label==D27+$I$12, cached=70
+  FORMULA E29: =((-LOG($I$10)+LOG((D29/1000*$I$9)/(($I$8/1000*$I$9)-(D29/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D29', 'I9', 'I8'], label==D28+$I$12, cached=5.107905397309519
+  FORMULA G29: =G28+$I$12
+         type=calculation, inputs=['G28', 'I12'], label==((-LOG($I$10)+LOG((D29/1000*$I$9)/(($I$8/1000*$I$, cached=160
+  FORMULA H29: =14-(-LOG(((((G29/1000*$I$9)-($G$22/1000*$I$9))/((G29+$G$22)/1000)))))
+         type=calculation, inputs=['G29', 'I9', 'G22'], label==G28+$I$12, cached=12.363177902412826
+  FORMULA D30: =D29+$I$12
+         type=calculation, inputs=['D29', 'I12'], label==D28+$I$12, cached=80
+  FORMULA E30: =((-LOG($I$10)+LOG((D30/1000*$I$9)/(($I$8/1000*$I$9)-(D30/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D30', 'I9', 'I8'], label==D29+$I$12, cached=5.3419886033428865
+  FORMULA G30: =G29+$I$12
+         type=calculation, inputs=['G29', 'I12'], label==((-LOG($I$10)+LOG((D30/1000*$I$9)/(($I$8/1000*$I$, cached=170
+  FORMULA H30: =14-(-LOG(((((G30/1000*$I$9)-($G$22/1000*$I$9))/((G30+$G$22)/1000)))))
+         type=calculation, inputs=['G30', 'I9', 'G22'], label==G29+$I$12, cached=12.41373427585527
+  FORMULA D31: =D30+$I$12
+         type=calculation, inputs=['D30', 'I12'], label==D29+$I$12, cached=90
+  FORMULA E31: =((-LOG($I$10)+LOG((D31/1000*$I$9)/(($I$8/1000*$I$9)-(D31/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D31', 'I9', 'I8'], label==D30+$I$12, cached=5.694171121454248
+  FORMULA G31: =G30+$I$12
+         type=calculation, inputs=['G30', 'I12'], label==((-LOG($I$10)+LOG((D31/1000*$I$9)/(($I$8/1000*$I$, cached=180
+  FORMULA H31: =14-(-LOG(((((G31/1000*$I$9)-($G$22/1000*$I$9))/((G31+$G$22)/1000)))))
+         type=calculation, inputs=['G31', 'I9', 'G22'], label==G30+$I$12, cached=12.455931955649724
+  FORMULA D32: =D31+$I$12
+         type=calculation, inputs=['D31', 'I12'], label==D30+$I$12, cached=100
+  FORMULA E32: =((-LOG($I$10)+LOG((D32/1000*$I$9)/(($I$8/1000*$I$9)-(D32/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D32', 'I9', 'I8'], label==D31+$I$12, cached=#DIV/0!
+  FORMULA G32: =G31+$I$12
+         type=calculation, inputs=['G31', 'I12'], label==((-LOG($I$10)+LOG((D32/1000*$I$9)/(($I$8/1000*$I$, cached=190
+  FORMULA H32: =14-(-LOG(((((G32/1000*$I$9)-($G$22/1000*$I$9))/((G32+$G$22)/1000)))))
+         type=calculation, inputs=['G32', 'I9', 'G22'], label==G31+$I$12, cached=12.49184451154037
+  FORMULA D33: =D32+$I$12
+         type=calculation, inputs=['D32', 'I12'], label==D31+$I$12, cached=110
+  FORMULA E33: =((-LOG($I$10)+LOG((D33/1000*$I$9)/(($I$8/1000*$I$9)-(D33/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D33', 'I9', 'I8'], label==D32+$I$12, cached=#NUM!
+  FORMULA G33: =G32+$I$12
+         type=calculation, inputs=['G32', 'I12'], label==((-LOG($I$10)+LOG((D33/1000*$I$9)/(($I$8/1000*$I$, cached=200
+  FORMULA H33: =14-(-LOG(((((G33/1000*$I$9)-($G$22/1000*$I$9))/((G33+$G$22)/1000)))))
+         type=calculation, inputs=['G33', 'I9', 'G22'], label==G32+$I$12, cached=12.522878745280337
+  FORMULA D34: =D33+$I$12
+         type=calculation, inputs=['D33', 'I12'], label==D32+$I$12, cached=120
+  FORMULA E34: =((-LOG($I$10)+LOG((D34/1000*$I$9)/(($I$8/1000*$I$9)-(D34/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D34', 'I9', 'I8'], label==D33+$I$12, cached=#NUM!
+  FORMULA D35: =D34+$I$12
+         type=calculation, inputs=['D34', 'I12'], label==D33+$I$12, cached=130
+  FORMULA E35: =((-LOG($I$10)+LOG((D35/1000*$I$9)/(($I$8/1000*$I$9)-(D35/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D35', 'I9', 'I8'], label==D34+$I$12, cached=#NUM!
+  FORMULA D36: =D35+$I$12
+         type=calculation, inputs=['D35', 'I12'], label==D34+$I$12, cached=140
+  FORMULA E36: =((-LOG($I$10)+LOG((D36/1000*$I$9)/(($I$8/1000*$I$9)-(D36/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D36', 'I9', 'I8'], label==D35+$I$12, cached=#NUM!
+  FORMULA D37: =D36+$I$12
+         type=calculation, inputs=['D36', 'I12'], label==D35+$I$12, cached=150
+  FORMULA E37: =((-LOG($I$10)+LOG((D37/1000*$I$9)/(($I$8/1000*$I$9)-(D37/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D37', 'I9', 'I8'], label==D36+$I$12, cached=#NUM!
+  FORMULA D38: =D37+$I$12
+         type=calculation, inputs=['D37', 'I12'], label==D36+$I$12, cached=160
+  FORMULA E38: =((-LOG($I$10)+LOG((D38/1000*$I$9)/(($I$8/1000*$I$9)-(D38/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D38', 'I9', 'I8'], label==D37+$I$12, cached=#NUM!
+  FORMULA D39: =D38+$I$12
+         type=calculation, inputs=['D38', 'I12'], label==D37+$I$12, cached=170
+  FORMULA E39: =((-LOG($I$10)+LOG((D39/1000*$I$9)/(($I$8/1000*$I$9)-(D39/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D39', 'I9', 'I8'], label==D38+$I$12, cached=#NUM!
+  FORMULA D40: =D39+$I$12
+         type=calculation, inputs=['D39', 'I12'], label==D38+$I$12, cached=180
+  FORMULA E40: =((-LOG($I$10)+LOG((D40/1000*$I$9)/(($I$8/1000*$I$9)-(D40/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D40', 'I9', 'I8'], label==D39+$I$12, cached=#NUM!
+  FORMULA D41: =D40+$I$12
+         type=calculation, inputs=['D40', 'I12'], label==D39+$I$12, cached=190
+  FORMULA E41: =((-LOG($I$10)+LOG((D41/1000*$I$9)/(($I$8/1000*$I$9)-(D41/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D41', 'I9', 'I8'], label==D40+$I$12, cached=#NUM!
+  FORMULA D42: =D41+$I$12
+         type=calculation, inputs=['D41', 'I12'], label==D40+$I$12, cached=200
+  FORMULA E42: =((-LOG($I$10)+LOG((D42/1000*$I$9)/(($I$8/1000*$I$9)-(D42/1000*$I$9)))))
+         type=calculation, inputs=['I10', 'D42', 'I9', 'I8'], label==D41+$I$12, cached=#NUM!
+
+  INPUTS:
+    I12: value=10, label=Volume setiap penambahan (mL), unit=molar
+    L23: value=, label=Setelah Titik Ekuivalen, unit=
+    I10: value=1.82e-05, label=Ka (X), unit=milliliter
+    I8: value=100, label=Volume Y (ml), unit=milliliter
+    I9: value=0.1, label=Konsentrasi Y (N, M), unit=milliliter
+    D22: value=0, label=Volume (X) yang ditambahkan (mL), unit=molar
+
+  LOOKUP TABLES:
+    Sheet=SPU KIMIA, Col=B, Rows=7-124, Count=118, Header=Nomor atom
+    Sheet=SPU KIMIA, Col=D, Rows=7-124, Count=118, Header=Nomor Massa (Ar)
+    Sheet=SPU KIMIA, Col=F, Rows=7-63, Count=57, Header=Periode
+    Sheet=SPU KIMIA, Col=F, Rows=78-95, Count=18, Header= 
+    Sheet=SPU KIMIA, Col=F, Rows=110-124, Count=15, Header= 
