@@ -13,15 +13,27 @@ export async function GET(req: NextRequest) {
 
     let classes;
     if (session.user.role === 'ADMIN') {
-      classes = await prisma.class.findMany({ include: { instructor: true } });
+      const classInclude = {
+        instructor: { include: { user: { select: { name: true, email: true } } } },
+        _count: { select: { members: true, experiments: true } },
+      };
+      classes = await prisma.class.findMany({ include: classInclude });
     } else if (session.user.role === 'INSTRUCTOR') {
       const instructor = await prisma.instructor.findUnique({ where: { userId: session.user.id } });
       if (!instructor) return apiError(ErrorCodes.NOT_FOUND, 'Instructor not found', 404);
-      classes = await prisma.class.findMany({ where: { instructorId: instructor.id }, include: { instructor: true } });
+      const classInclude = {
+        instructor: { include: { user: { select: { name: true, email: true } } } },
+        _count: { select: { members: true, experiments: true } },
+      };
+      classes = await prisma.class.findMany({ where: { instructorId: instructor.id }, include: classInclude });
     } else {
       const student = await prisma.student.findUnique({ where: { userId: session.user.id } });
       if (!student) return apiError(ErrorCodes.NOT_FOUND, 'Student not found', 404);
-      const members = await prisma.classMember.findMany({ where: { studentId: student.id }, include: { class: { include: { instructor: true } } } });
+      const classInclude = {
+        instructor: { include: { user: { select: { name: true, email: true } } } },
+        _count: { select: { members: true, experiments: true } },
+      };
+      const members = await prisma.classMember.findMany({ where: { studentId: student.id }, include: { class: { include: classInclude } } });
       classes = members.map(m => m.class);
     }
     return apiSuccess(classes);

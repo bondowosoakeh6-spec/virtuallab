@@ -189,7 +189,7 @@ export default function KelasPage() {
                     <span>{cls._count?.experiments || 0} praktikum</span>
                   </div>
                 </div>
-                {cls.instructor && (
+                {cls.instructor?.user?.name && (
                   <p className="text-xs text-slate-400 mt-2">
                     Dosen: {cls.instructor.user.name}
                   </p>
