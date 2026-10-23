@@ -144,7 +144,8 @@ export default function HomePage() {
             </Link>
             <Link
               href="/"
-              className="text-sm font-semibold text-gray-900 border-b-2 border-gray-900 pb-0.5 transition"
+              className="text-sm font-semibold pb-0.5 transition border-b-2"
+              style={{ color: '#2D2B7F', borderColor: '#2D2B7F' }}
             >
               Virtual Lab
             </Link>
@@ -156,7 +157,8 @@ export default function HomePage() {
           {/* Login Button */}
           <Link
             href="/login"
-            className="shrink-0 text-sm font-medium bg-gray-900 text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition"
+            className="shrink-0 text-sm font-medium text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+            style={{ backgroundColor: '#2D2B7F' }}
           >
             Login
           </Link>
@@ -177,7 +179,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight" style={{ color: '#1a1a2e' }}>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight" style={{ color: '#2D2B7F' }}>
                   Virtual Lab
                 </h1>
 
@@ -360,7 +362,7 @@ export default function HomePage() {
         <div className="border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6 py-5">
             <p className="text-center text-xs text-gray-400">
-              © Copyright <span className="font-semibold text-gray-600">akuanalis.com</span>
+              © <span style={{ color: '#2D2B7F' }}>Copyright</span> <span className="font-semibold text-gray-600">akuanalis.com</span>
             </p>
           </div>
         </div>
