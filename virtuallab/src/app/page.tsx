@@ -112,8 +112,8 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
-          <div className="flex items-center gap-2 shrink-0">
-            <Image src="/akuanalis-logo.svg" alt="AkuAnalis" width={40} height={40} />
+          <div className="flex items-center shrink-0">
+            <Image src="/logo.png" alt="AkuAnalis" width={120} height={48} className="h-10 w-auto object-contain" />
           </div>
 
           {/* Search Bar */}
