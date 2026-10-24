@@ -89,6 +89,13 @@ export default function DashboardLayout({
 
   const getInitial = (name: string) => name ? name.charAt(0).toUpperCase() : "U";
 
+  // Use window.location.origin so logout always redirects to the current domain
+  // instead of hardcoded NEXTAUTH_URL (which may still point to localhost)
+  const handleLogout = () => {
+    const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
+    signOut({ callbackUrl: `${baseUrl}/` });
+  };
+
   // ==========================================
   // STUDENT LAYOUT — Horizontal top navbar
   // ==========================================
@@ -141,7 +148,7 @@ export default function DashboardLayout({
 
                 <Button
                   variant="ghost"
-                  onClick={() => signOut({ callbackUrl: '/' })}
+                  onClick={() => handleLogout()}
                   className="text-slate-500 hover:text-red-600 hover:bg-red-50 gap-2 hidden sm:inline-flex"
                   size="sm"
                 >
@@ -175,7 +182,7 @@ export default function DashboardLayout({
                   );
                 })}
                 <button
-                  onClick={() => signOut({ callbackUrl: '/' })}
+                  onClick={() => handleLogout()}
                   className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-red-600 hover:bg-red-50 w-full"
                 >
                   <LogOut size={18} />
@@ -239,7 +246,7 @@ export default function DashboardLayout({
           <div className="p-4 border-t border-slate-200 shrink-0">
             <Button 
               variant="ghost" 
-              onClick={() => signOut({ callbackUrl: '/' })}
+              onClick={() => handleLogout()}
               className={`w-full text-red-600 hover:text-red-700 hover:bg-red-50 ${collapsed ? 'justify-center px-0' : 'justify-start'}`}
             >
               <LogOut size={20} />
