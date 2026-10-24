@@ -89,6 +89,116 @@ export default function DashboardLayout({
 
   const getInitial = (name: string) => name ? name.charAt(0).toUpperCase() : "U";
 
+  // ==========================================
+  // STUDENT LAYOUT — Horizontal top navbar
+  // ==========================================
+  if (userRole === "STUDENT") {
+    return (
+      <UserContext.Provider value={{ user, loading }}>
+        <div className="min-h-screen bg-slate-50 flex flex-col">
+          {/* Top Navbar */}
+          <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shrink-0">
+            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
+              {/* Left: Avatar + Nav Links */}
+              <div className="flex items-center gap-6">
+                {/* Avatar */}
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style={{ backgroundColor: '#2D2B7F' }}>
+                  {getInitial(user?.name || "User")}
+                </div>
+
+                {/* Nav Links */}
+                <nav className="hidden sm:flex items-center gap-5">
+                  {studentNav.map((item) => {
+                    const isActive = item.href === "/dashboard"
+                      ? pathname === "/dashboard"
+                      : pathname === item.href || pathname.startsWith(item.href + "/");
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={`text-sm font-medium transition ${
+                          isActive
+                            ? "text-slate-900 font-semibold"
+                            : "text-slate-500 hover:text-slate-800"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
+                </nav>
+              </div>
+
+              {/* Right: Mobile menu + Logout */}
+              <div className="flex items-center gap-3">
+                {/* Mobile hamburger */}
+                <button
+                  onClick={() => setCollapsed(!collapsed)}
+                  className="sm:hidden p-2 rounded-md hover:bg-slate-100 text-slate-500"
+                >
+                  {collapsed ? <X size={20} /> : <Menu size={20} />}
+                </button>
+
+                <Button
+                  variant="ghost"
+                  onClick={() => signOut({ callbackUrl: '/' })}
+                  className="text-slate-500 hover:text-red-600 hover:bg-red-50 gap-2 hidden sm:inline-flex"
+                  size="sm"
+                >
+                  <LogOut size={16} />
+                  Logout
+                </Button>
+              </div>
+            </div>
+
+            {/* Mobile nav dropdown */}
+            {collapsed && (
+              <div className="sm:hidden border-t border-slate-100 bg-white px-6 py-3 space-y-1">
+                {studentNav.map((item) => {
+                  const isActive = item.href === "/dashboard"
+                    ? pathname === "/dashboard"
+                    : pathname === item.href || pathname.startsWith(item.href + "/");
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setCollapsed(false)}
+                      className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm transition ${
+                        isActive
+                          ? "bg-blue-50 text-blue-700 font-medium"
+                          : "text-slate-600 hover:bg-slate-100"
+                      }`}
+                    >
+                      <item.icon size={18} />
+                      {item.name}
+                    </Link>
+                  );
+                })}
+                <button
+                  onClick={() => signOut({ callbackUrl: '/' })}
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-red-600 hover:bg-red-50 w-full"
+                >
+                  <LogOut size={18} />
+                  Logout
+                </button>
+              </div>
+            )}
+          </header>
+
+          {/* Main Content */}
+          <main className="flex-1 overflow-y-auto">
+            <div className="max-w-7xl mx-auto px-6 py-8">
+              {children}
+            </div>
+          </main>
+        </div>
+      </UserContext.Provider>
+    );
+  }
+
+  // ==========================================
+  // INSTRUCTOR / ADMIN LAYOUT — Sidebar
+  // ==========================================
   return (
     <UserContext.Provider value={{ user, loading }}>
       <div className="flex h-screen bg-slate-50">
