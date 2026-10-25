@@ -89,11 +89,11 @@ export default function DashboardLayout({
 
   const getInitial = (name: string) => name ? name.charAt(0).toUpperCase() : "U";
 
-  // Use window.location.origin so logout always redirects to the current domain
-  // instead of hardcoded NEXTAUTH_URL (which may still point to localhost)
-  const handleLogout = () => {
-    const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-    signOut({ callbackUrl: `${baseUrl}/` });
+  // Logout: use redirect:false to prevent NextAuth from validating callbackUrl
+  // against NEXTAUTH_URL (which may point to localhost). Then redirect manually.
+  const handleLogout = async () => {
+    await signOut({ redirect: false });
+    window.location.href = "/";
   };
 
   // ==========================================
